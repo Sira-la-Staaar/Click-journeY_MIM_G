@@ -1,4 +1,4 @@
-/*p{
+z/*p{
   color: red;
 }
 header{
@@ -159,5 +159,40 @@ th {
 	font-size: 1.2em;
 	font-variant: small-caps;
 	color: #ffffff;
+}
+#page d'inscription
+*{ background-color:#F4F6F6} 
+h1{
+  color: #73c6b6;|
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid #73C6B6;
+  font-family: Onyx; 
+}
+
+h2{
+  color:#17A589;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: lefft;  
+}
+div{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #515A5A;
+}
+div{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #515A5A;
+}
+div{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #515A5A;
 }
 
