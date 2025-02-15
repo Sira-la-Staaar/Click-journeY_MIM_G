@@ -196,3 +196,37 @@ div{
   color: #515A5A;
 }
 
+/* li { /*code cours, site 3W*/
+	display: inline;
+	border: 2px solid #000000;
+	font-family: Futura, Tahoma, sans-serif;
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 5px 5px;
+	background-color: #73C6B6;
+}
+
+*{
+  text-align: center;
+}
+
+strong{
+  font-size: 25px;
+}
+
+a{
+  display: block;/* Mettre le mot sur une ligne séparée */
+  text-align: center;
+}
+
+#Google{
+	display: block;/* Mettre la phrase sur une ligne séparée */
+  left: 50px;
+}
+
+#Facebook{
+	display: block;/* Mettre la phrase sur une ligne séparée */
+  right: 50px; 
+}*/
+
+
