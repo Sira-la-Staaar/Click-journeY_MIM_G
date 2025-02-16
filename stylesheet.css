@@ -1,41 +1,9 @@
-z/*p{
-  color: red;
-}
-header{
-  background-color: #45b39d;
-  position: relative;
-	top: -10px;
-	/*border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-}
-body{
-  background-color:black;
-}*/
-
-body {
-	background-color: black/*#b7d1c4*/;
-} 
-h2 {
-	font-family: Verdana;
-	font-weight: bold;
-	text-align: center;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	color: #acd1b2;
-}
-
-img {
-	height: 170px;
-	width: 170px;
-	box-shadow: rgba(0,0,0,0.2) 10px 10px;
-
-}
-
+#Page d'accueil
 #navbar {
 	position: fixed;
 	top:10px;
 	left:50%;
-	margin-left:-254px;
+	margin-left:-154px;
 }
 
 #header {
@@ -50,115 +18,75 @@ ul{
 	list-style-type: none;
 	position: fixed;
 	margin: -10px;
+	top:10px;
 }
 
 li {
 	display: inline;
 	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
+	font-family: Tahoma,Futura, sans-serif;
+	font-size:20px;
 	color: #fffff;
-	padding: 7px;
-	/*border-radius: 5px 5px;*/
-	background-color: #45b39d
+	padding: 10px;
+	background-color: #45b39d;
 }
-span {
+/*span {
   position: relative;
   left:0px;
 	border: 2px solid #000000;
 	font-family: Futura, Tahoma, sans-serif;
 	color: #fffff;
 	padding: 7px;
-	/*border-radius: 5px 5px;*/
 	background-color: #45b39d
+
+}*/
+body{
+  background-color:black;
 }
 
-#left{
-	width: 45%;
-	float: left;
+
+a {
+  position: relative;  /* Nécessaire pour appliquer z-index */
+  z-index: 15;  /* Un z-index plus élevé que celui de l'image */
+  color: black;
+  text-decoration:none;  
+}
+.div1 {
+  position: absolute;
+  left:70px;
+  width: 170px;
+  height: 100%;
+  background-image: url('fond1.jpg');
+  z-index: 0; /* Passer ce div au-dessus de l'autre */
+  background-color: white; /* Ajoute une couleur de fond temporaire pour tester */
+}
+.div2{
+  position: absolute;
+  margin-top:55px;
+  opacity:0.65;
+  left:0px;
+  width: 100%;
+  height: 45px;
+  background-color: #336666;
+  z-index: 1; /* Passer ce div en dessous de l'autre */
 }
 
-p {
-	font-family: Tahoma;
-	font-size: 1em;
+.div3 {
+  position: absolute;
+  left:90px;
+  width: 130px;
+  height: 100%;
+  background-color: #73c6b6;
+  z-index: 2; /* Passer ce div en dessous des deux*/
 }
 
-#right{
-	width: 45%;
-	float: right;
-}
-
-table {
-	border: #000000 1px solid;
-	background-color: #acd1b2;
-	float: right;
-	margin-right: 10px;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
-
-td {
-	height: 75px;
-	width: 75px;
-}
-
-td img {
-	height: 75px;
-	width: 75px;
-	box-shadow: none;
-}
-
-th {
-	font-family: Verdana;
-	font-size: 1em;
-	font-weight: normal;
-	color: #3c4543
-}
-
-#bottom_left{
-	border-bottom-left-radius: 15px;
-}
-
-#bottom_right{
-	border-bottom-right-radius: 15px;
-}
-
-#footer{
-	clear: both;
-	position: relative;
-	bottom: -20px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	height: 75px;
-	background-color: #3c4543;
-}
-
-#button{
-	border: 2px solid #000000;
-	float:left;
-	position: relative;
-	left: 229px;
-	bottom: -20px;
-	border-radius: 5px;
-	background-color: #cc0323;
-	height: 30px;
-	width: 150px;
-	
-}
-
-#button p{
-	position: relative;
-	bottom: 10px;
-	font-size: 0.8em;
-	color: #acd1b2;
-	text-align: center;
-}
-
-.bold{
-	font-family: tahoma;
-	font-weight: bold;
-	font-size: 1.2em;
-	font-variant: small-caps;
-	color: #ffffff;
+img {
+  left:20px;
+  top:20px;
+  position: absolute;  /* Nécessaire pour appliquer z-index */
+  z-index: 10;  /* Un z-index élevé pour qu'il soit au premier plan */
+  width: 309px;
+  height: 100px;
 }
 #page d'inscription
 *{ background-color:#F4F6F6} 
