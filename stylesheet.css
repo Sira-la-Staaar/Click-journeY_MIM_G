@@ -1,4 +1,4 @@
-#Page d'accueil
+/*#Page d'accueil*/
 #navbar {
 	position: fixed;
 	top:10px;
@@ -105,18 +105,7 @@ h2{
   margin-right: auto;
   text-align: lefft;  
 }
-div{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  color: #515A5A;
-}
-div{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  color: #515A5A;
-}
+
 div{
   margin-left: auto;
   margin-right: auto;
@@ -124,17 +113,8 @@ div{
   color: #515A5A;
 }
 
-/* li { /*code cours, site 3W*/
-	display: inline;
-	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
-	color: #ffffff;
-	padding: 5px;
-	border-radius: 5px 5px;
-	background-color: #73C6B6;
-}
 
-*{
+.centered * {
   text-align: center;
 }
 
@@ -142,10 +122,10 @@ strong{
   font-size: 25px;
 }
 
-a{
+/*a{
   display: block;/* Mettre le mot sur une ligne séparée */
   text-align: center;
-}
+}*/
 
 #Google{
 	display: block;/* Mettre la phrase sur une ligne séparée */
@@ -156,5 +136,7 @@ a{
 	display: block;/* Mettre la phrase sur une ligne séparée */
   right: 50px; 
 }*/
+
+
 
 
