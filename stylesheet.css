@@ -124,14 +124,9 @@ li { /*code cours, site 3W*/
 	padding: 10px;
 	border-radius: 5px 5px;
 	background-color: #73C6B6;
-  align-items: center;
-  display: block;/* Mettre le mot sur une ligne séparée */
+  	align-items: center;
+  	display: block;/* Mettre le mot sur une ligne séparée */
   
-}
-
-*{
-  display: block;/* Mettre le mot sur une ligne séparée */
-  align-items: center;
 }
 
 strong{
