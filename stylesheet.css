@@ -1,24 +1,26 @@
 /*#Page d'accueil*/
 #navbar {
 	position: fixed;
-	top:10px;
+	/*margin-top:10px;*/
 	left:50%;
-	margin-left:-154px;
 }
 
 #header {
-	position: relative;
-	top: -10px;
+	position: absolute;
+	margin-top: -10px;
 	background-color: #3c4543;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	/*border-top-left-radius: 15px;
+	border-top-right-radius: 15px;*/
 }
-body{background-color:#d5f5e3;}
-
 ul{
 	list-style-type: none;
+	widht:100%;
+	height:45px;
 	position: fixed;
-	margin: -10px;
+	/*margin: -10px;*/
+	margin-top:55px;
+	background-color: #336666;
+	margin-left:-154px;
 	top:10px;
 }
 
@@ -41,10 +43,6 @@ li {
 	background-color: #45b39d
 
 }*/
-body{
-  background-color:black;
-}
-
 
 a {
   position: relative;  /* Nécessaire pour appliquer z-index */
@@ -61,7 +59,7 @@ a {
   z-index: 0; /* Passer ce div au-dessus de l'autre */
   background-color: white; /* Ajoute une couleur de fond temporaire pour tester */
 }
-.div2{
+/*.div2{
   position: absolute;
   margin-top:55px;
   opacity:0.65;
@@ -70,7 +68,7 @@ a {
   height: 45px;
   background-color: #336666;
   z-index: 1; /* Passer ce div en dessous de l'autre */
-}
+}*/
 
 .div3 {
   position: absolute;
@@ -90,7 +88,6 @@ img {
   height: 100px;
 }
 #page d'inscription
-*{ background-color:#F4F6F6} 
 h1{
   color: #73c6b6;|
   margin-left: auto;
@@ -116,7 +113,7 @@ div{
   color: #515A5A;
 }
 
-li { /*code cours, site 3W*/
+/*li { /*code cours, site 3W
 	display: block;
 	border: 2px solid #000000;
 	font-family: Futura, Tahoma, sans-serif;
@@ -125,9 +122,9 @@ li { /*code cours, site 3W*/
 	border-radius: 5px 5px;
 	background-color: #73C6B6;
   	align-items: center;
-  	display: block;/* Mettre le mot sur une ligne séparée */
+  	display: block; Mettre le mot sur une ligne séparée 
   
-}
+}*/
 
 strong{
   display: block;/* Mettre le mot sur une ligne séparée */
@@ -135,10 +132,10 @@ strong{
   font-size: 25px;
 }
 
-a{
-  display: block;/* Mettre le mot sur une ligne séparée */
+/*a{
+  display: block;/* Mettre le mot sur une ligne séparée 
   align-items: center; 
-}
+}*/
 
 #Google{
 	display: block;/* Mettre la phrase sur une ligne séparée */
@@ -149,7 +146,6 @@ a{
 	display: block;/* Mettre la phrase sur une ligne séparée */
   align-items: center 
 }
-
 
 
 
