@@ -123,6 +123,9 @@ li { /*code cours, site 3W*/
 	background-color: #73C6B6;
 }
 
+*{
+  text-align: center;
+}
 
 strong{
   font-size: 25px;
@@ -142,6 +145,9 @@ a{
 	display: block;/* Mettre la phrase sur une ligne séparée */
   right: 50px; 
 }
+
+
+
 
 
 
