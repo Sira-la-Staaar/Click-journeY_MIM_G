@@ -5,47 +5,174 @@
 		<title>Une page spécifique pour rechercher des voyages avec plusieurs champs de filtrage (dates, lieux, options, ...)</title>
 	</head>
 	<body>
-    <h1>Trouver une destination!</h1>
-    <h2>Liste des Pays:</h2>
-    <ol>
-      <li>Maroc</li>
-      <li>Guinée</li>
-      <li>Mali</li>
-      <li>Senegal</li>
-      <li>Liberia</li>      
-      <li>Guinée Bissau</li>
-      <li>Sierra leonne</li>
-      <li>Benin</li>
-      <li>Togo</li>
-      <li>Ghana</li>
-      <li>Nigeria</li>
-      <li>Côte d’Ivoire</li>
-      <li>Burkina Faso</li>
-      <li>Gambie</li>
-      <li>Le cap vert</li> 
-      <li>Niger</li>
-      <li>Mauritanie</li>
-    </ol>
-      <h3>Liste des Villes:</h3>
-      <ol>
-        <li>Marrakech, Casablanca</li>
-        <li>Conakry, Kankan</li>
-        <li>Bamako, Mopti</li>
-        <li>Dakar, Saint-Louis</li>
-        <li>Monrovia, Buchanan</li>
-        <li>Bissau, Bafatá</li>
-        <li>Freetown, Bo</li>
-        <li>Cotonou, Parakou</li>
-        <li>Lomé, Niamtougou</li>
-        <li>Accra, Kumasi</li>
-        <li>Lagos, Abuja</li>
-        <li>Abidjan, Yamoussoukro</li>
-        <li>Ouagadougou, Bobo-Dioulasso</li>
-        <li>Banjul, Farafenni</li>
-        <li>Praia, Mindelo</li>
-        <li>Niamey, Agadez</li>
-        <li>Nouakchott, Nouadhibou</li>
-      </ol>
+    <form action="page1.php">
+<p>D'où partez-vous?</p>
+   <select name="city" id="city">
+   <optgroup label="Maroc">
+<option value="Marrakech">Marrakech</option>
+<option value="Casablanca">Casablanca</option>
+    </optgroup>
+  <optgroup label="Guinée">
+<option value="Conakry">Conakry</option>
+<option value="Kankan">Kankan</option>
+   </optgroup>
+  <optgroup label="Mali">
+<option value="Bamako">Bamako</option>
+<option value="Mopti">Mopti</option>
+    </optgroup>
+    <optgroup label="Sénégal">
+<option value="Dakar">Dakar</option>
+<option value="Saint-Louis">Saint-Louis</option>
+      </optgroup>
+      <optgroup label="Libéria">
+<option value="Monrovia">Monrovia</option>
+<option value="Buchanan">Buchanan</option>
+        </optgroup>
+        <optgroup label="Guinée Bissau">
+<option value="Bissau">Bissau</option>
+<option value="Bafatá">Bafatá</option>
+          </optgroup>
+          <optgroup label="Sierra leonne">
+<option value="Freetown">Freetown</option>
+<option value="Bo">Bo</option>
+            </optgroup>
+            <optgroup label="Benin">
+<option value="Cotonou">Cotonou</option>
+<option value="Parakou">Parakou</option>
+              </optgroup>
+              <optgroup label="Togo">
+<option value="Lomé">Lomé</option>
+<option value="Niamtougou">Niamtougou</option>
+                </optgroup>
+                 <optgroup label="Ghana">
+<option value="Accra">Accra</option>
+<option value="Kumasi">Kumasi</option>
+                   </optgroup>
+                   <optgroup label="Nigeria">
+<option value="Lagos">Lagos</option>
+<option value="Abuja">Abuja</option>
+                     </optgroup>
+                  <optgroup label="Côte d’Ivoire">
+<option value="Abidjan">Abidjan</option>
+<option value="Yamoussoukro">Yamoussoukro</option>
+                    </optgroup>
+                  <optgroup label="Burkina Faso">
+<option value="Ouagadougou">Ouagadougou</option>
+<option value="Bobo-Dioulasso">Bobo-Dioulasso</option>
+                    </optgroup>
+                <optgroup label="Gambie">
+<option value="Banjul">Banjul</option>
+<option value="Farafenni">Farafenni</option>
+                  </optgroup>
+                  <optgroup label="Le cap vert">
+<option value="Praia">Praia</option>
+<option value="Mindelo">Mindelo</option>
+                    </optgroup>
+                    <optgroup label="Niger">
+<option value="Niamey">Niamey</option>
+<option value="Agadez">Agadez</option>
+                      </optgroup>
+                    <optgroup label="Mauritanie">
+<option value="Nouakchott">Nouakchott</option>
+<option value="Nouadhibou">Nouadhibou</option>
+</optgroup>
+</select>
     
+    <form action="page1.php">
+<p>D'où allez-vous?</p>
+   <select name="city" id="city">
+   <optgroup label="Maroc">
+<option value="Marrakech">Marrakech</option>
+<option value="Casablanca">Casablanca</option>
+     </optgroup>
+  <optgroup label="Guinée">
+<option value="Conakry">Conakry</option>
+<option value="Kankan">Kankan</option>
+    </optgroup>
+  <optgroup label="Mali">
+<option value="Bamako">Bamako</option>
+<option value="Mopti">Mopti</option>
+    </optgroup>
+    <optgroup label="Sénégal">
+<option value="Dakar">Dakar</option>
+<option value="Saint-Louis">Saint-Louis</option>
+      </optgroup>
+      <optgroup label="Libéria">
+<option value="Monrovia">Monrovia</option>
+<option value="Buchanan">Buchanan</option>
+        </optgroup>
+        <optgroup label="Guinée Bissau">
+<option value="Bissau">Bissau</option>
+<option value="Bafatá">Bafatá</option>
+          </optgroup>
+          <optgroup label="Sierra leonne">
+<option value="Freetown">Freetown</option>
+<option value="Bo">Bo</option>
+            </optgroup>
+            <optgroup label="Benin">
+<option value="Cotonou">Cotonou</option>
+<option value="Parakou">Parakou</option>
+              </optgroup>
+              <optgroup label="Togo">
+<option value="Lomé">Lomé</option>
+<option value="Niamtougou">Niamtougou</option>
+                </optgroup>
+                 <optgroup label="Ghana">
+<option value="Accra">Accra</option>
+<option value="Kumasi">Kumasi</option>
+                   </optgroup>
+                   <optgroup label="Nigeria">
+<option value="Lagos">Lagos</option>
+<option value="Abuja">Abuja</option>
+                     </optgroup>
+                  <optgroup label="Côte d’Ivoire">
+<option value="Abidjan">Abidjan</option>
+<option value="Yamoussoukro">Yamoussoukro</option>
+                    </optgroup>
+                  <optgroup label="Burkina Faso">
+<option value="Ouagadougou">Ouagadougou</option>
+<option value="Bobo-Dioulasso">Bobo-Dioulasso</option>
+                    </optgroup>
+                <optgroup label="Gambie">
+<option value="Banjul">Banjul</option>
+<option value="Farafenni">Farafenni</option>
+                  </optgroup>
+                  <optgroup label="Le cap vert">
+<option value="Praia">Praia</option>
+<option value="Mindelo">Mindelo</option>
+                    </optgroup>
+                    <optgroup label="Niger">
+<option value="Niamey">Niamey</option>
+<option value="Agadez">Agadez</option>
+                      </optgroup>
+                    <optgroup label="Mauritanie">
+<option value="Nouakchott">Nouakchott</option>
+<option value="Nouadhibou">Nouadhibou</option>
+</optgroup>
+</select>
+    
+     <form action="page1.php">
+<p>Choisissez votre formule:</p>
+<select name="formule">
+<option value="économique">économique</option>
+<option value="affaire">affaire</option>
+<option value="première">première</option>
+ </optgroup>
+</select>
+  
+  <form action="page1.php">
+<p>Type de voyage:</p>
+<select name="type-voyage">
+<option value="aller-retour">aller-retour</option>
+<option value="aller simple">aller simple</option>
+</optgroup>
+</select>
+    <!-- nombre de voyageurs avec valises (deux bagages de 23 kg par personne!! regarder pourquoi date n'est pas limite, ajouter un css pour ca. Enlevez se connecter avec facebook!!!! relier tous les css ensemble!-->
+    <p>Choisissez la date et l'heure de votre   vol:</p> 
+ Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
+      
+La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
+      
+La date: <input type="datetime-local" name="time2" value="12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
   </body>
 </html>
