@@ -1,38 +1,45 @@
 /*#Page d'accueil*/
 #navbar {
 	position: fixed;
-	/*margin-top:10px;*/
-	left:50%;
-}
+	left: 50%;
+ }
 
 #header {
 	position: absolute;
 	margin-top: -10px;
 	background-color: #3c4543;
-	/*border-top-left-radius: 15px;
-	border-top-right-radius: 15px;*/
-}
-ul{
-	list-style-type: none;
-	widht:100%;
-	height:45px;
-	position: fixed;
-	/*margin: -10px;*/
-	margin-top:55px;
-	background-color: #336666;
-	margin-left:-154px;
-	top:10px;
-}
+  	}
+a:link{text-decoration: none;
+	color:#336666;}
+a:visited{color:black;}
+a:hover{text-decoration: none;
+	color:#336666;}
+a:active{text-decoration: none;
+	color:black;}
 
-li {
-	display: inline;
-	border: 2px solid #000000;
-	font-family: Tahoma,Futura, sans-serif;
-	font-size:20px;
-	color: #fffff;
+
+.liButton {
+	display: inline-block; /* Change display pour inline-block afin que les éléments puissent être centrés */
+	border: 1px solid #000000;
+	font-family: Tahoma, Futura, sans-serif;
+	font-size: 20px;
+	color: black; /* Corrige la couleur du texte */
 	padding: 10px;
 	background-color: #45b39d;
 }
+.ulButton {
+	list-style-type: none;
+	width: 100%; /* L'élément <ul> occupe toute la largeur */
+	height: 48px;
+	position: fixed;
+	opacity:0.85;
+	margin-top: 5%;
+  	background-color: #336666;
+	/*top: 10px;*/
+	left: 0; /*L'élément commence du bord gauche de la fenêtre */
+	padding-left: 37%; /* Décale le contenu à 154px du bord gauche */
+}
+
 /*span {
   position: relative;
   left:0px;
@@ -44,21 +51,33 @@ li {
 
 }*/
 
-a {
+#Logo {
   position: relative;  /* Nécessaire pour appliquer z-index */
   z-index: 15;  /* Un z-index plus élevé que celui de l'image */
   color: black;
-  text-decoration:none;  
+  text-decoration:none;
+  margin-left:6%;
+  top:4%;  
+
+.liCompte {
+  direction:rtl;
+  display: inline; /* Change display pour inline-block afin que les éléments puissent être centrés */
+  border: 1px solid #000000;
+  left:200px;
+  font-family: Tahoma, Futura, sans-serif;
+  font-size: 20px;
+  color: black;
 }
-.div1 {
+
+
+/*.div1 {
   position: absolute;
   left:70px;
   width: 170px;
   height: 100%;
   background-image: url('fond1.jpg');
-  z-index: 0; /* Passer ce div au-dessus de l'autre */
-  background-color: white; /* Ajoute une couleur de fond temporaire pour tester */
-}
+  z-index: 0; /* Passer ce div au-dessus de l'autre 
+}*/
 /*.div2{
   position: absolute;
   margin-top:55px;
@@ -67,21 +86,19 @@ a {
   width: 100%;
   height: 45px;
   background-color: #336666;
-  z-index: 1; /* Passer ce div en dessous de l'autre */
+  z-index: 1; /* Passer ce div en dessous de l'autre 
 }*/
 
-.div3 {
+/*.div3 {
   position: absolute;
   left:90px;
   width: 130px;
   height: 100%;
   background-color: #73c6b6;
-  z-index: 2; /* Passer ce div en dessous des deux*/
-}
+  z-index: 2; /* Passer ce div en dessous des deux
+}*/
 
 img {
-  left:20px;
-  top:20px;
   position: absolute;  /* Nécessaire pour appliquer z-index */
   z-index: 10;  /* Un z-index élevé pour qu'il soit au premier plan */
   width: 309px;
