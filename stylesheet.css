@@ -130,40 +130,34 @@ div{
   color: #515A5A;
 }
 
-/*li { /*code cours, site 3W
-	display: block;
-	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
-	color: #ffffff;
-	padding: 10px;
-	border-radius: 5px 5px;
+/*li { /*code cours, site 3W*/
+  font-family: Futura, Tahoma, sans-serif;
+  color: #ffffff;
+  background-color: #73C6B6;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px 5px;
 	background-color: #73C6B6;
-  	align-items: center;
-  	display: block; Mettre le mot sur une ligne séparée 
-  
-}*/
+  width: 250px;
+}
 
 strong{
-  display: block;/* Mettre le mot sur une ligne séparée */
-  align-items: center; 
   font-size: 25px;
 }
 
-/*a{
-  display: block;/* Mettre le mot sur une ligne séparée 
-  align-items: center; 
-}*/
-
 #Google{
-	display: block;/* Mettre la phrase sur une ligne séparée */
-  align-items: center;
+  display: block; /* Met chaque bouton sur une ligne */
+    text-align: center;
+    padding: 10px;
+    width: 250px;
 }
 
 #Facebook{
-	display: block;/* Mettre la phrase sur une ligne séparée */
-  align-items: center 
-}
-
+ display: block; /* Met chaque bouton sur une ligne */
+    text-align: center;
+    padding: 10px;
+    width: 250px;
+}*/
 
 
 
