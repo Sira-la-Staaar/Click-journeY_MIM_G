@@ -44,6 +44,11 @@ a:active{text-decoration: none;
 	font-family:Onyx;
 	font-size:150px;
 	color:grey;}
+.titre1admin{margin-top:90px;
+	margin-left:20%;
+	font-family:Onyx;
+	font-size:150px;
+	color:#66CC99;}
 .titre2{
 	margin-left:400px;
 	color:white; 
@@ -61,6 +66,12 @@ p{background-color:#006633;
 	z-index:10;
 
 }
+#dos{
+	position:absolute;
+	margin-left:35%;
+	margin-top:-5%;
+	width:200px;
+}
 
 /*span {
   position: relative;
@@ -76,7 +87,7 @@ p{background-color:#006633;
 #Logo {
   position: relative;  /* Nécessaire pour appliquer z-index */
   z-index: 15;/* Un z-index plus élevé que celui de l'image */
-  color: black;
+  color:black
   text-decoration:none;
   margin-left:6%;
   top:5%;  
