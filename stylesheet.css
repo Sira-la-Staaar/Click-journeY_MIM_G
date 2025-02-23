@@ -244,20 +244,20 @@ p{
     color: #000000;
 }
 
-.seConnecter #Google, #Facebook{
+.seConnecter #Google, .seConnecter #Facebook{
     display: block;
     text-align: center;
     padding: 10px;
     width: 250px;
 }
 
-.seConnecter form { /*crée le care blanc*/
+.seConnecter form { /*crée le carre blanc*/
   background-color: #73C6B6; 
   padding: 20px; 
   border-radius: 10px;
 }
 
-/*body{
+.Vols body{
     display: flex;
     flex-direction: column; /* Placer les éléments en colonne */
     justify-content: center; /* Centrer verticalement */
@@ -267,7 +267,7 @@ p{
     height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
 }
 
-form{
+.Vols form{
     background-color: #rrggbbaa;
     padding: 30px;
     border-radius: 10px;
@@ -278,14 +278,14 @@ form{
     gap: 15px; /* Espacement entre les éléments */
 }
 
-form select, form input {
+.Vols form select, .Vols form input {
     width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-*/
+	
 
 
 
