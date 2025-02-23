@@ -237,6 +237,36 @@ form { /*crée le care blanc*/
   border-radius: 10px;
 }
 
+/*body{
+    display: flex;
+    flex-direction: column; /* Placer les éléments en colonne */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    margin: 0;
+    color: #000000;/*soit je laisse en noir soit je mets #73C6B6 ou le balanc!, ca depend du background (la photo que j'ai cree et que je vais ajouter avec apres sira!*/
+    height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
+}
+
+form{
+    background-color: #rrggbbaa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Largeur du grand cadre */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les éléments */
+}
+
+form select, form input {
+    width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+*/
+
 
 
 
