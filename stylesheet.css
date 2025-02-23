@@ -136,6 +136,18 @@ h1{
   font-family: Roboto Slab;
   font-size: 100px; 
 }
+.input-box {
+  background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+  border: 2px solid white;
+  color: white;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
 
 h2{
   color:#F5F5DC;
@@ -155,16 +167,27 @@ div{
   text-align: left;
   color: #515A5A;
 }
-
+.input-box {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  margin-left: 0; /* Colle le bloc à gauche */
+}
 button{
   margin-left: auto;
   margin-right: auto;
   text-align: right;
 }
-input-box {
-  background-color: rgba(255, 255, 255, 0.5); 
-}
+
 /*#Mon profil*/
+	
 	
 /*li { /*code cours, site 3W*/
   font-family: Futura, Tahoma, sans-serif;
