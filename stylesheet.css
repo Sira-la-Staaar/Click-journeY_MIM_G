@@ -264,7 +264,7 @@ img {
     justify-content: center; /* Centrer verticalement */
     align-items: center; /* Centrer horizontalement */
     margin: 0;
-    color: #000000;/*soit je laisse en noir soit je mets #73C6B6 ou le balanc!, ca depend du background (la photo que j'ai cree et que je vais ajouter avec apres sira!*/
+    color: #000000;
     height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
 }
 
