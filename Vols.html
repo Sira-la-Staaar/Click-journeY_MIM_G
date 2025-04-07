@@ -1,14 +1,12 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<title>Une page spécifique pour rechercher des voyages avec plusieurs champs de filtrage (dates, lieux, options, ...)</title>
 	</head>
-	<body class="Vols" style="background: url('file:///C:/Users/CYTech%20Student/AppData/Local/Microsoft/Windows/INetCache/IE/SRD3LALH/collage[1].jpg') no-repeat center center fixed; background-size: cover;">
- 
+	<body>
     <form action="page1.php">
-<p><u>D'où partez-vous?</u></p>
+<p>D'où partez-vous?</p>
    <select name="city" id="city">
    <optgroup label="Maroc">
 <option value="Marrakech">Marrakech</option>
@@ -79,10 +77,9 @@
 <option value="Nouadhibou">Nouadhibou</option>
 </optgroup>
 </select>
-    </form>
     
     <form action="page1.php">
-<p><u>D'où allez-vous?</u></p>
+<p>D'où allez-vous?</p>
    <select name="city" id="city">
    <optgroup label="Maroc">
 <option value="Marrakech">Marrakech</option>
@@ -153,40 +150,29 @@
 <option value="Nouadhibou">Nouadhibou</option>
 </optgroup>
 </select>
-      </form>
     
      <form action="page1.php">
-<p><u>Choisissez votre formule:</u></p>
+<p>Choisissez votre formule:</p>
 <select name="formule">
 <option value="économique">économique</option>
 <option value="affaire">affaire</option>
 <option value="première">première</option>
  </optgroup>
 </select>
-     </form>
   
   <form action="page1.php">
-<p><u>Type de voyage:</u></p>
+<p>Type de voyage:</p>
 <select name="type-voyage">
 <option value="aller-retour">aller-retour</option>
 <option value="aller simple">aller simple</option>
 </optgroup>
 </select>
-  </form>
-		
-<form>
-    <p><u>Choisissez la date et l'heure de votre   vol:</u></p> 
+    <!-- nombre de voyageurs avec valises (deux bagages de 23 kg par personne!! regarder pourquoi date n'est pas limite, ajouter un css pour ca. Enlevez se connecter avec facebook!!!! relier tous les css ensemble!-->
+    <p>Choisissez la date et l'heure de votre   vol:</p> 
  Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
       
 La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
       
 La date: <input type="datetime-local" name="time2" value="12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
-      
-      <p><u>Nombre de voyageurs avec valises:</u></p>
-  <label for="voyageurs">Nombre de voyageurs :</label>
-<input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1">
-
-<p>-À noter: <span id="valises">chaque voyageur bénéficie de l'inclusion de deux valises de 23 kg chacune!</span></p>
-</form>
   </body>
 </html>
