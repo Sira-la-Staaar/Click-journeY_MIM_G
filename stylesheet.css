@@ -1,3 +1,4 @@
+
 /*#Page d'accueil*/
 #accueil{
   margin-top:0%;
@@ -6,33 +7,45 @@
   height:auto;
   color:white;
 }
-
 .acc1{
-  background-color:#336666;
+  width:100%;
+  top:15.5%;
+  height:85%;
+  background-color: rgb(21, 2, 70);
+  position:absolute;
+  display:flex;
+  justify-content: center;
 }
-.overlay {
+.overlay{
+  top:13%;
+  position: absolute;
+  padding:10%;
+  display:block;
+  width: 80%;
+  height: 25%;
+  background-color:#336666; 
+  opacity:0.7;
+  z-index: 2;  
+}
+.overlay1{
   position: absolute;
   display:block;
-  top: 15.5%;
   width: 100%;
-  height: 72%;
-  background-color:#336666; 
-  opacity:0.5;
-  z-index: 2; /* Cette sur-couche est au-dessus de la vidéo */
+  font-size:400%;
+  color:rgb(21, 2, 70);
+  height: auto;
+  z-index: 2;  
 }
 
-/* Si tu veux masquer complètement la vidéo mais la laisser jouer en arrière-plan */
-#myVideo {
-  position: absolute;
+#myVideo{
   display: block;
-  top: 15.5%;
-  width: 60%;
-  height: auto;
-  object-fit: cover; /* Pour que la vidéo remplisse l'écran sans déformer */
-  border-right: 410px solid #336666; /* Cadre plus épais et bleu acier */
-  border-left:200px solid #336666; /* Cadre plus épais et bleu acier */
+  width:auto;
+  height:100%;
+  /*object-fit: cover; Pour que la vidéo remplisse l'écran sans déformer */
+  /*border-right: 302px solid #336666; Cadre plus épais et bleu acier */
+  /*border-left:302px solid #336666; /* Cadre plus épais et bleu acier */
   /*margin:20px; Espace autour du cadre */
-}
+}        
 
 #apropos{
   margin-top:0%;
@@ -42,7 +55,19 @@
   color:white;
 }
 footer{
-  margin-top:80%;
+  margin-top:70%;
+  background-image:url('pj1.png'); /*center fixed;*/  
+  background-size:100%;
+  height:auto;
+}
+footer.footer1{
+  margin-top:115%;
+  background-image:url('pj1.png'); /*center fixed;  */
+  background-size:100%;
+  height:auto;
+}
+footer.footer2{
+  margin-top:165%;
   background-image:url('pj1.png'); /*center fixed;  */
   background-size:100%;
   height:auto;
@@ -54,9 +79,9 @@ div.pied1 {
   font-size:14px;
   font-family: Calibri;
 }
-img.pied1 {
-  height:80px;
-  width:auto;
+img.pied11 {
+  height:auto;
+  width:25%;
 }
 
 button.pied1{
@@ -116,38 +141,154 @@ a:active{text-decoration: none;
 	left: 0; /*L'élément commence du bord gauche de la fenêtre */
 	padding-left: 37%; /* Décale le contenu à 154px du bord gauche */
 }
-.titre1{margin-top:90px;
+.titre1{
+  margin-top:1%;
 	margin-left:20%;
 	font-family:Onyx;
-	font-size:150px;
+	font-size:500%;
 	color:grey;}
-.titre1admin{margin-top:90px;
+.titre1admin{
+  margin-top:90px;
 	margin-left:20%;
 	font-family:Onyx;
 	font-size:150px;
 	color:#66CC99;}
 .titre2{
-	margin-left:400px;
+	margin-left:20%;
+  font-size:150%;
 	color:white; 
 }
-p{background-color:#006633;
+.titre22{
+	margin-right:20%;
+  font-size:150%;
+	color:white; 
+  direction:rtl;
+}
+p.sira{/*background-color:#006633;*/
+  color:#EFDCC3;
+  font-size:110%;
 	margin-left:20%;
 	width:40%;
 	font-family:Verdana;
 	}
+p.sira2{background-color:#006633;
+    margin-right:20%;
+    margin-left:auto;
+    width:40%;
+    font-family:Verdana;
+}
 #uno{
-	position:absolute;
+  position: absolute;  /* Nécessaire pour appliquer z-index*/
+  z-index: 10;/*Un z-index élevé pour qu'il soit au premier plan*/
 	margin-left:65%;
-	width:400px;
-	margin-top:-450px;
-	z-index:10;
-
+	width:29.63%;
+	margin-top:-25%;
 }
 #dos{
 	position:absolute;
-	margin-left:35%;
-	margin-top:-5%;
-	width:200px;
+  height:auto;
+  margin-top:1%;
+	width:40%;
+  left:20%;
+}
+.debut{
+  z-index:1;
+  margin-top:8%;
+  position:absolute;
+  width:100%;
+  height:auto;
+  padding-bottom:17%;
+  background-color:#002818;
+}
+.debut2{
+  position:absolute;
+  color:#3A2610;
+  text-align:center;
+  font-size:250%;
+  background-image:url("debut2.png");
+  margin-top:53%;
+  width:100%;
+  height:39%;
+  background-color:#D7C4AB;
+}
+.mari{
+  width:80%;
+  border-radius: 15px;
+}
+.mari1{
+  width:80%;
+  margin-left:10%;
+  border-radius: 15px;
+  margin-right:10%;
+}
+.mari12{
+  width:30%;
+  text-align:center;
+  height:auto;
+}
+.debut3{
+  position:absolute;
+  width:100%;
+  height:auto;
+  color:#D7C4AB;
+  text-align:center;
+  font-size:250%;
+  position:absolute;
+  margin-top:71%;
+  background-color:#3A2610;
+}
+
+.ACC{
+  width:80%;
+  border-radius: 15px;
+}
+.Accueil1{
+  width:80%;
+  margin-left:10%;
+  border-radius: 15px;
+  margin-right:10%;
+}
+.Accueil12{
+  width:30%;
+  text-align:center;
+  height:auto;
+}
+.Accueil3{
+  position:absolute;
+  width:100%;
+  height:auto;
+  color:#3A2610;
+  text-align:center;
+  font-size:250%;
+  position:absolute;
+  margin-top:50%;
+  background-color:#FF9900;
+}
+.Accueil31{
+  position:absolute;
+  display:flex;
+  justify-content: center;  /* centre les éléments horizontalement */
+  color:#D7C4AB;
+  text-align:center;
+  font-size:68%;
+  position:absolute;
+  padding-bottom:2%;
+  width:100%;
+  height:auto;
+  background-color:#FF9900;
+}
+.debut31{
+  position:absolute;
+  display:flex;
+  justify-content: center;  /* centre les éléments horizontalement */
+  color:#D7C4AB;
+  text-align:center;
+  font-size:68%;
+  position:absolute;
+  padding-bottom:2%;
+  width:100%;
+  height:auto;
+  background-color:#3A2610;
 }
 
 /*span {
@@ -165,9 +306,11 @@ p{background-color:#006633;
   position: fixed;  /* Nécessaire pour appliquer z-index */
   z-index: 15;/* Un z-index plus élevé que celui de l'image */
   color:black;
+  height:7%;
   text-decoration:none;
   margin-left:-45%;
-  top:4%;  
+  top:5%; 
+}  
 
 .liCompte {
   direction:rtl;
@@ -208,12 +351,13 @@ p{background-color:#006633;
   z-index: 2; /* Passer ce div en dessous des deux
 }*/
 
-img {
-  position: absolute;  /* Nécessaire pour appliquer z-index */
+img.disp {
+  position: fixed;  /* Nécessaire pour appliquer z-index */
   z-index: 10;  /* Un z-index élevé pour qu'il soit au premier plan */
-  width: 309px;
-  height: 100px;
+  width: 18%;
+  height: auto;
 }
+
 /*#Inscription*/
 .Inscription h1{
   color: #C7A317;|
