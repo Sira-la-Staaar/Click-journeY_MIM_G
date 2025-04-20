@@ -104,20 +104,34 @@ button.pied1:hover{
   z-index: 15;
 	left: 50%;
  }
+/*h3.grill{
+  color:#D7C4AB;
+  text-align:center;
+  font-size:40%;
+  padding-bottom:2%;
+}*/
 
 #header {
 	position: absolute;
   z-index: 15;
 	margin-top: -10px;
 	background-color: #3c4543;
-  	}
-a:link{text-decoration: none;
-	color:#336666;}
-a:visited{color:black;}
-a:hover{text-decoration: none;
-	color:#336666;}
-a:active{text-decoration: none;
-	color:black;}
+}
+a:link{
+  text-decoration: none;
+	color:#336666;
+}
+a:visited{
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+	color:#336666;
+}
+a:active{
+  text-decoration: none;
+	color:black;
+}
 
 
 .liButton {
@@ -239,19 +253,35 @@ p.sira2{background-color:#006633;
 }
 
 .ACC{
-  width:80%;
+  width:90%;
   border-radius: 15px;
 }
-.Accueil1{
+/*.Accueil1{
   width:80%;
   margin-left:10%;
   border-radius: 15px;
   margin-right:10%;
+}*/
+
+.Accueil31 {
+  display: flex;
+  flex-wrap: wrap;                /* ➤ permet de passer à la ligne automatiquement */
+  justify-content: center;       /* ➤ centre les éléments horizontalement */
+  color: #D7C4AB;
+  text-align: center;
+  font-size: 60%;
+  width: 100%;
+  height: auto;
+  background-color: #FF9900;
+  padding-bottom: 1%;
+  gap: 1%;                        /* ➤ ajoute un peu d’espace entre les cartes */
 }
-.Accueil12{
-  width:30%;
-  text-align:center;
-  height:auto;
+
+.Accueil12 {
+  width: 25%;                 /* ➤ 3 éléments de 30% = 90%, avec 10% pour l'espace/gap */
+  margin-bottom: 1%;          /* ➤ espace entre les lignes */
+  text-align: center;
+  height: auto;
 }
 .Accueil3{
   position:absolute;
@@ -261,46 +291,23 @@ p.sira2{background-color:#006633;
   text-align:center;
   font-size:250%;
   position:absolute;
-  margin-top:50%;
+  margin-top:40%;
   background-color:#FF9900;
 }
-.Accueil31{
-  position:absolute;
-  display:flex;
-  justify-content: center;  /* centre les éléments horizontalement */
-  color:#D7C4AB;
-  text-align:center;
-  font-size:68%;
-  position:absolute;
-  padding-bottom:2%;
-  width:100%;
-  height:auto;
-  background-color:#FF9900;
-}
+
 .debut31{
   position:absolute;
+  flex-wrap: wrap;
   display:flex;
   justify-content: center;  /* centre les éléments horizontalement */
   color:#D7C4AB;
   text-align:center;
-  font-size:68%;
-  position:absolute;
-  padding-bottom:2%;
+  font-size:60%;
+  padding-bottom:1%;
   width:100%;
   height:auto;
   background-color:#3A2610;
 }
-
-/*span {
-  position: relative;
-  left:0px;
-	border: 2px solid #000000;
-	font-family: Futura, Tahoma, sans-serif;
-	color: #fffff;
-	padding: 7px;
-	background-color: #45b39d
-
-}*/
 
 #Logo {
   position: fixed;  /* Nécessaire pour appliquer z-index */
@@ -322,42 +329,12 @@ p.sira2{background-color:#006633;
   color: black;
 }
 
-
-/*.div1 {
-  position: absolute;
-  left:70px;
-  width: 170px;
-  height: 100%;
-  background-image: url('fond1.jpg');
-  z-index: 0; /* Passer ce div au-dessus de l'autre 
-}*/
-/*.div2{
-  position: absolute;
-  margin-top:55px;
-  opacity:0.65;
-  left:0px;
-  width: 100%;
-  height: 45px;
-  background-color: #336666;
-  z-index: 1; /* Passer ce div en dessous de l'autre 
-}*/
-
-/*.div3 {
-  position: absolute;
-  left:90px;
-  width: 130px;
-  height: 100%;
-  background-color: #73c6b6;
-  z-index: 2; /* Passer ce div en dessous des deux
-}*/
-
 img.disp {
   position: fixed;  /* Nécessaire pour appliquer z-index */
   z-index: 10;  /* Un z-index élevé pour qu'il soit au premier plan */
   width: 18%;
   height: auto;
 }
-
 /*#Inscription*/
 .Inscription h1{
   color: #C7A317;|
