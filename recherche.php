@@ -1,5 +1,5 @@
 <?php
-$voyages = json_decode("../data/voyages.json",true);
+$voyages = json_decode("voyages.json",true);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 $resultats = [];
 
