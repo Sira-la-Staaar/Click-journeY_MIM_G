@@ -12,21 +12,24 @@
     <div class="div1"></div>
     <div class="div2">-->
       <div id="header">        
-        <div id="navbar"> 
-            <ul class="ulButton">
-              <a href="Vols.html"><li class="liButton">Vols</li></a>
-              <a href="Apropos.html"><li class="liButton">A propos de nous</li></a>
-              <li class="liButton">Contacts</li>
-            </ul>
-            <a id="Logo" href="Accueil.html"><img class="disp" src="logo.png"/></a>
-          </div>
-        </div>
-        <!--</div>
-        <div class="div3"></div>
-        </div>-->
-          <li><a href="inscription.html">S'inscrire</a>
-          <a href="seConnecter.html">/Se connecter</a></li>
-    <!--<img id="debut" src="img2.jpg"/>-->
+      <div id="navbar"> 
+				<ul class="ulButton">
+          <a href="Vols.php"><li class="liButton">Vols</li></a>
+          <a href="Apropos.php"><li class="liButton"><?php echo "A propos de nous \n"; ?></li></a>
+          <li class="liButton">Contacts</li>
+				</ul>
+        <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
+			</div>
+		</div>
+    <!--</div>
+    <div class="div3"></div>
+    </div>-->
+      <li><a href="inscription.php">S'inscrire</a>
+      <a href="seConnecter.php">/Se connecter</a></li>
+      <form method="GET" action="recherche.php" class="barre-recherche">
+        <input type="text" name="q" placeholder="Rechercher un voyage..." required>
+        <button type="submit"><img id="recherche" src="logo2.webp" alt="Rechercher"/></button>
+      </form>
     <div class="debut"><h1 class="titre1">  A propos de nous</h1>
     <h2 class="titre2">Qui sommes nous?</h2>
     <p class="sira">En tant qu'étrangères vivants en France, Sira, Aida et Hajar ressentent une constante nostalgie pour leur patries, toutes situés en Afrique du nord-ouest. Les vacances d'été, elles préfèrent les passer avec leurs fammilles, au Mali, en Guinée et au maroc. Mais en éffectuant des recherches rapides, elles se rendent vite compte du fait que leurs pays n'étaient presque jamais représentées parmi les lieux proposés par les agences de voyage. Pourtant, le tourisme reste l'un des secteurs les plus rentables pour un pays et si leurs pays sont encore considérés en cours développement, le tourisme et l'argent qu'il raporte pourrait être un moteur de ce développement. </p>
@@ -35,11 +38,49 @@
     <img id="uno" src="img1.jpeg"/>
     <img id="dos" src="img6.jpg"/>
     </div>
-    <div class="debut2"><br><br>Pourquoi choisir <strong>The West Agency</strong>?</div>
-    <div class="debut3"><br>Nos destinations <br><br> <div class="debut31"><br><br><div class="mari12"><a href=""><img class="mari" src="p2.jpg"/><br>Sûgû bâ, Bko, MLI</a></div><div class="mari12"><a href=""><img class="mari1" src="p1.jpg"/><br>Jardin majorelle, Kech, MAR</a></div><div class="mari12"><a href=""><img class="mari" src="p3.jpg"/><br>Thiès, SEN</a></div></div></div>
+    <div class="debut2"><br><br>Pourquoi choisir <strong>The West Agency</strong>?
+    <div class="debut3"><br>Nos destinations <br><br> <div class="debut31"><br><br><div class="mari12"><a href=""><img class="mari" src="p2.jpg"/><br>Sûgû bâ, Bko, MLI</a></div><div class="mari12"><a href=""><img class="mari1" src="p1.jpg"/><br>Jardin majorelle, Kech, MAR</a></div><div class="mari12"><a href=""><img class="mari" src="p3.jpg"/><br>Banjul, GMB</a></div></div></div>
+    </div>
+
+<div class="avis-contact-wrapper">
+  <div class="avis-section">
+      <h2 class="titre2">Avis de nos voyageurs</h2>
+      <div id="avis-container">
+          <?php
+          $json = file_get_contents(__DIR__ . '/../projet2/data/avis.json');
+          $avis = json_decode($json, true);
+
+          if ($avis) {
+              foreach ($avis as $a) {
+                  echo '<div class="avis">';
+                  echo '<p><strong>' . htmlspecialchars($a["pseudo"]) . '</strong> - ⭐ ' . htmlspecialchars($a["note"]) . '/5</p>';
+                  echo '<p>' . htmlspecialchars($a["commentaire"]) . '</p>';
+                  echo '</div>';
+              }
+          } else {
+              echo '<p>Aucun avis à afficher pour le moment.</p>';
+          }
+          ?>
+      </div>
+  </div>
+
+  <div class="section-formulaire-contact">
+    <h2 class="titre-contact">Contactez-nous</h2>
+    <form method="post" action="scripts/contact.php">
+        <label for="nom">Nom :</label>
+        <input class="champ-texte" type="text" id="nom" name="nom" required>
+
+        <br><label for="email">Email :</label><input class="champ-texte" type="email" id="email" name="email" required>
+
+        <br><label for="message">Message :</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
 
 
-    <footer class="footer1">
+    <footer class="footer2">
       <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
         - Vols : Tarifs TTC par personne et « à partir de », valables à certaines dates, sous réserve de disponibilité et de confirmation de la compagnie aérienne<br><br>
         - Séjours : Tarifs TTC, hors taxes de séjour, par personne sur base d'une chambre double. Prix « à partir de » valables à certaines dates et sous réserve de disponibilités et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
