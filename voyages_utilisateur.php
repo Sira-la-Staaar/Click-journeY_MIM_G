@@ -5,7 +5,7 @@ if (!isset($_GET['id'])) {
 }
 
 $idUtilisateur = $_GET['id'];
-$voyages = json_decode(file_get_contents('../projet2/data/voyages.json'), true);
+$voyages = json_decode(file_get_contents('voyages.json'), true);
 $voyagesUtilisateur = [];
 
 // Filtrer les voyages pour cet utilisateur
