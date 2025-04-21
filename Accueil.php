@@ -1,3 +1,7 @@
+<?php include("scripts/get_voyage.php");
+$voyages_json = file_get_contents('data/voyages.json');
+$voyages = json_decode($voyages_json, true);
+?>
 <!DOCTYPE html>
 <html>
   <head lang="fr">
@@ -14,77 +18,74 @@
     <div id="header">        
     <div id="navbar"> 
 				<ul class="ulButton">
-          <a href="Vols.html"><li class="liButton">Vols</li></a>
-          <a href="Apropos.html"><li class="liButton">A propos de nous</li></a>
+          <a href="Vols.php"><li class="liButton">Vols</li></a>
+          <a href="Apropos.php"><li class="liButton"><?php echo "A propos de nous \n"; ?></li></a>
           <li class="liButton">Contacts</li>
 				</ul>
-        <a id="Logo" href="Accueil.html"><img class="disp" src="logo.png"/></a>
+        <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
 			</div>
 		</div>
     <!--</div>
     <div class="div3"></div>
     </div>-->
-      <li><a href="inscription.html">S'inscrire</a>
-      <a href="seConnecter.html">/Se connecter</a></li>
+      <li><a href="inscription.php">S'inscrire</a>
+      <a href="seConnecter.php">/Se connecter</a></li>
 
-    <div class="acc1">
-        <video id="myVideo" src="Movie1.webm" width="640" height="360" autoplay muted loop>
-            Votre navigateur ne supporte pas la balise vidéo.
-        </video>
-        <div class="overlay"></div>
-          <div class="overlay1"><p><br><br><br>Laissez-vous tenter!</p></div>
-        <script>
-          const video = document.getElementById('myVideo');
-        
-          // Désactive l'option Picture-in-Picture
-          video.disablePictureInPicture = true;
-        </script>
+      <form method="GET" action="Accueil.php" class="barre-recherche">
+        <input type="text" name="q" placeholder="Rechercher un voyage..." required>
+        <button type="submit"><img id="recherche" src="logo2.webp" alt="Rechercher"></button>
+      </form>
+
+
+<div class="acc1">
+  <video id="myVideo" src="Movie1.webm" autoplay muted loop>
+    Votre navigateur ne supporte pas la balise vidéo.
+  </video>
+
+  <a href="inscription.php">
+    <div class="overlay"></div>
+  </a>
+
+  <div class="overlay1">
+    <p>Laissez-vous tenter !</p>
+  </div>
+</div>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    // Désactive l'option Picture-in-Picture
+    video.disablePictureInPicture = true;
+  </script>
+</div>
+
+
+<div class="Accueil3">
+  <div class="Accueil31">
+
+    <div class="grid-pinterest">
+      <?php
+
+        shuffle($voyages);
+
+        $voyages_limited = array_slice($voyages, 0, 6);
+      ?>
+
+      <?php foreach ($voyages_limited as $voyage): ?>
+        <div class="pin">
+          <img class="ACC" src="<?= $voyage['img'] ?>" alt="<?= htmlspecialchars($voyage['titre']) ?>">
+          <div class="pin-content">
+            <h3><?= htmlspecialchars($voyage['titre']) ?></h3>
+            <p>Du <?= $voyage['date_debut'] ?> au <?= $voyage['date_fin'] ?></p>
+            <p><strong><?= $voyage['prix'] ?> €</strong></p>
+            <a class="btn-details" href="detail_voyage.php?id=<?= $voyage['id'] ?>">Voir plus</a>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
-    <div class="Accueil3">
-      <br><br><br>
-      <div class="Accueil31">
-        <br><br>
-        <div class="Accueil12">
-          <a href="">
-            <img class="ACC" src="imag2.jpg" /><br>
-          </a><br>
-          <a href="">
-            <img class="ACC" src="imag6.jpg" />
-          </a>
-          <br><br>
-          <a href="">
-            <img class="ACC" src="imag8.jpg" />
-          </a>
-        </div>
-    
-        <div class="Accueil12">
-          <a href="">
-            <img class="Accueil1" src="imag5.jpg" />
-            <br><br>
-          </a>
-          <a href="">
-            <img class="ACC" src="imag1.jpg" />
-          </a>
-          <br><br>
-          <a href="">
-            <img class="ACC" src="imag7.jpg" />
-          </a>
-        </div>
-    
-        <div class="Accueil12">
-          <a href="">
-            <img class="ACC" src="imag3.jpg" /><br><br>
-          </a>
-          <a href="">
-            <img class="ACC" src="imag4.jpg" />
-          </a>
-          <br><br>
-          <a href="">
-            <img class="ACC" src="imag9.jpg" />
-          </a>
-        </div>
-      </div>
-    </div>
+
+  </div>
+</div>
+
     
     
     <footer class="footer2">
