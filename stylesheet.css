@@ -1,77 +1,97 @@
-
 /*#Page d'accueil*/
 #accueil{
-  margin-top:0%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-image:url('fond2.jpeg');
   background-size:100%; 
   height:auto;
   color:white;
 }
-.acc1{
-  width:100%;
-  top:15.5%;
-  height:85%;
-  background-color: rgb(21, 2, 70);
-  position:absolute;
-  display:flex;
-  justify-content: center;
-}
-.overlay{
-  top:13%;
-  position: absolute;
-  padding:10%;
-  display:block;
-  width: 80%;
-  height: 25%;
-  background-color:#336666; 
-  opacity:0.7;
-  z-index: 2;  
-}
-.overlay1{
-  position: absolute;
-  display:block;
-  width: 100%;
-  font-size:400%;
-  color:rgb(21, 2, 70);
-  height: auto;
-  z-index: 2;  
-}
-
-#myVideo{
-  display: block;
-  width:auto;
-  height:100%;
-  /*object-fit: cover; Pour que la vidéo remplisse l'écran sans déformer */
-  /*border-right: 302px solid #336666; Cadre plus épais et bleu acier */
-  /*border-left:302px solid #336666; /* Cadre plus épais et bleu acier */
-  /*margin:20px; Espace autour du cadre */
-}        
-
 #apropos{
-  margin-top:0%;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
   background-image:url('fond3.jpeg');
   background-size:100%; 
   height:auto;
   color:white;
 }
-footer{
-  margin-top:70%;
-  background-image:url('pj1.png'); /*center fixed;*/  
-  background-size:100%;
+#admin{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+ /* background-image:url('fond4.jpg');*/
+  background-size:100%; 
   height:auto;
+  background-color:black;
 }
-footer.footer1{
-  margin-top:115%;
-  background-image:url('pj1.png'); /*center fixed;  */
-  background-size:100%;
-  height:auto;
+.acc1 {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 6.10%;
+  background-color: rgb(21, 2, 70);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  overflow: hidden;
 }
-footer.footer2{
-  margin-top:165%;
-  background-image:url('pj1.png'); /*center fixed;  */
-  background-size:100%;
-  height:auto;
+
+#myVideo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #336666;
+  opacity: 0.7;
+  z-index: 2;
+}
+.overlay:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #336666;
+  opacity: 0;
+  z-index: 2;
+}
+
+.overlay1 {
+  margin-top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: rgb(21, 2, 70);
+  z-index: 3;
+}
+    
+
+
+footer.footer2   {
+background-image: url('pj1.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+padding: 40px 40px;
+height: auto;
+}
+
 div.pied1 {
   text-align:center;
   padding:5%;
@@ -104,12 +124,6 @@ button.pied1:hover{
   z-index: 15;
 	left: 50%;
  }
-/*h3.grill{
-  color:#D7C4AB;
-  text-align:center;
-  font-size:40%;
-  padding-bottom:2%;
-}*/
 
 #header {
 	position: absolute;
@@ -161,12 +175,7 @@ a:active{
 	font-family:Onyx;
 	font-size:500%;
 	color:grey;}
-.titre1admin{
-  margin-top:90px;
-	margin-left:20%;
-	font-family:Onyx;
-	font-size:150px;
-	color:#66CC99;}
+
 .titre2{
 	margin-left:20%;
   font-size:150%;
@@ -192,37 +201,34 @@ p.sira2{background-color:#006633;
     font-family:Verdana;
 }
 #uno{
-  position: absolute;  /* Nécessaire pour appliquer z-index*/
-  z-index: 10;/*Un z-index élevé pour qu'il soit au premier plan*/
+  z-index: 10;
 	margin-left:65%;
 	width:29.63%;
 	margin-top:-25%;
 }
 #dos{
-	position:absolute;
+  position:absolute;
   height:auto;
   margin-top:1%;
 	width:40%;
   left:20%;
 }
+
 .debut{
   z-index:1;
-  margin-top:8%;
-  position:absolute;
+  margin-top:5%;
   width:100%;
   height:auto;
-  padding-bottom:17%;
+  padding-bottom:5%;
   background-color:#002818;
 }
 .debut2{
-  position:absolute;
   color:#3A2610;
   text-align:center;
   font-size:250%;
   background-image:url("debut2.png");
-  margin-top:53%;
   width:100%;
-  height:39%;
+  min-height:350px;
   background-color:#D7C4AB;
 }
 .mari{
@@ -241,68 +247,89 @@ p.sira2{background-color:#006633;
   height:auto;
 }
 .debut3{
-  position:absolute;
   width:100%;
   height:auto;
   color:#D7C4AB;
   text-align:center;
-  font-size:250%;
-  position:absolute;
-  margin-top:71%;
+  font-size:175%;
+  margin-top:15%;
+  margin-bottom:5%;
   background-color:#3A2610;
 }
 
-.ACC{
-  width:90%;
-  border-radius: 15px;
+.grid-pinterest {
+  column-count: 3; /* nombre de colonnes */
+  column-gap: 1em; /* espace entre colonnes */
+  padding: 2em;
 }
-/*.Accueil1{
-  width:80%;
-  margin-left:10%;
-  border-radius: 15px;
-  margin-right:10%;
-}*/
 
-.Accueil31 {
-  display: flex;
-  flex-wrap: wrap;                /* ➤ permet de passer à la ligne automatiquement */
-  justify-content: center;       /* ➤ centre les éléments horizontalement */
-  color: #D7C4AB;
-  text-align: center;
-  font-size: 60%;
+.pin {
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.pin:hover {
+  background-color: #f1e2c6;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 107%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ACC {
   width: 100%;
   height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.pin-content {
+  padding: 1em;
+  color: #3A2610;
+  font-size: 90%;
+  text-align: center;
+}
+
+.btn-details {
+  display: inline-block;
+  margin-top: 10px;
   background-color: #FF9900;
-  padding-bottom: 1%;
-  gap: 1%;                        /* ➤ ajoute un peu d’espace entre les cartes */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9em;
 }
 
 .Accueil12 {
-  width: 25%;                 /* ➤ 3 éléments de 30% = 90%, avec 10% pour l'espace/gap */
+  width: 25%;                 
   margin-bottom: 1%;          /* ➤ espace entre les lignes */
   text-align: center;
   height: auto;
 }
 .Accueil3{
-  position:absolute;
   width:100%;
+  margin-top:5%;
   height:auto;
   color:#3A2610;
   text-align:center;
-  font-size:250%;
-  position:absolute;
-  margin-top:40%;
+  font-size:175%;
   background-color:#FF9900;
 }
 
 .debut31{
-  position:absolute;
   flex-wrap: wrap;
   display:flex;
   justify-content: center;  /* centre les éléments horizontalement */
   color:#D7C4AB;
   text-align:center;
-  font-size:60%;
+  font-size:30%;
   padding-bottom:1%;
   width:100%;
   height:auto;
@@ -310,13 +337,14 @@ p.sira2{background-color:#006633;
 }
 
 #Logo {
-  position: fixed;  /* Nécessaire pour appliquer z-index */
+  position: fixed; /*  Nécessaire pour appliquer z-index */
   z-index: 15;/* Un z-index plus élevé que celui de l'image */
   color:black;
   height:7%;
+  width:auto;
   text-decoration:none;
   margin-left:-45%;
-  top:5%; 
+  margin-top:3.1%; 
 }  
 
 .liCompte {
@@ -330,11 +358,308 @@ p.sira2{background-color:#006633;
 }
 
 img.disp {
-  position: fixed;  /* Nécessaire pour appliquer z-index */
-  z-index: 10;  /* Un z-index élevé pour qu'il soit au premier plan */
+  position: fixed;
+  z-index: 10;  
   width: 18%;
   height: auto;
 }
+
+.avis-contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding:2%;
+  padding-bottom:5%;
+  flex-wrap: wrap;
+}
+
+.avis-section {
+  flex: 1;
+  background-color: #3A2610;
+  color: #D7C4AB;
+  padding: 2em;
+  border-radius: 15px;
+  min-width: 300px;
+}
+
+.avis-section h2 {
+  font-size: 200%;
+  color: #FF9900;
+  margin-bottom: 1em;
+}
+
+#avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+#avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+/* Section du formulaire de contact */
+.section-formulaire-contact {
+  flex: 1;
+  background-color: #3A2610; /* Fond marron */
+  color: #D7C4AB; /* Texte en couleur crème */
+  padding: 2em;
+  border-radius: 15px;
+  min-width: 300px;
+}
+
+.section-formulaire-contact h2 {
+  color: #FF9900; /* Titre en jaune */
+  margin-bottom: 1em;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style du formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5em 0 0.2em;
+  font-weight: bold;
+}
+
+form .champ-texte,
+form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  color: #333;
+}
+
+form .champ-texte:focus,
+form textarea:focus {
+  outline: none;
+  border: 2px solid #FF9900; /* Bordure jaune lorsque le champ est focus */
+}
+
+form button {
+  margin-top: 1em;
+  background-color: #FF9900; /* Bouton en jaune */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #cc7a00; /* Couleur du bouton lors du survol */
+}
+
+/* Pour améliorer l'accessibilité des boutons et des champs */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+
+  
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+a.admin {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+td {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+
+form {
+  display: inline-block;
+}
+
+a.admin:hover {
+  color: #2ecc71;
+}
+
+table td, table th {
+  padding: 12px;
+  text-align: center;
+}
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin:5%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+a.admin {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+a.admin:hover {
+  color: #2ecc71;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+td {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+
+form.admin {
+  display: inline-block;
+}
+.barre-recherche input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  background-color:rgba(255, 255, 255, 0.2);
+  width: 85%;
+}
+.barre-recherche {
+  display:flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(193, 93, 11);
+  background-color:rgba(255, 255, 255, 0.5);
+  padding: 3px 6px;
+  margin-left:78%;
+  margin-right:20px;
+  border-radius: 6px;
+  z-index:15;
+  width: 20%;
+}
+.barre-recherche button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+#recherche{
+  width: 9%;
+  height:auto;
+}
+
+
+
 /*#Inscription*/
 .Inscription h1{
   color: #C7A317;|
@@ -414,7 +739,6 @@ img.disp {
   color: #f5f5f5;
   font-family: 'Nunito', serif;
   font-size:20px;
-}
 }
 
 /*css pour "seConnecter"*/	
