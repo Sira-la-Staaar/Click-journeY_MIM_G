@@ -1,5 +1,5 @@
-<?php include("scripts/get_voyage.php");
-$voyages_json = file_get_contents('data/voyages.json');
+<?php include("get_voyage.php");
+$voyages_json = file_get_contents('voyages.json');
 $voyages = json_decode($voyages_json, true);
 ?>
 <!DOCTYPE html>
