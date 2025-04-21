@@ -1,0 +1,23 @@
+[
+    {
+        "id":"u003",
+        "pseudo": "Marwa_loud",
+        "date":"20/10/2024",
+        "note":"4.5",
+        "commentaire":"Très belle expérience! Je recommande beaucoup."
+    },
+    {
+        "id":"u004",
+        "pseudo": "elsa_blanc",
+        "date":"02/03/2025",
+        "note":"5",
+        "commentaire":"Excellent, service client au Top! Je n'aurais jamais pensé que les médias auraient osés nous cacher une si belle beauté."
+    },
+    {
+        "id":"u005",
+        "pseudo": "hamshishi", 
+       "date":"05/7/2023", 
+        "note":"5",
+        "commentaire":"Je ne me suis jamais autant amusée! Banjul c'est incroyablement chalereux."
+    }
+]

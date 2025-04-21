@@ -1,0 +1,95 @@
+[
+    {
+        "id":"u001",
+        "e-mail":"siradiakite792@gmail.com",
+        "mdp":"Everybody4ever",
+        "role":"A",
+        "informations":[
+            {
+                "nom":"DIAKITE",
+                "prenom":"Sira",
+                "pseudo":"Admin1",
+                "civilité":"F",
+                "naissance":"20/10/2005",
+                "adresse":"Cergy"
+            }],
+        "lst_conn":"17/04/2025",
+        "creation":"N/A"
+    },
+    {
+        "id":"u002",
+        "e-mail":"belquassaida@gmail.com",
+        "mdp":"Pestostylo10",
+        "role":"A",
+        "informations":[
+            {
+                "nom":"BELQUASS",
+                "prenom":"Aida",
+                "pseudo":"Admin2",
+                "civilité":"H",
+                "naissance":"26/02/2004",
+                "adresse":"Freneuse"
+            }],
+        "lst_conn":"19/04/2025",
+        "creation":"N/A"
+    },
+    {
+        "id": "u003",
+        "e-mail": "marwa.loud@gmail.com",
+        "mdp": "Allezlesgros152",
+        "role": "N",
+        "informations": [
+            {
+                "nom": "OUTAMGHART",
+                "prenom": "Marwa",
+                "pseudo": "Marwa_loud",
+                "civilité": "F",
+                "naissance": "12/12/1996",
+                "adresse": "Sevran"
+            }],
+        "creation": "10/11/2023",
+        "lst_conn": "20/04/2025",
+        "voyages_a": ["v001", "v007", "v015"],
+        "voyages_c": ["v006", "v014"]
+    },
+    {
+        "id": "u004",
+        "e-mail": "elsou.sanchez@gmail.com",
+        "mdp": "Weshlequipe210",
+        "role": "N",
+        "informations": [
+            {
+                "nom": "SANCHEZ",
+                "prenom": "Elsa",
+                "pseudo": "elsa_blanc",
+                "civilité": "F",
+                "naissance": "31/08/2005",
+                "adresse": "Rueil-Malmaison"
+            }],
+        "creation": "16/05/2020",
+        "lst_conn": "08/02/2025",
+        "voyages_a": ["v004", "v008"],
+        "voyages_c": ["v002", "v005", "v013"]
+    },
+    {
+        "id": "u005",
+        "e-mail": "hamshishi@gmail.com",
+        "mdp": "HamshigaaJekumar14",
+        "role": "N",
+        "informations": [
+            {
+                "nom": "JEKUMAR",
+                "prenom": "Hamshigaa",
+                "pseudo": "hamshishi",
+                "civilité": "F",
+                "naissance": "14/04/2004",
+                "adresse": "Aulnay-sous-Bois"
+            }],
+        "creation": "07/05/2021",
+        "lst_conn": "28/08/2024",
+        "voyages_a": ["v003", "v009", "v011", "v012"],
+        "voyages_c": ["v010"]
+    }
+
+
+]
