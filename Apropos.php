@@ -15,7 +15,7 @@
       <div id="navbar"> 
 				<ul class="ulButton">
           <a href="Vols.php"><li class="liButton">Vols</li></a>
-          <a href="Apropos.php"><li class="liButton"><?php echo "A propos de nous \n"; ?></li></a>
+          <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
           <li class="liButton">Contacts</li>
 				</ul>
         <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
@@ -47,7 +47,7 @@
       <h2 class="titre2">Avis de nos voyageurs</h2>
       <div id="avis-container">
           <?php
-          $json = file_get_contents(__DIR__ . '/../projet2/data/avis.json');
+          $json = file_get_contents(__DIR__ . 'avis.json');
           $avis = json_decode($json, true);
 
           if ($avis) {
