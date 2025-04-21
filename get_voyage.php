@@ -1,5 +1,5 @@
 <?php 
-$json = file_get_contents(__DIR__ . '/../data/voyages.json');
+$json = file_get_contents(__DIR__ . 'voyages.json');
 $voyages = json_decode($json, true); 
 
 if ($voyages === null) {
