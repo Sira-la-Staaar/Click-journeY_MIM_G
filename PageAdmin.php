@@ -12,7 +12,7 @@ if ($_SESSION['user']['role'] !== 'A') {
     header("Location: seConnecter.php");
     exit;
 }
-$utilisateurs = json_decode(file_get_contents('data/utilisateurs.json'), true);
+$utilisateurs = json_decode(file_get_contents('utilisateurs.json'), true);
 $utilisateursParPage = 10;
 $totalUtilisateurs = count($utilisateurs);
 $nombreDePages = ceil($totalUtilisateurs / $utilisateursParPage);
