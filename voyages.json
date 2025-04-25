@@ -6,7 +6,7 @@
         "date_fin":"10/08/2025",
         "nb_etapes":6,
         "img":"img10.jpg",
-        "mots_cles": ["Paris", "Kayes", "Royal Air Maroc", "vol", "vacances", "Mali", "Bamako", "Kayes"],
+        "mots_cles": ["Paris", "Kayes","août","France","Mali", "Royal Air Maroc", "vol", "vacances", "Mali", "Bamako", "Kayes"],
         "etapes":[{
             "id":"e001",
             "compagnie":"Royal Air Maroc",
@@ -97,7 +97,7 @@
         "titre":"Aller-retour Paris-Conakry",
         "date_debut":"01/08/2025",
         "date_fin":"09/08/2025",
-        "mots_cles": ["Paris", "Conakry", "Royal Air Maroc", "vol", "Guinée", "CMN", "ORY", "CKY"],
+        "mots_cles": ["Paris", "Conakry","août","Guinée","France", "Royal Air Maroc", "vol", "Guinée", "CMN", "ORY", "CKY"],
         "img":"imag8.jpg",
         "nb_etapes":4,
         "etapes":[{
@@ -163,7 +163,7 @@
         "titre":"Aller-retour Marrakech-Thiès",
         "date_debut":"02/06/2025",
         "date_fin":"09/07/2025",
-        "mots_cles": ["Marrakech", "Thiès", "Gastronomie", "vol", "voiture", "Sénégal", "CMN", "DSS", "RAK"],
+        "mots_cles": ["Marrakech", "Thiès","Maroc","Juin", "Gastronomie", "vol", "voiture", "Sénégal", "CMN", "DSS", "RAK"],
         "img":"imag4.jpg",
         "nb_etapes":6,
         "etapes":[{
@@ -254,7 +254,7 @@
         "date_debut": "15/07/2025",
         "date_fin": "30/07/2025",
         "img":"imag7.jpg",
-        "mots_cles": ["Bamako", "Dakar", "Air Sénégal", "été", "voiture", "moto", "Mali", "Sénégal", "DSS", "BKO"],
+        "mots_cles": ["Bamako", "Dakar","Juillet", "Air Sénégal", "été", "voiture", "moto", "Mali", "Sénégal", "DSS", "BKO"],
         "nb_etapes": 6,
         "etapes": [{
             "id": "e017",
@@ -342,7 +342,7 @@
         "date_debut": "05/09/2025",
         "date_fin": "20/09/2025",
         "img":"img11.jpg",
-        "mots_cles": ["Abidjan", "Lomé", "avion", "bus", "taxi", "Air Côte d'Ivoire", "Direct", "Vacances", "Plage"], 
+        "mots_cles": ["Abidjan", "Lomé", "avion", "bus","Côte d'Ivoire","CI","Togo","Septembre", "taxi", "Air Côte d'Ivoire", "Direct", "Vacances", "Plage"], 
         "nb_etapes": 4,
         "etapes": [  {
             "id": "e023",
@@ -429,7 +429,7 @@
         "date_debut": "10/08/2025",
         "date_fin": "17/08/2025",
         "img":"img12.jpg",
-        "mots_cles": ["Conakry", "Bissau", "voiture", "étape", "Guinée", "Plage"],
+        "mots_cles": ["Conakry", "Bissau","Guinée Bissau","août", "voiture", "étape", "Guinée", "Plage"],
         "nb_etapes": 2,
         "etapes": [  {
             "id": "e027",
@@ -465,8 +465,8 @@
         "titre": "Aller-retour Abidjan-Banjul",
         "date_debut": "05/08/2025",
         "date_fin": "18/08/2025",
-        "img":"p3.jpg",
-        "mots_cles": ["Abidjan", "Banjul", "avion", "Asky Airlines", "Côte d'Ivoire", "Gambie", "vacances"],
+        "img":"a.jpg",
+        "mots_cles": ["Abidjan", "Banjul", "avion", "Asky Airlines", "août","Côte d'Ivoire", "Gambie", "vacances"],
         "nb_etapes": 4,
         "etapes": [  {
             "id": "e029",
@@ -531,8 +531,8 @@
         "titre": "Aller-retour Cotonou-Bamako",
         "date_debut": "01/07/2025",
         "date_fin": "18/07/2025",
-        "img":"img2.jpg",
-        "mots_cles": ["Cotonou", "Bamako", "bus", "avion", "Asky Airlines", "Mali", "Gari", "Togo"],
+        "img":"b.jpg",
+        "mots_cles": ["Cotonou", "Bamako", "bus", "avion", "Asky Airlines", "Mali", "Gari", "Togo","BKO","Juillet"],
         "nb_etapes": 6,
         "etapes": [  {
             "id": "e035",
@@ -595,7 +595,7 @@
         "date_debut": "12/08/2025",
         "date_fin": "14/08/2025",
         "img":"imag6.jpg",
-        "mots_cles": ["Casablanca", "Rabat", "train", "voiture", "Maroc","Désert", "Sahara"],
+        "mots_cles": ["Casablanca", "Rabat", "train", "voiture", "Maroc","Désert", "Sahara","août"],
         "nb_etapes": 2,
         "etapes": [{
             "id": "e039",
@@ -632,7 +632,7 @@
         "date_debut": "02/09/2025",
         "date_fin": "10/09/2025",
         "img":"img13.jpg",
-        "mots_cles": ["Marrakech", "Tanger", "Rabat", "train", "bus", "plage"],
+        "mots_cles": ["Marrakech", "Tanger", "Rabat", "train", "bus", "plage","Maroc","Septembre"],
         "nb_etapes": 4,
         "etapes": [  {
             "id": "e041",
@@ -794,8 +794,8 @@
         "titre": "Aller-retour Kayes-Kankan",
         "date_debut": "05/07/2025",
         "date_fin": "12/07/2025",
-        "img":"imag2.jpg",
-        "mots_cles": ["Kayes", "Kankan", "Dakar", "bus", "avion", "Ghana Transport", "Air Sénégal", "plage"],
+        "img":"c.jpg",
+        "mots_cles": ["Kayes", "Kankan","Mali","Guinée","juillet", "Dakar", "bus", "avion", "Ghana Transport", "Air Sénégal", "plage"],
         "nb_etapes": 4,
         "etapes": [{
             "id": "e051",
@@ -861,7 +861,7 @@
         "date_debut": "01/06/2025",
         "date_fin": "07/06/2025",
         "img":"imag5.jpg",
-        "mots_cles": ["Abidjan", "Accra", "avion", "Air Côte d'Ivoire", "plage"],
+        "mots_cles": ["Abidjan", "Accra", "avion","Ghana","Côte d'Ivoire", "Air Côte d'Ivoire", "plage","Côte d'Ivoire","Ghana","juin"],
         "nb_etapes": 2,
         "etapes": [{
             "id": "e055",
@@ -901,7 +901,7 @@
         "date_debut": "18/08/2025",
         "date_fin": "01/09/2025",
         "img":"imag3.jpg",
-        "mots_cles": ["Fès", "Laâyoune", "CMN", "avion", "Royal Air Maroc", "plage"],
+        "mots_cles": ["Fès", "Laâyoune", "CMN", "avion", "Royal Air Maroc", "plage","août","septembre","Maroc"],
         "nb_etapes": 4,
         "etapes": [{
             "id": "e057",
@@ -959,6 +959,43 @@
         "nb_pers": 2,
         "personnes": ["p21", "p22"],
         "statut": "p"
+    },
+    {
+        "id": "v016",
+        "titre": "Aller-retour Ouagadougou-Bobo Dioulasso",
+        "date_debut": "10/08/2025",
+        "date_fin": "10/09/2025",
+        "img":"d.jpg",
+        "mots_cles": ["Burkina", "Ouagadougou", "Ouaga", "Plage", "Bus", "août","septembre","Burkina Faso"],
+        "nb_etapes": 2,
+        "etapes": [  {
+            "id": "e061",
+            "titre": "aller_v006_pt1",
+            "moyen": "voiture",
+            "date_a": "10/08/2025",
+            "h_a": "08h00",
+            "pos_a": "Conakry",
+            "date_b": "10/08/2025",
+            "h_b": "13h00",
+            "pos_b": "Bissau",
+            "tmps": "05h00"
+          },
+          {
+            "id": "e062",
+            "titre": "retour_v006_pt1",
+            "moyen": "voiture",
+            "date_a": "17/08/2025",
+            "h_a": "09h00",
+            "pos_a": "Bissau",
+            "date_b": "17/08/2025",
+            "h_b": "14h00",
+            "pos_b": "Conakry",
+            "tmps": "05h00"
+          }],
+        "prix": 600,
+        "nb_pers": 1,
+        "personnes": ["p08"],
+        "statut": "np"
     }        
           
 ]
