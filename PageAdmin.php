@@ -40,18 +40,18 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
       <div id="header">        
         <div id="navbar"> 
             <ul class="ulButton">
-              <a href="Vols.html"><li class="liButton">Vols</li></a>
-              <a href="Apropos.html"><li class="liButton">A propos de nous</li></a>
-              <li class="liButton">Contacts</li>
+              <a href="Vols.php"><li class="liButton">Vols</li></a>
+              <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
+              <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
             </ul>
-            <a id="Logo" href="Accueil.html"><img class="disp" src="logo.png" alt="Rechercher"/></a>
+            <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png" alt="Rechercher"/></a>
           </div>
         </div>
         <!--</div>
         <div class="div3"></div>
         </div>-->
-          <li><a href="inscription.html">S'inscrire</a>
-          <a href="seConnecter.html">/Se connecter</a></li>
+          <li><a href="inscription.php">S'inscrire</a>
+          <a href="seConnecter.php">/Se connecter</a></li>
 
     <form method="GET" action="recherche.php" class="barre-recherche">
       <input type="text" name="q" placeholder="Rechercher un voyage..." required>
