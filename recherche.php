@@ -1,14 +1,28 @@
 <?php
+// Fonction pour retirer les accents
+function remove_accents($string) {
+    return preg_replace('/[^A-Za-z0-9 ]/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $string));
+}
+
 $voyages = json_decode(file_get_contents("voyages.json"), true);
 $query = isset($_GET['q']) ? $_GET['q'] : '';
 $resultats = [];
 
+// Normaliser la requête utilisateur
+$search = remove_accents(strtolower($query));
+
 foreach ($voyages as $voyage) {
-    if (stripos(implode(' ', $voyage['mots_cles']), $query) !== false) {
+    // Normaliser les mots-clés du voyage
+    $keywords = remove_accents(strtolower(implode(' ', $voyage['mots_cles'])));
+    
+    // Recherche sans accent et insensible à la casse
+    if (stripos($keywords, $search) !== false) {
         $resultats[] = $voyage;
     }
 }
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head lang="fr">
