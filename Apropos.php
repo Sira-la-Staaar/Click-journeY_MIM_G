@@ -47,7 +47,7 @@
       <h2 class="titre2">Avis de nos voyageurs</h2>
       <div id="avis-container">
           <?php
-          $json = file_get_contents(__DIR__ . 'avis.json');
+          $json = file_get_contents('avis.json');
           $avis = json_decode($json, true);
 
           if ($avis) {
