@@ -52,10 +52,10 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
         </div>-->
           <li><a href="inscription.html">S'inscrire</a>
           <a href="seConnecter.html">/Se connecter</a></li>
-        <form method="GET" action="recherche.php" class="barre-recherche">
-            <input type="text" name="q" placeholder="Rechercher un voyage..." required>
-            <button type="submit"><img id="recherche" src="logo2.webp"/></button>
-        </form>
+
+    <form method="GET" action="recherche.php" class="barre-recherche">
+      <input type="text" name="q" placeholder="Rechercher un voyage..." required>
+    </form>
 
     <h1>Liste des utilisateurs</h1>
 
