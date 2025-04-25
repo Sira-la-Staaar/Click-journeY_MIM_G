@@ -41,8 +41,8 @@ foreach ($voyages as $voyage) {
 				<ul class="ulButton">
           <a href="Vols.php"><li class="liButton">Vols</li></a>
           <a href="Apropos.php"><li class="liButton"><?php echo "A propos de nous \n"; ?></li></a>
-          <li class="liButton">Contacts</li>
-				</ul>
+          <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
+          </ul>
         <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
 			</div>
 		</div>
