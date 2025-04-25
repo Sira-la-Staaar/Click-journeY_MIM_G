@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta charset="UTF-8">
   <link type="text/css" rel="stylesheet" href="stylesheet.css">
   <title>S'inscrire</title>
   <style>
-    /* Ajout de l'image en arrière-plan */
     body {
       background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
       background-size: cover;
@@ -12,26 +12,30 @@
   </style>
 </head>
 <body>
- 
-  <h1 class="aida1"> S'inscrire</h1>
-  <h2 class="aida2"><p> Adresse e-mail</p></h2>
-  <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
-    <label for="user"</label>
-  </div>
-  <h2 class="aida2"><p>Nom</p></h2>
-  <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
+  <form method="post" action="traitement_inscription.php">
+    <h1 class="aida1">S'inscrire</h1>
 
-    <label for="user"</label>
-  </div> 
-  <h2 class="aida2"><p> Prénom</p></h2>
-  <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
-    <label for="user"</label>
-  </div> 
-  <h2 class="aida2"><p> Date de naissance</p></h2>
-  <input type="date" name="date_naissance" min="1930-01-01" max="2007-01-01" required>
-  <button type="button">Click Here!</button><br> 
+    <h2 class="aida2">Adresse e-mail</h2>
+    <div class="input-box">
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+    </div>
+
+    <h2 class="aida2">Nom</h2>
+    <div class="input-box">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+    </div> 
+
+    <h2 class="aida2">Prénom</h2>
+    <div class="input-box">
+      <input type="text" name="prenom" placeholder="Votre prénom" required>
+    </div> 
+
+    <h2 class="aida2">Date de naissance</h2>
+    <div class="input-box">
+      <input type="date" name="date_naissance" min="1930-01-01" max="2007-01-01" required>
+    </div>
+
+    <button type="submit">S'inscrire</button>
+  </form>
 </body>
 </html>
