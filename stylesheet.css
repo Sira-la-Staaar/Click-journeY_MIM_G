@@ -308,7 +308,7 @@ p.sira2{background-color:#006633;
 }
 
 .Accueil12 {
-  width: 25%;                 
+  width: 25%;                 /* ➤ 3 éléments de 30% = 90%, avec 10% pour l'espace/gap */
   margin-bottom: 1%;          /* ➤ espace entre les lignes */
   text-align: center;
   height: auto;
@@ -364,7 +364,7 @@ img.disp {
   height: auto;
 }
 
-.avis-contact-wrapper {
+#avis-contact-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 2em;
