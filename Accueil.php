@@ -16,25 +16,24 @@ $voyages = json_decode($voyages_json, true);
     <div class="div1"></div>
     <div class="div2">-->
     <div id="header">        
-    <div id="navbar"> 
-				<ul class="ulButton">
-          <a href="Vols.php"><li class="liButton">Vols</li></a>
-          <a href="Apropos.php"><li class="liButton"><?php echo "A propos de nous \n"; ?></li></a>
-          <li class="liButton">Contacts</li>
-				</ul>
-        <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
-			</div>
-		</div>
-    <!--</div>
-    <div class="div3"></div>
-    </div>-->
-      <li><a href="inscription.php">S'inscrire</a>
-      <a href="seConnecter.php">/Se connecter</a></li>
+        <div id="navbar"> 
+            <ul class="ulButton">
+              <a href="Vols.php"><li class="liButton">Vols</li></a>
+              <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
+              <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
+            </ul>
+            <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png" alt="Rechercher"/></a>
+          </div>
+        </div>
+        <!--</div>
+        <div class="div3"></div>
+        </div>-->
+          <li><a href="inscription.php">S'inscrire</a>
+          <a href="seConnecter.php">/Se connecter</a></li>
 
-      <form method="GET" action="Accueil.php" class="barre-recherche">
-        <input type="text" name="q" placeholder="Rechercher un voyage..." required>
-        <button type="submit"><img id="recherche" src="logo2.webp" alt="Rechercher"></button>
-      </form>
+    <form method="GET" action="recherche.php" class="barre-recherche">
+      <input type="text" name="q" placeholder="Rechercher un voyage..." required>
+    </form>
 
 
 <div class="acc1">
