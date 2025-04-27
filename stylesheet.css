@@ -655,7 +655,8 @@ form.admin {
 }
 
 /*#Inscription*/
-.Inscription h1{
+/*#Inscription*/
+.aida1 {
   color: #006633;
   margin-left: auto;
   margin-right: auto;
@@ -666,9 +667,9 @@ form.admin {
 }
 
 
-.Inscription h2{
-  color:#F5F5DC;
-  margin-left: 20%;
+.aida2{
+  color:#bfbf50;
+  margin-left: 10%;
   margin-right: auto;
   text-align: left; 
   font-family: Roboto Slab; 
@@ -677,20 +678,24 @@ form.admin {
   line-height: 1.5;
   font-size:30px;
 }
+.aida3{
+  text-align: center;
+  color:#006633;
+}
 
 .Inscription  div{
-  margin-left: 20%;
+  margin-left: 10%;
   margin-right: auto;
   text-align: left;
   color: #515A5A;
 }
 .Inscription .input-box {
-  background: rgba(255, 255, 255, 0.3);
+  background:#FFFFFF4D;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #FFFFFF33;
   color: white;
   padding: 8px;
-  width: 30%;
+  width: 20%;
   border-radius: 5px;
   font-size: 14px;
   margin-left: 20%;
@@ -702,17 +707,85 @@ form.admin {
   margin-right: auto;
   text-align: right;
 }
-.pied1 {
+
+footer.footer2 {
+  position: relative;
+  padding: 10px;
+  height: auto;
+  color: black;
+  z-index: 0;
+  overflow: hidden;
+  background: transparent; 
+}
+
+footer.footer2::before {
+  content: "";
+  color:#000000;
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px) brightness(0.8);
+  background: rgba(255, 255, 255, 0.05); 
+  z-index: -1;
+}
+
+/*#Mon profil*/
+.dana2 {
+  color: #556B2F; 
+  font-family: 'Nunito', serif;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-bottom: 3px solid #FFD700; 
+  display: inline-block;
+}
+
+
+.dana1{
+  color: #f5f5f5;
+  font-family: 'Nunito', serif;
+  font-size:20px;
+}
+.footer2{
+  width: 100%;
+  min-height: 100vh;
+  background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5%;
+  color:#000000;
+}
+
+.Profil pied1 {
   color: #000; 
   text-align: left; 
   font-size: 14px;
   font-family: Calibri, sans-serif;
   max-width: 80%;
 }
-.monProfil p{
-  color: #f5f5f5;
+/*#Paiement*/
+.el1 {
+  color: #FF7F50; 
+  font-family: 'Nunito', serif;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-bottom: 3px solid #FF7F50; 
+  display: inline-block;
+}
+.el2{
+  color: #D3D3D3;
   font-family: 'Nunito', serif;
   font-size:20px;
+  
+
 }
 
 /*css pour "seConnecter"*/	
