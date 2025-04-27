@@ -4,7 +4,6 @@
   <link type="text/css" rel="stylesheet" href="stylesheet.css">
   <title>S'inscrire</title>
   <style>
-    /* Ajout de l'image en arrière-plan */
     body {
       background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
       background-size: cover;
@@ -12,27 +11,82 @@
   </style>
 </head>
 <body class="Inscription">
-  <h1 class="aida1"> S'inscrire</h1>
-  <h2 class="aida2"><p> Adresse e-mail</p></h2>
+  <img src ="logo3.png" alt="logo de The West Agency"/>
+   
+  <h1 class="aida1">S'inscrire</h1>
+  <h2 class="aida3">Bienvenue sur notre site de voyage !</h2>
+  <h2 class="aida3">Veuillez remplir le formulaire ci-dessous pour créer votre compte et rejoindre l'aventure !</h2>
+  
   <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
-    <label for="user"></label>
+    <h2 class="aida2">Civilité</h2>
+    <select name="Civilité" required style="padding: 10px; border: 2px solid #ccc; border-radius: 8px; width: 250px; font-size: 16px; background-color: #f9f9f9; 
+             color: #333; cursor: pointer; transition: border-color 0.3s ease; margin-left: 20%;margin-right: auto; text-align: left;"
+      <option value="">-- Sélectionnez --</option>
+      <option value="M.">Monsieur</option>
+      <option value="Mme">Madame</option>
+      <option value="Autre">Autre</option>
+    </select>
   </div>
-  <h2 class="aida2"><p>Nom</p></h2>
+  
   <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
-    <label for="user"></label>
-  </div> 
-  <h2 class="aida2"><p> Prénom</p></h2>
-  <div class="input box">
-    <input type="text" class="input-box" placeholder="Votre texte ici" required>
-    <label for="user"></label>
+    <h2 class="aida2">Nom</h2>
+    <input type="text" class="input-box" placeholder="Votre nom ici">
   </div>
-  <h2 class="aida2"><p> Date de naissance</p></h2>
-  <input type="date" name="date_naissance" min="1930-01-01" max="2007-12-31" required>
-  <button type="button">Click Here!</button><br> 
+  
+  <div class="input box">
+    <h2 class="aida2">Prénom</h2>
+    <input type="text" class="input-box" placeholder="Votre prénom ici">>
+  </div>
+  
+  <div class="input box">
+    <h2 class="aida2">Pays de résidence</h2>
+    <select name="pays_residence" required style="padding: 10px; border: 2px solid #ccc; border-radius: 8px; width: 250px; font-size: 16px; background-color: #f9f9f9; 
+             color: #333; cursor: pointer; transition: border-color 0.3s ease; margin-left: 20%;margin-right: auto; text-align: left;">
 
-   <footer class="footer2">
+      <option value="">-- Sélectionnez --</option>
+      <option value="Guinée">Guinée</option>
+      <option value="Maroc">Maroc</option>
+      <option value="Mali">Mali</option>
+      <option value="Sénégal">Sénégal</option>
+      <option value="Cote d'Ivoire">Côte d'Ivoire</option>
+      <option value="Gambie">Gambie</option>
+      <option value="Burkina Faso">Burkina Faso</option>
+      <option value="Togo">Togo</option>
+      <option value="Bénin">Bénin</option>
+      <option value="Guinée Bissau">Guinée Bissau</option>
+      <option value="Liberia">Liberia</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Sierra Leone">Sierra Leone</option>
+      <option value="Ghana">Ghana</option>
+      <option value="Niger">Niger</option>
+      <option value="Mauritanie">Mauritanie</option>
+      <option value="Cap-Vert">Cap-Vert</option>
+    </select>
+  </div>
+  
+  <div class="input box">
+    <h2 class="aida2">Date de naissance</h2>
+    <input type="date" name="date_naissance" min="1930-01-01" max="2007-12-31" required style="padding: 10px; border: 2px solid #ccc; border-radius: 8px; width: 250px; font-size: 16px; background-color: #f9f9f9; 
+             color: #333; cursor: pointer; transition: border-color 0.3s ease; margin-left: 20%;margin-right: auto; text-align: left;"/>
+  </div>
+  
+  <div class="input box">
+    <h2 class="aida2">Adresse e-mail</h2>
+    <input type="email" class="input-box" placeholder="Votre adresse e-mail ici">
+  </div>
+  
+  <div class="input box">
+    <h2 class="aida2">Mot de passe</h2>
+    <input type="password" class="input-box" placeholder="Choissisez votre mot de passe"required minlength="8">
+  </div>
+  
+  <div class="input box" style="margin-top: 20px;">
+    <button type="submit" 
+      style="padding: 10px 20px; background-color: #3498db; border: none; border-radius: 8px; color: white; font-size: 16px; cursor: pointer;margin-left: auto;margin-right: 20%; text-align:right;">
+      S'inscrire
+    </button>
+  </div>
+  <footer class="footer2">
     <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
       - Vols : Tarifs TTC par personne et « à partir de », valables à certaines dates, sous réserve de disponibilité et de confirmation de la compagnie aérienne<br><br>
       - Séjours : Tarifs TTC, hors taxes de séjour, par personne sur base d'une chambre double. Prix « à partir de » valables à certaines dates et sous réserve de disponibilités et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
