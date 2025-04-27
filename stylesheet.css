@@ -748,17 +748,6 @@ footer.footer2::before {
   font-family: 'Nunito', serif;
   font-size:20px;
 }
-.footer2{
-  width: 100%;
-  min-height: 100vh;
-  background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5%;
-  color:#000000;
-}
 
 .Profil pied1 {
   color: #000; 
