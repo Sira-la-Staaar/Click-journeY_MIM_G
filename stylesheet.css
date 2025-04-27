@@ -483,10 +483,6 @@ input:focus, textarea:focus {
   outline: none;
 }
 
-
-  
-
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -658,8 +654,6 @@ form.admin {
   height:auto;
 }
 
-
-
 /*#Inscription*/
 .Inscription h1{
   color: #006633;
@@ -708,18 +702,6 @@ form.admin {
   margin-right: auto;
   text-align: right;
 }
-footer.footer2 {
-  width: 100%;
-  min-height: 100vh;
-  background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5%;
-  color:#000000;
-}
-
 .pied1 {
   color: #000; 
   text-align: left; 
