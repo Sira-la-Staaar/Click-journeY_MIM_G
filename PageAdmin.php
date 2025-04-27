@@ -2,27 +2,25 @@
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    $_SESSION['user'] = [
-        'username' => 'admin_test',
-        'role' => 'A'  // 'A' pour admin
-    ];
+    header("Location: seConnecter.php");
+    exit;
 }
 
 if ($_SESSION['user']['role'] !== 'A') {
     header("Location: seConnecter.php");
     exit;
 }
+
 $utilisateurs = json_decode(file_get_contents('utilisateurs.json'), true);
 $utilisateursParPage = 10;
 $totalUtilisateurs = count($utilisateurs);
 $nombreDePages = ceil($totalUtilisateurs / $utilisateursParPage);
 
 $pageActuelle = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-
 $debut = ($pageActuelle - 1) * $utilisateursParPage;
-
 $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
 ?>
+
 
 <!DOCTYPE html>
 <html>
