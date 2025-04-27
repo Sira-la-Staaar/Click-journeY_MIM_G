@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
-		<title>Se Connecter</title>
-	</head>
-	<body style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
-    <form>
-    <h1>Se connecter à TheWestAgency:</h1>
-    <ul>
-      <li id="Google">
-        <a href="lien vers google>">Se connecter avec Google</a>
-      </li>
-        <li id="Facebook">
-          <a href="lien vers facebook">Se connecter avec Facebook</a>
-        </li>
-     </ul>
-    <strong>OU</strong>
-    <ul> 
-    <li>Adresse e-mail:</li> 
-    <input type="email" name="email">
-    <li>Mot de passe:</li>
-    <input type="Mot de passe" name="Mot de passe">
-    </ul>
-    <a href= "lien vers MDP">Mot de passe oublié?</a><br>
-    <a href= "lien vers crée un compte">Pas de compte? Crée un compte.</a>
+<head>
+    <meta charset="UTF-8">
+    <title>Se Connecter</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
+    
+    <form action="login.php" method="POST">
+        <h1>Se connecter à TheWestAgency :</h1>
+        <ul>
+            <li id="Google">
+                <a href="#">Se connecter avec Google</a>
+            </li>
+        </ul>
+
+        <strong>OU</strong>
+
+        <ul> 
+            <li>Adresse e-mail :</li> 
+            <input type="email" name="username" required>
+            <li>Mot de passe :</li>
+            <input type="password" name="password" required>
+        </ul>
+
+        <button type="submit">Se connecter</button><br>
+
+        <a href="#">Mot de passe oublié ?</a><br>
+        <a href="#">Pas de compte ? Crée un compte</a>
     </form>
+
+</body>
+</html>
+
 
 <footer class="footer2">
         <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
