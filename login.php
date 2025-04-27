@@ -1,43 +1,38 @@
 <?php
-
-
-session_start(); //pour mémoriser si l'utilisateur est connecté
-//vérifie si l'utilisateur est déjà connecté!
-if (isset($_SESSION["connecte"])) {
-    header("Location: accueil.php");// si l'utilisateur est déjà connecté on le renvoit à la page d'acceuil, et on arrete l'éxécution!
-    exit();
-}
-
-
-
-
 session_start();
 
-// Vérifie si l'utilisateur est déjà connecté
-
+// Rediriger vers accueil si l'utilisateur est déjà connecté
 if (isset($_SESSION["connecte"])) {
     header("Location: accueil.php");
     exit();
 }
 
-// Informations de connexion!
+// Charger les utilisateurs depuis le fichier JSON
+$utilisateurs_json = file_get_contents("utilisateurs.json"); // Lire tout le contenu du fichier utilisateurs.json et le mettre dans la variable: $utilisateurs_json 
+$utilisateurs = json_decode($utilisateurs_json, true); // Convertir le texte en tableau pour le manipuler; le "true" c'est pour que le PHP transforme le JSON en tableaux associatifs.
 
-$login_valide = "admin";
-$mdp_valide = "1234";
+// Vérifier si le formulaire a été soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {//Vérifie si le formulaire a été envoyé.
+    $email = $_POST["username"]; //Récupère la valeur que l'utilisateur a tapée dans le champ e-mail.
+    $motdepasse = $_POST["password"]; //Donc name="username" pour que le PHP récupère cette valeur dans $_POST["username"].
 
-// Vérifie si le formulaire a été soumis
+    $connexion_reussie = false; // Initialise une variable pour savoir si la connexion a réussi ou pas.
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_POST["username"] == $login_valide && $_POST["password"] == $mdp_valide) {
-        // L'utilisateur est connecté, on crée la session
-        $_SESSION["connecte"] = true;
-        $_SESSION["username"] = $_POST["username"];
-        header("Location: accueil.php");
-        exit();
-    } else {
-        echo "Login ou mot de passe incorrect.";
+    // Parcourir tous les utilisateurs
+    foreach ($utilisateurs as $utilisateur) { //C’est une boucle qui parcourt tous les utilisateurs du tableau $utilisateurs.
+        if ($utilisateur["e-mail"] == $email && $utilisateur["mdp"] == $motdepasse) { //si les informations taper correspendent à celle du tableau, donc connexion réussite(on a touvé le bon utilisateur)!
+            $_SESSION["connecte"] = true; // utilisateur connecter
+            $_SESSION["username"] = $utilisateur["informations"][0]["pseudo"]; // Stocker le pseudo dans la session pour l'afficher plus tard dans les pages.
+            $_SESSION["role"] = $utilisateur["role"]; // Stocker le rôle (Admin ou Normal)
+            $connexion_reussie = true; //connexion réussite
+            header("Location: accueil.php"); //Dès que la connexion réussit, on redirige l’utilisateur vers la page d’accueil
+            exit(); //Arrête immédiatement l’exécution du script, Parce qu'une fois qu'on redirige, on ne veut pas continuer à exécuter du PHP inutilement. Ça évite aussi des erreurs.
+        }
+    }
+
+    // Si aucune correspondance trouvée
+    if (!$connexion_reussie) {
+        echo "E-mail ou mot de passe incorrect.";
     }
 }
-
 ?>
-
