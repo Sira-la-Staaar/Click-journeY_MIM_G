@@ -1,0 +1,96 @@
+
+    "Règlement": {
+        "nom du titulaire": "Elsa Sanchez",
+        "identifiant": "u004",
+        "adresse e-mail": "elsou.sanchez@gmail.com",
+        "voyage choisi":"Marrakesh-Cotonou (Aller-Retour)",
+        "date de départ": "20/05/2025",
+        "compagnie aérienne": "Royal Air Maroc",
+        "nuémro de transaction": "2552048962",
+        "date":"05/05/2025",
+        "montant TTC": "4000",
+        "devise": "dihram",
+        "mode de paiement:":"carte bancaire",
+        "numéro de carte": "5241 1236 7850 0052",
+        "date d'expiration": "12/28",
+        "cryptogramme": "895",
+        
+        "état de la transaction": "en cours",
+
+
+    }
+    
+        "Règlement": {
+            "nom du titulaire": "Hamshigaa Jekumar",
+            "numéro de compte": "u005",
+            "adresse e-mail": "hamshishi@gmail.com",
+            "voyage choisi":"Conakry-Lomé (Aller)",
+            "date de départ": "14/10/2025",
+            "compagnie aérienne": "ASKY airlines",
+            "nuémro de transaction": "5263149910",
+            "date":"25/09/2025",
+            "montant TTC": "98 393,55",
+            "devise": "Franc CFA",
+            "mode de paiement:":"carte bancaire",
+            "numéro de carte": "6548 1205 4569 7558",
+            "date d'expiration": "07/29",
+            "cryptogramme": "457",
+            "état de la transaction": "validée",
+    
+        
+        }
+        "Règlement": {
+            "nom du titulaire": "Sira Diakité",
+            "numéro de compte": "u001",
+            "adresse e-mail": "e-mail":"siradiakite792@gmail.com",
+            "voyage choisi":"Bamako-Bissau (Aller)",
+            "date de départ": "06/08/2025",
+            "compagnie aérienne": "Sky Mali",
+            "nuémro de transaction": "8520034857",
+            "date":"25/07/2025",
+            "montant TTC": "98 393,55",
+            "devise": "Franc CFA",
+            "mode de paiement:":"carte bancaire",
+            "numéro de carte": "2154 0325 7889 5642",
+            "date d'expiration": "10/25",
+            "cryptogramme": "256",
+            "état de la transaction": "validée",
+    
+    
+        }
+        "Règlement": {
+            "nom du titulaire": "Marwa OUTAMGHART",
+            "numéro de compte": "u003",
+            "adresse e-mail": "e-mail":"marwa.loud@gmail.com",
+            "voyage choisi":"Dakar-Abuja (Aller-Retour)",
+            "date de départ": "01/05/2025",
+            "compagnie aérienne": "Air sénégal",
+            "nuémro de transaction": "7421005216",
+            "date":"08/04/2025",
+            "montant TTC": "98 393,55",
+            "devise": "Franc CFA",
+            "mode de paiement:":"carte bancaire",
+            "numéro de carte": "7858 1102 2258 3245",
+            "date d'expiration": "10/29",
+            "cryptogramme": "742",
+            "état de la transaction": "en cours",
+    
+    
+        }
+        "Règlement": {
+            "nom du titulaire": "Aida Belquass",
+            "numéro de compte": "u002",
+            "adresse e-mail": "e-mail":"belquassaida@gmail.com",
+            "voyage choisi":"Nouakchott-Casablanca (Retour)",
+            "date de départ": "29/12/2025",
+            "compagnie aérienne": "Royal Air Maroc",
+            "nuémro de transaction": "7854215523",
+            "date":"03/12/2025",
+            "montant TTC": "1050",
+            "devise": "dihram",
+            "mode de paiement:":"carte bancaire",
+            "numéro de carte": "5236 1102 4578 5236",
+            "date d'expiration": "05/27",
+            "cryptogramme": "458",
+            "état de la transaction": "validée",
+}
