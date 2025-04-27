@@ -3,7 +3,7 @@ session_start();
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION["connecte"])) { 
-    header("Location: login.php"); 
+    header("Location: seConnecter.php"); 
     exit();
 }
 
