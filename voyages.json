@@ -1,12 +1,12 @@
 [
     {
         "id":"v001",
-        "titre":"Aller-retour Freetown-Kayes",
+        "titre":"Aller-retour Paris-Kayes",
         "date_debut":"10/07/2025",
         "date_fin":"10/08/2025",
         "nb_etapes":6,
         "img":"img10.jpg",
-        "mots_cles": ["Freetown", "Kayes","août","Sierra Leonne","Mali", "Royal Air Maroc", "vol", "vacances", "Mali", "Bamako", "Kayes"],
+        "mots_cles": ["Paris", "Kayes","août","France","Mali", "Royal Air Maroc", "vol", "vacances", "Mali", "Bamako", "Kayes"],
         "etapes":[{
             "id":"e001",
             "compagnie":"Royal Air Maroc",
@@ -94,10 +94,10 @@
 
     {
         "id":"v002",
-        "titre":"Aller-retour Abidjan-Conakry",
+        "titre":"Aller-retour Paris-Conakry",
         "date_debut":"01/08/2025",
         "date_fin":"09/08/2025",
-        "mots_cles": ["Abidjan", "Conakry","août","Guinée","Abidjan", "Royal Air Maroc", "vol", "Guinée", "CMN", "ABJ", "CKY"],
+        "mots_cles": ["Paris", "Conakry","août","Guinée","France", "Royal Air Maroc", "vol", "Guinée", "CMN", "ORY", "CKY"],
         "img":"imag8.jpg",
         "nb_etapes":4,
         "etapes":[{
