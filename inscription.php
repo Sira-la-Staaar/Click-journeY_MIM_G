@@ -83,13 +83,13 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $champs = ['civilite', 'nom', 'prenom', 'pays_residence', 'date_naissance', 'email', 'mot_de_passe'];
-    f ($formulaire_complet) {
+    if ($formulaire_complet) {
         echo "Formulaire complet, envoi en cours...";
-        if (empty($_POST[$champ])) {
-            echo "Erreur : Le formulaire est incomplet.";
-            $formulaire_complet = false;
-            break; // Arrêter la boucle si un champ est vide
-        }
+          foreach ($champs_obligatoires as $champ) {
+    if (empty($_POST[$champ])) {
+        echo "Erreur : Le formulaire est incomplet.";
+        $formulaire_complet = false;
+        break;
     }
 ?>
 
