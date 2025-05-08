@@ -24,7 +24,7 @@
  /* background-image:url('fond4.jpg');*/
   background-size:100%; 
   height:auto;
-  background-color:black;
+  background-color:rgb(29, 22, 22);
 }
 .acc1 {
   padding-left: 20%;
@@ -81,9 +81,7 @@
   z-index: 3;
 }
     
-
-
-footer.footer2   {
+footer.footer2 {
 background-image: url('pj1.png');
 background-size: cover;
 background-repeat: no-repeat;
@@ -95,7 +93,14 @@ height: auto;
 div.pied1 {
   text-align:center;
   padding:5%;
-  color:grey;
+  color:rgb(238, 233, 233);
+  font-size:14px;
+  font-family: Calibri;
+}
+div.pied2 {
+  text-align:center;
+  padding:5%;
+  color:black;
   font-size:14px;
   font-family: Calibri;
 }
@@ -119,6 +124,22 @@ button.pied1:hover{
   border-radius:15px;
   border-color:white;
 }
+button.pied2{
+  background-color:#181818;
+  color:white;
+  padding:8px;
+  text-align:center;
+  border-radius:15px;
+  border-color:white;
+}
+button.pied2:hover{
+  background-color:white;
+  color:white;
+  color:#181818;
+  padding:8px;
+  border-radius:15px;
+  border-color:white;
+}
 #navbar {
 	position: fixed;
   z-index: 15;
@@ -138,6 +159,9 @@ a:link{
 a:visited{
   color:black;
 }
+a.admin:visited{
+  color:rgb(51, 98, 199);
+}
 a:hover{
   text-decoration: none;
 	color:#336666;
@@ -146,7 +170,9 @@ a:active{
   text-decoration: none;
 	color:black;
 }
-
+a.admin:active{
+  color:rgb(51, 98, 199);
+}
 
 .liButton {
 	display: inline-block; /* Change display pour inline-block afin que les éléments puissent être centrés */
@@ -683,12 +709,11 @@ form.admin {
   color:#006633;
 }
 
-.Inscription  div{
+/*.Inscription  div{
   margin-left: 10%;
   margin-right: auto;
   text-align: left;
-  color: #515A5A;
-}
+}*/
 .Inscription .input-box {
   background:#FFFFFF4D;
   backdrop-filter: blur(10px);
@@ -703,29 +728,23 @@ form.admin {
   text-align: left;
 }
 .Inscription button{
-  margin-left: auto;
+  margin-left: 10%;
   margin-right: auto;
-  text-align: right;
+  text-align: left;
 }
 
-footer.footer2 {
-  position: relative;
+footer.footer3 {
+  position:relative;
   padding: 10px;
   height: auto;
   color: black;
   z-index: 0;
   overflow: hidden;
   background: transparent; 
-}
-
-footer.footer2::before {
   content: "";
-  color:#000000;
-  position: absolute;
   inset: 0;
   backdrop-filter: blur(10px) brightness(0.8);
   background: rgba(255, 255, 255, 0.05); 
-  z-index: -1;
 }
 
 /*#Mon profil*/
