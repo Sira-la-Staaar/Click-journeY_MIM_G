@@ -29,16 +29,26 @@ $selection = $_SESSION['selection'];
         <p><?php echo $error_message; ?></p>
     </div>
 <?php else: ?>
-    <p>Votre récapitulatif est complet et prêt à être finalisé.</p>
+    <p>Voici le récapitulatif de votre voyage personnalisé:</p>
+    
+    <div>
+            <h2>Informations du voyage :</h2>
+            <p><strong>Ville de départ :</strong> <?php echo isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
+            <p><strong>Ville d'arrivée :</strong> <?php echo isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
+            <p><strong>Date d'arrivée :</strong> <?php echo isset($selection['date_arrivee']) ? $selection['date_arrivee'] : 'Non spécifiée'; ?></p>
+            <p><strong>Durée du voyage :</strong> <?php echo isset($selection['duree_voyage']) ? $selection['duree_voyage'] : 'Non spécifiée'; ?></p>
+            <p><strong>Prix total :</strong> <?php echo isset($selection['prix_total']) ? $selection['prix_total'] : 'Non spécifié'; ?></p>
+            <p><strong>Nombre de personnes :</strong> <?php echo isset($selection['nb_personnes']) ? $selection['nb_personnes'] : 'Non spécifié'; ?></p>
+        </div>
 
     <?php foreach ($selection as $index => $data): ?>
         <div>
             <h2>Étape <?php echo $index + 1; ?></h2>
-            <p><strong>Hébergement :</strong> <?php echo isset($data['hebergement']) ? $data['hebergement'] : 'Non spécifié'; ?></p> 
-            <p><strong>Restauration :</strong> <?php echo isset($data['restauration']) ? $data['restauration'] : 'Non spécifiée'; ?></p>
-            <p><strong>Activités :</strong> <?php echo isset($data['activites']) && !empty($data['activites']) ? implode(', ', $data['activites']) : 'Aucune activité spécifiée'; ?></p>
-            <p><strong>Transport vers la prochaine étape :</strong> <?php echo isset($data['transport']) ? $data['transport'] : 'Non spécifié'; ?></p>
-            <p><strong>Nombre de personnes par activité :</strong> <?php echo isset($data['nb_personnes_activite']) ? $data['nb_personnes_activite'] : 'Non spécifié'; ?></p>
+            <p><strong>Hébergement :</strong> <?= $data['hebergement'] ?></p>
+            <p><strong>Restauration :</strong> <?= $data['restauration'] ?></p>
+            <p><strong>Activités :</strong> <?= implode(', ', $data['activites']) ?></p>
+            <p><strong>Transport vers la prochaine étape :</strong> <?= $data['transport'] ?></p>
+            <p><strong>Nombre de personnes par activité :</strong> <?= $data['nb_personnes_activite'] ?></p>
         </div>
     <?php endforeach; ?>
 <?php endif; ?>
