@@ -4,7 +4,7 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css">
 		<title>Une page spécifique pour rechercher des voyages avec plusieurs champs de filtrage (dates, lieux, options, ...)</title>
 	</head>
-	<body>
+	<body class="Vols">
     <form action="page1.php" method="GET">
 <p>D'où partez-vous?</p>
    <select name="ville_depart" id="ville_depart">
@@ -173,7 +173,7 @@
       
 La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
       
-La date: <input type="datetime-local" name="time2" value="12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
+La date: <input type="datetime-local" name="time2" value="2025-03-01T12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
 		<button type="submit">Rechercher</button>
 
 <footer class="footer2">
