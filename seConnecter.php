@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
     <title>Se Connecter</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
+<body class="seConnecter" style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
     
     <form action="seConnecter.php" method="POST">
         <h1>Se connecter à TheWestAgency :</h1>
