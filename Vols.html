@@ -5,7 +5,7 @@
 		<title>Une page spécifique pour rechercher des voyages avec plusieurs champs de filtrage (dates, lieux, options, ...)</title>
 	</head>
 	<body>
-    <form action="page1.php">
+    <form action="page1.php" method="GET">
 <p>D'où partez-vous?</p>
    <select name="ville_depart" id="ville_depart">
    <optgroup label="Maroc">
@@ -77,9 +77,7 @@
 <option value="Nouadhibou">Nouadhibou</option>
 </optgroup>
 </select>
-    </form>
-    
-    <form action="page1.php">
+
 <p>D'où allez-vous?</p>
    <select name="ville_arrivee" id="ville_arrivee">
    <optgroup label="Maroc">
@@ -151,24 +149,24 @@
 <option value="Nouadhibou">Nouadhibou</option>
 </optgroup>
 </select>
-    </form>
+
     
-     <form action="page1.php">
 <p>Choisissez votre formule:</p>
 <select name="formule">
 <option value="économique">économique</option>
 <option value="affaire">affaire</option>
 <option value="première">première</option>
 </select>
-     </form>
   
-  <form action="page1.php">
+  
 <p>Type de voyage:</p>
 <select name="type-voyage">
 <option value="aller-retour">aller-retour</option>
 <option value="aller simple">aller simple</option>
 </select>
-  </form>
+	    
+    </form>
+		
     <!-- nombre de voyageurs avec valises (deux bagages de 23 kg par personne!! regarder pourquoi date n'est pas limite, ajouter un css pour ca. Enlevez se connecter avec facebook!!!! relier tous les css ensemble!-->
     <p>Choisissez la date et l'heure de votre   vol:</p> 
  Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
