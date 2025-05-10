@@ -13,9 +13,13 @@ if ($_SESSION["role"] != "A") {
     exit();
 }
 
-// Charger les utilisateurs depuis le fichier JSON
+// Charger les utilisateurs depuis le fichier JSON, et verifier si il existe!
 $utilisateurs_json = file_get_contents("utilisateurs.json"); 
 $utilisateurs = json_decode($utilisateurs_json, true); 
+
+if (!$utilisateurs) {
+    die("Erreur : données utilisateurs introuvables ou corrompues.");
+}
 
 // Pagination : déterminer le nombre total d'utilisateurs
 $total_utilisateurs = count($utilisateurs);
