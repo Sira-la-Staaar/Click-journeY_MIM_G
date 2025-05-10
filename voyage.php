@@ -6,9 +6,13 @@ if (!isset($_SESSION['utilisateur'])) {
     exit();
 }
 
-// Charger les données depuis les fichiers JSON (étapes, options, etc.)
+// Charger les données depuis les fichiers JSON (étapes, options, etc.), et verifier si l'un des fichiers est vide ou les deux
 $etapes = json_decode(file_get_contents('etapes.json'), true);
 $options = json_decode(file_get_contents('options.json'), true);
+
+if (!$etapes || !$options) {
+    die("Erreur lors du chargement des données JSON.");
+}
 
 // Initialiser les variables des options sélectionnées
 $selection = [];
