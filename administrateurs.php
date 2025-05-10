@@ -45,7 +45,7 @@ echo "<tr><th>Nom</th><th>Prénom</th><th>Pseudo</th><th>Email</th><th>Rôle</th
 // Afficher seulement les utilisateurs de la page actuelle
 for ($i = $depart; $i < $depart + $utilisateurs_par_page && $i < $total_utilisateurs; $i++) {
     echo "<tr>";
-    echo "<td>" . htmlspecialchars($utilisateurs[$i]["informations"][0]["nom"]) . "</td>";
+    echo "<td>" . htmlspecialchars($utilisateurs[$i]["informations"][0]["nom"]) . "</td>"; //pour empêcher les failles XS (des failles de sécurité qui permettent à un pirate d'injecter du code JavaScript malveillant dans une page web.)
     echo "<td>" . htmlspecialchars($utilisateurs[$i]["informations"][0]["prenom"]) . "</td>";
     echo "<td>" . htmlspecialchars($utilisateurs[$i]["informations"][0]["pseudo"]) . "</td>";
     echo "<td>" . htmlspecialchars($utilisateurs[$i]["e-mail"]) . "</td>";
