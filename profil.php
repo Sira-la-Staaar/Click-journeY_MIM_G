@@ -1,4 +1,11 @@
 
+<?php
+session_start();
+if (!isset($_SESSION['utilisateur'])) {
+    header("Location: seConnecter.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +30,7 @@
         <p class="dana1">Email :</p>
         <p class="dana1">Lieu de résidence :</p>
 
-        <button id="logout">Se déconnecter</button>
+        <a href="seDeconnecter.php"><button id="logout">Se déconnecter</button><a>
 
         <footer class="footer2" requiered style="text-align: center; margin-top: 20px;">
           <div class="pied1"><br><img class="pied11" src="logo4.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
