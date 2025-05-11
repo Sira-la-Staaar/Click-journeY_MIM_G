@@ -24,12 +24,25 @@ $voyages = json_decode($voyages_json, true);
             </ul>
             <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png" alt="Rechercher"/></a>
           </div>
-        </div>
-        <!--</div>
-        <div class="div3"></div>
-        </div>-->
-          <li><a href="inscription.php">S'inscrire</a>
-          <a href="seConnecter.php">/Se connecter</a></li>
+    </div>
+    <div class="section_connect">
+          <?php
+          session_start();
+          if (isset($_SESSION["connecte"]) && $_SESSION["connecte"] === true): ?>
+            <a href="profil.php">
+                <img class="section_connect" src="Images/<?= $_SESSION['utilisateur']['img'] ?>" 
+                alt="<?= htmlspecialchars($_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']) ?>">
+            </a>
+            <a href="profil.php" class="nom_profil">
+                <?= $_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']; ?>
+            </a>
+            <?php else: ?>
+              <li>
+                <a href="inscription.php">S'inscrire</a>
+                <a href="seConnecter.php">/Se connecter</a>
+              </li>
+          <?php endif; ?>
+    </div>      
 
     <form method="GET" action="recherche.php" class="barre-recherche">
       <input type="text" name="q" placeholder="Rechercher un voyage..." required>
@@ -68,7 +81,6 @@ $voyages = json_decode($voyages_json, true);
 
         $voyages_limited = array_slice($voyages, 0, 6);
       ?>
-
       <?php foreach ($voyages_limited as $voyage): ?>
         <div class="pin">
           <img class="ACC" src="<?= $voyage['img'] ?>" alt="<?= htmlspecialchars($voyage['titre']) ?>">
