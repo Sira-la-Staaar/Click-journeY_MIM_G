@@ -1,55 +1,50 @@
-{
-  "options": [
-    {
-      "nom": "Activité sportive",
-      "valeurs_possibles": [
-        "Randonnée",
-        "Vélo",
-        "Canoë"
-      ],
-      "choix_utilisateur": "Randonnée",
-      "nombre_personnes": 5,
-      "prix_par_personne": 30,
-      "prix_par_age": {
-        "enfant": 15,
-        "adulte": 30
+"id": "e001",
+    "ville_depart": "Casablanca",
+    "ville_arrivee": "Marrakech",
+    "formule": "économique",
+    "type_voyage": "aller-retour",
+    "date_heure": "2025-03-01T12:00",
+    "mois": "2025-03",
+    "semaine": "2025-W09",
+    "utilisateur": "u001",
+    "options": [
+      {
+        "nom": "Bagage supplémentaire",
+        "valeurs": ["Oui", "Non"],
+        "choix_utilisateur": "Oui",
+        "nb_personnes": 1,
+        "prix": 35.0,
+        "champs_specifiques": {
+          "poids_max": "23kg"
+        }
       },
-      "autres_champs": {
-        "vitesse_moyenne": "5 km/h"
+      {
+        "nom": "Repas spécial",
+        "valeurs": ["Végétarien", "Halal", "Sans gluten"],
+        "choix_utilisateur": "Halal",
+        "nb_personnes": 1,
+        "prix": 15.0
       }
-    },
-    {
-      "nom": "Hébergement",
-      "valeurs_possibles": [
-        "Camping",
-        "Hôtel 3 étoiles",
-        "Auberge"
-      ],
-      "choix_utilisateur": "Hôtel 3 étoiles",
-      "nombre_personnes": 5,
-      "prix_par_personne": 60,
-      "prix_par_nombre_personnes": {
-        "1": 100,
-        "2": 90,
-        "3": 80
-      },
-      "autres_champs": {
-        "type": "chambre double"
+    ]
+  },
+  {
+    "id": "e002",
+    "ville_depart": "Conakry",
+    "ville_arrivee": "Bamako",
+    "formule": "affaire",
+    "type_voyage": "aller simple",
+    "date_heure": "2025-04-10T14:30",
+    "mois": "2025-04",
+    "semaine": "2025-W15",
+    "utilisateur": "u002",
+    "options": [
+      {
+        "nom": "Assurance voyage",
+        "valeurs": ["Standard", "Premium"],
+        "choix_utilisateur": "Premium",
+        "nb_personnes": 1,
+        "prix": 20.0
       }
-    },
-    {
-      "nom": "Transport",
-      "valeurs_possibles": [
-        "Train",
-        "Bus",
-        "Voiture"
-      ],
-      "choix_utilisateur": "Train",
-      "nombre_personnes": 5,
-      "prix_par_personne": 50,
-      "autres_champs": {
-        "vitesse_moyenne": "80 km/h"
-      }
-    }
-  ]
-}
+    ]
+  }
+]
