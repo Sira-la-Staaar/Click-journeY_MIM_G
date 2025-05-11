@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['utilisateur'])) {
     header("Location: seConnecter.php");
     exit;
 }
 
-if ($_SESSION['user']['role'] !== 'A') {
-    header("Location: seConnecter.php");
-    exit;
+if ($_SESSION['utilisateur']['role'] !== 'A') {
+  header("Location: accueil.php");
+  exit;
 }
 
 $utilisateurs = json_decode(file_get_contents('utilisateurs.json'), true);
@@ -20,7 +20,6 @@ $pageActuelle = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $debut = ($pageActuelle - 1) * $utilisateursParPage;
 $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -35,7 +34,7 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
     <!--<div class="container">
     <div class="div1"></div>
     <div class="div2">-->
-      <div id="header">        
+    <div id="header">        
         <div id="navbar"> 
             <ul class="ulButton">
               <a href="Vols.php"><li class="liButton">Vols</li></a>
@@ -44,18 +43,35 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
             </ul>
             <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png" alt="Rechercher"/></a>
           </div>
-        </div>
+    </div>
         <!--</div>
         <div class="div3"></div>
         </div>-->
-          <li><a href="inscription.php">S'inscrire</a>
-          <a href="seConnecter.php">/Se connecter</a></li>
+    <div class="section_connect">
+      <?php
+        if (isset($_SESSION["connecte"]) && $_SESSION["connecte"] === true):
+          $lien_profil = ($_SESSION['utilisateur']['role'] === 'A') ? 'PageAdmin.php' : 'profil.php';
+          ?>
+          <a href="<?= $lien_profil ?>">
+            <img class="section_connect" src="Images/<?= $_SESSION['utilisateur']['img'] ?>" 
+            alt="<?= htmlspecialchars($_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']) ?>">
+          </a>
+          <a href="<?= $lien_profil ?>" class="nom_profil">
+            <?= $_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']; ?>
+          </a>
+        <?php else: ?>
+          <li>
+            <a href="inscription.php">S'inscrire</a>
+            <a href="seConnecter.php">/Se connecter</a>
+          </li>
+        <?php endif; ?>
+    </div>
 
     <form method="GET" action="recherche.php" class="barre-recherche">
       <input type="text" name="q" placeholder="Rechercher un voyage..." required>
     </form>
 
-    <h1>Liste des utilisateurs</h1>
+    <h1 id="admin">Liste des utilisateurs</h1>
 
     <table border="1">
         <thead>
