@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header("Location: seConnecter.php");
+    header("Location: Accueil.php");
     exit();
 }
 ?>
@@ -23,17 +23,17 @@ if (!isset($_SESSION['utilisateur'])) {
 
 <body class="Profil">
   <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
-        <h2 class="dana2">Mon profil🌴 </h2>
-        <p class="dana1"> Nom:</p>
-        <p class="dana1"> Prénom: </p>
-        <p class="dana1">Date de naissance :</p>
-        <p class="dana1">Email :</p>
-        <p class="dana1">Lieu de résidence :</p>
+      <h2 class="dana2">Mon profil🌴 </h2>
+        <p class="dana1">👤 Nom :</p>
+        <p class="dana1">🧑 Prénom :</p>
+        <p class="dana1">🎂 Date de naissance :</p>
+        <p class="dana1">📧 Email :</p>
+        <p class="dana1">🏡 Lieu de résidence :</p>
 
         <a href="seDeconnecter.php"><button id="logout">Se déconnecter</button><a>
 
-        <footer class="footer2" requiered style="text-align: center; margin-top: 20px;">
-          <div class="pied1"><br><img class="pied11" src="logo4.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
+        <footer class="footer3" requiered style="text-align: center; margin-top: 20px;">
+          <div class="pied2"><br><img class="pied11" src="logo4.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
             - Vols : Tarifs TTC par personne et « à partir de », valables à certaines dates, sous réserve de disponibilité et de confirmation de la compagnie aérienne<br><br>
             - Séjours : Tarifs TTC, hors taxes de séjour, par personne sur base d'une chambre double. Prix « à partir de » valables à certaines dates et sous réserve de disponibilités et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
             - Week-ends : Tarifs TTC hors taxes de séjours, indiqués par personne « à partir de », valables à certaines dates et sous réserve de disponibilité et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
