@@ -4,6 +4,7 @@
         "e-mail":"siradiakite792@gmail.com",
         "mdp":"Everybody4ever",
         "role":"A",
+        "img":"u001.jpeg",
         "informations":[
             {
                 "nom":"DIAKITE",
@@ -21,6 +22,7 @@
         "e-mail":"belquassaida@gmail.com",
         "mdp":"Pestostylo10",
         "role":"A",
+        "img":"u002.png",
         "informations":[
             {
                 "nom":"BELQUASS",
@@ -38,6 +40,7 @@
         "e-mail": "marwa.loud@gmail.com",
         "mdp": "Allezlesgros152",
         "role": "N",
+        "img":"u003.jpg",
         "informations": [
             {
                 "nom": "OUTAMGHART",
@@ -57,6 +60,7 @@
         "e-mail": "elsou.sanchez@gmail.com",
         "mdp": "Weshlequipe210",
         "role": "N",
+        "img":"u004.png",
         "informations": [
             {
                 "nom": "SANCHEZ",
@@ -76,6 +80,7 @@
         "e-mail": "hamshishi@gmail.com",
         "mdp": "HamshigaaJekumar14",
         "role": "N",
+        "img":"u005.png",
         "informations": [
             {
                 "nom": "JEKUMAR",
