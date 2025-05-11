@@ -46,11 +46,27 @@ foreach ($voyages as $voyage) {
         <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png"/></a>
 			</div>
 		</div>
-    <!--</div>
-    <div class="div3"></div>
-    </div>-->
-      <li><a href="inscription.php">S'inscrire</a>
-      <a href="seConnecter.php">/Se connecter</a></li>
+    
+    <div class="section_connect">
+      <?php
+        session_start();
+        if (isset($_SESSION["connecte"]) && $_SESSION["connecte"] === true):
+          $lien_profil = ($_SESSION['utilisateur']['role'] === 'A') ? 'PageAdmin.php' : 'profil.php';
+          ?>
+          <a href="<?= $lien_profil ?>">
+            <img class="section_connect" src="Images/<?= $_SESSION['utilisateur']['img'] ?>" 
+            alt="<?= htmlspecialchars($_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']) ?>">
+          </a>
+          <a href="<?= $lien_profil ?>" class="nom_profil">
+            <?= $_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']; ?>
+          </a>
+        <?php else: ?>
+          <li>
+            <a href="inscription.php">S'inscrire</a>
+            <a href="seConnecter.php">/Se connecter</a>
+          </li>
+        <?php endif; ?>
+    </div>
 
       <form method="GET" action="recherche.php" class="barre-recherche">
         <input type="text" name="q" placeholder="Rechercher un voyage..." required>
