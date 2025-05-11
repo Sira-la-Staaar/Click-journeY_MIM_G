@@ -1,4 +1,3 @@
-//ajouter css pour cette page
 <?php
 
 session_start();
@@ -10,6 +9,7 @@ if (!isset($_SESSION['selection'])) {
 }
 
 $selection = $_SESSION['selection'];
+$error_message = "";
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ $selection = $_SESSION['selection'];
     <link type="text/css" rel="stylesheet" href="stylesheet.css">
     <title>Récapitulatif du voyage</title>
 </head>
-<body>
+<body class="recapitulatif">
 
     <h1>Récapitulatif de votre voyage</h1>
 
@@ -42,16 +42,32 @@ $selection = $_SESSION['selection'];
         </div>
 
     <?php foreach ($selection as $index => $data): ?>
+        <?php if (is_int($index) && is_array($data)): ?>
         <div>
-            <h2>Étape <?php echo $index + 1; ?></h2>
-            <p><strong>Hébergement :</strong> <?= $data['hebergement'] ?></p>
-            <p><strong>Restauration :</strong> <?= $data['restauration'] ?></p>
-            <p><strong>Activités :</strong> <?= implode(', ', $data['activites']) ?></p>
-            <p><strong>Transport vers la prochaine étape :</strong> <?= $data['transport'] ?></p>
-            <p><strong>Nombre de personnes par activité :</strong> <?= $data['nb_personnes_activite'] ?></p>
-        </div>
+           <h2>Étape <?= $index + 1 ?></h2>
+
+        <?php if (!empty($data['hebergement'])): ?>
+            <p>Hébergement : <?= $data['hebergement'] ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($data['restauration'])): ?>
+            <p>Restauration : <?= $data['restauration'] ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($data['activites'])): ?>
+            <p>Activités : <?= implode(', ', $data['activites']) ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($data['transport'])): ?>
+            <p>Transport vers la prochaine étape : <?= $data['transport'] ?></p>
+        <?php endif; ?>
+
+        <?php if (!empty($data['nb_personnes_activite'])): ?>
+            <p>Nombre de personnes par activité : <?= $data['nb_personnes_activite'] ?></p>
+        <?php endif; ?>
+    </div>
+        <?php endif; ?>
     <?php endforeach; ?>
-<?php endif; ?>
 
 <div>
     <a href="paiement.php">Finaliser le voyage</a>
