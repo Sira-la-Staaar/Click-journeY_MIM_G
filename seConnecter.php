@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Rediriger vers accueil si l'utilisateur est déjà connecté
 if (isset($_SESSION["connecte"])) {
     header("Location: accueil.php");
@@ -21,18 +20,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
     // Parcourir tous les utilisateurs
     foreach ($utilisateurs as $utilisateur) { //C’est une boucle qui parcourt tous les utilisateurs du tableau $utilisateurs.
         if ($utilisateur["e-mail"] == $email && $utilisateur["mdp"] == $motdepasse) { //si les informations taper correspendent à celle du tableau, donc connexion réussite(on a touvé le bon utilisateur)!
-            $_SESSION["connecte"] = true; // utilisateur connecter
-            $_SESSION["username"] = $utilisateur["informations"][0]["pseudo"]; // Stocker le pseudo dans la session pour l'afficher plus tard dans les pages.
-            $_SESSION["role"] = $utilisateur["role"]; // Stocker le rôle (Admin ou Normal)
+            $_SESSION["connecte"] = true;
+            $_SESSION["utilisateur"] = [
+                "nom" => $utilisateur["informations"][0]["nom"],    
+                "prenom" => $utilisateur["informations"][0]["prenom"],
+                "pseudo" => $utilisateur["informations"][0]["pseudo"],
+                "role" => $utilisateur["role"],
+                "img" => $utilisateur["img"],
+                "id" => $utilisateur["id"]
+                ];
             $connexion_reussie = true; //connexion réussite
-            header("Location: accueil.php"); //Dès que la connexion réussit, on redirige l’utilisateur vers la page d’accueil
+            header("Location: Accueil.php"); //Dès que la connexion réussit, on redirige l’utilisateur vers la page d’accueil
             exit(); //Arrête immédiatement l’exécution du script, Parce qu'une fois qu'on redirige, on ne veut pas continuer à exécuter du PHP inutilement. Ça évite aussi des erreurs.
         }
     }
 
     // Si aucune correspondance trouvée
     if (!$connexion_reussie) {
-        echo "E-mail ou mot de passe incorrect.";
+        echo "E-mail ou mot de passe incorrect";
     }
 }
 ?>
@@ -42,10 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
 <head>
     <meta charset="UTF-8">
     <title>Se Connecter</title>
+    <link rel="shortcut icon" type="image/png" href="minilogo.png"/>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body class="seConnecter" style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
-    
+    <a id="Logo1" href="Accueil.php"><img class="disp1" src="logo4.png"/></a>
     <form action="seConnecter.php" method="POST">
         <h1>Se connecter à TheWestAgency :</h1>
         <ul>
@@ -57,9 +63,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
         <strong>OU</strong>
 
         <ul> 
-            <li>Adresse e-mail :</li> 
+            <li>Adresse e-mail :</li>
+            <br> 
             <input type="email" name="username" required>
+            <br><br>
             <li>Mot de passe :</li>
+            <br>
             <input type="password" name="password" required>
         </ul>
 
