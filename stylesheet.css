@@ -903,6 +903,78 @@ div {
     color: #ffffff;
 }
 
+/*css pour page voyage*/
+.voyage body {
+    font-family: Futura, Tahoma, sans-serif;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    color: #000;
+}
+
+.voyage h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.voyage .etape {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voyage .etape h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.voyage label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.voyage select, .voyage input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.voyage button {
+    display: block;
+    margin: 0 auto;
+    background-color: #73C6B6;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: Futura, Tahoma, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.voyage button:hover {
+    background-color: #45A29E;
+    color: #fff;
+}
+
 
 
 
