@@ -2,7 +2,7 @@
 
 session_start();
 
-// Vérification si les données du voyage sont présentes
+// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols pour faire son choix!!!
 if (!isset($_SESSION['selection'])) {
     header("Location: vols.html"); 
     exit();
