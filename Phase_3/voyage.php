@@ -52,7 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <?php foreach ($etapes as $index => $etape): ?>
             <div class="etape">
-                <h2>Étape <?= $index + 1 ?>: <?= $etape['nom'] ?></h2>
+                <h2>
+    Étape <?= is_numeric($index) ? $index + 1 : htmlspecialchars($index) ?> :
+    <?= isset($etape['nom']) ? htmlspecialchars($etape['nom']) : 'Nom non précisé' ?>
+    </h2>
 
                 <!-- Hébergement -->
                 <label for="hebergement_<?= $index ?>">Choisissez votre type d'hébergement :</label>
