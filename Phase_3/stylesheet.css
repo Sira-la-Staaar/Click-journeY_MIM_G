@@ -644,6 +644,10 @@ tr:hover {
   margin-right: auto;
   text-align: left;
 }
+.Inscription{
+  background:url('Images/img224.jpg')no-repeat center center fixed;
+  background-size:cover;
+}
 
 footer.footer3 {
   position:relative;
