@@ -7,7 +7,7 @@ if (isset($_SESSION["connecte"])) {
 }
 
 // Charger les utilisateurs depuis le fichier JSON
-$utilisateurs_json = file_get_contents("utilisateurs.json"); // Lire tout le contenu du fichier utilisateurs.json et le mettre dans la variable: $utilisateurs_json 
+$utilisateurs_json = file_get_contents("Data/utilisateurs.json"); // Lire tout le contenu du fichier utilisateurs.json et le mettre dans la variable: $utilisateurs_json 
 $utilisateurs = json_decode($utilisateurs_json, true); // Convertir le texte en tableau pour le manipuler; le "true" c'est pour que le PHP transforme le JSON en tableaux associatifs.
 
 // Vérifier si le formulaire a été soumis
@@ -47,11 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
 <head>
     <meta charset="UTF-8">
     <title>Se Connecter</title>
-    <link rel="shortcut icon" type="image/png" href="minilogo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body class="seConnecter" style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
-    <a id="Logo1" href="Accueil.php"><img class="disp1" src="logo4.png"/></a>
+    <a id="Logo1" href="Accueil.php"><img class="disp1" src="Images/logo4.png"/></a>
     <form action="seConnecter.php" method="POST">
         <h1>Se connecter à TheWestAgency :</h1>
         <ul>
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
     </form>
 
     <footer class="footer2">
-        <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
+        <div class="pied1"><br><img class="pied11" src="Images/logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
           - Vols : Tarifs TTC par personne et « à partir de », valables à certaines dates, sous réserve de disponibilité et de confirmation de la compagnie aérienne<br><br>
           - Séjours : Tarifs TTC, hors taxes de séjour, par personne sur base d'une chambre double. Prix « à partir de » valables à certaines dates et sous réserve de disponibilités et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
           - Week-ends : Tarifs TTC hors taxes de séjours, indiqués par personne « à partir de », valables à certaines dates et sous réserve de disponibilité et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
