@@ -35,10 +35,8 @@ $error_message = "";
             <h2>Informations du voyage :</h2>
             <p><strong>Ville de départ :</strong> <?php echo isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
             <p><strong>Ville d'arrivée :</strong> <?php echo isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Date d'arrivée :</strong> <?php echo isset($selection['date_arrivee']) ? $selection['date_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Durée du voyage :</strong> <?php echo isset($selection['duree_voyage']) ? $selection['duree_voyage'] : 'Non spécifiée'; ?></p>
-            <p><strong>Prix total :</strong> <?php echo isset($selection['prix_total']) ? $selection['prix_total'] : 'Non spécifié'; ?></p>
             <p><strong>Nombre de personnes :</strong> <?php echo isset($selection['nb_personnes']) ? $selection['nb_personnes'] : 'Non spécifié'; ?></p>
+            <p><strong>Bagages :</strong> 2 bagages de 23kg par personne (soit <?php echo $_GET['voyageurs'] * 2; ?> bagages)</p>
         </div>
 
     <?php foreach ($selection as $index => $data): ?>
