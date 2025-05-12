@@ -21,7 +21,7 @@ $error_message = "";
     <title>Récapitulatif du voyage</title>
 </head>
     <body class="recapitulatif">
-
+    <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Récapitulatif de votre voyage</h1>
 
     <?php if (!empty($error_message)): ?>
