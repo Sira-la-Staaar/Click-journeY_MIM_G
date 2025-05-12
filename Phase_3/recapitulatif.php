@@ -9,7 +9,6 @@ if (!isset($_SESSION['selection'])) {
 }
 
 $selection = $_SESSION['selection'];
-$error_message = "";
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +22,7 @@ $error_message = "";
     <body class="recapitulatif">
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Récapitulatif de votre voyage</h1>
-
-    <?php if (!empty($error_message)): ?>
+        
     <div>
         <p><?php echo $error_message; ?></p>
     </div>
