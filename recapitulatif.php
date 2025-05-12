@@ -20,7 +20,7 @@ $error_message = "";
     <link rel="stylesheet" href="stylesheet.css">
     <title>Récapitulatif du voyage</title>
 </head>
-<body class="recapitulatif">
+    <body class="recapitulatif">
 
     <h1>Récapitulatif de votre voyage</h1>
 
@@ -77,5 +77,5 @@ $error_message = "";
     <a href="voyage.php">Retour à la sélection</a>
 </div>
 
-</body>
+    </body>
 </html>
