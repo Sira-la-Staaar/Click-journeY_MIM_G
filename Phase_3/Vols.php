@@ -5,7 +5,7 @@
 		<title>Une page spécifique pour rechercher des voyages avec plusieurs champs de filtrage (dates, lieux, options, ...)</title>
 	</head>
 	<body class="Vols" style="background: url('https://media.istockphoto.com/id/1057333524/fr/photo/kasbah-ait-ben-haddou-dans-le-d%C3%A9sert-pr%C3%A8s-de-montagnes-de-latlas-maroc.jpg?s=612x612&w=0&k=20&c=Zcr5WKI1URXHrsYqBFdydkW0EywJdJXRqKyb4MBzqjc=') no-repeat center center fixed; background-size: cover;">
-    <form action="recapitulatif.php" method="GET">
+    <form action="recapitulatif.php" method="GET"> 
 <p>D'où partez-vous?</p>
    <select name="ville_depart" id="ville_depart">
    <optgroup label="Maroc">
@@ -164,7 +164,7 @@
 <option value="aller-retour">aller-retour</option>
 <option value="aller simple">aller simple</option>
 </select>
-	    
+	<button type="submit">Rechercher</button>    
     </form>
 		
     <!-- nombre de voyageurs avec valises (deux bagages de 23 kg par personne!! regarder pourquoi date n'est pas limite, ajouter un css pour ca. Enlevez se connecter avec facebook!!!! relier tous les css ensemble!-->
@@ -174,7 +174,7 @@
 La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
       
 La date: <input type="datetime-local" name="time2" value="2025-03-01T12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
-		<button type="submit">Rechercher</button>
+		
 
 <footer class="footer2">
         <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
