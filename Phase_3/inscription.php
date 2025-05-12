@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,13 +5,13 @@
   <title>S'inscrire</title>
   <style>
     body {
-      background: url('https://levoyageautrement-ec2.s3.eu-west-3.amazonaws.com/public/img/upload/magazine/country-430/les-iles-de-loos-un-halot-de-lumiere-dans-la-noirceur-de-conakry/img-2020-10-27-04-04-21-1-long---iles-de-loos-%C2%A9%C2%A9vincent-brudo.jpg') no-repeat center center fixed;
+      background: url('img224.jpg') no-repeat center center fixed;
       background-size: cover;
     }
   </style>
 </head>
 <body class="Inscription">
-<form action="profil.php" method="POST">
+<form action="Accueil.php" method="POST">
   <img src ="logo3.png" alt="logo de The West Agency"/>
    
   <h1 class="aida1">S'inscrire</h1>
@@ -63,7 +62,6 @@
       <option value="Niger">Niger</option>
       <option value="Mauritanie">Mauritanie</option>
       <option value="Cap-Vert">Cap-Vert</option>
-      <option value="France">France</option>
     </select>
   </div>
   
@@ -84,10 +82,10 @@
   </div>
 <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $champs = ['civilite', 'nom', 'prenom', 'pays_de_residence', 'date_naissance', 'e-mail', 'mot_de_passe'];
+    $champs = ['civilite', 'nom', 'prenom', 'pays_residence', 'date_naissance', 'email', 'mot_de_passe'];
     if ($formulaire_complet) {
         echo "Formulaire complet, envoi en cours...";
-
+        
         foreach ($champs_obligatoires as $champ) {
           if (empty($_POST[$champ])) {
               echo "Erreur : Le formulaire est incomplet.";
@@ -101,11 +99,9 @@
 
   <div class="input box" style="margin-top: 20px;">
   <button type="submit" 
-          class="button" 
-          style="padding: 10px 20px; background-color: #3498db; border: none; border-radius: 8px; color: white; font-size: 16px; cursor: pointer; margin-left: auto; margin-right: 20%; text-align:right;"> 
-          S'inscrire
+   style="padding: 10px 20px; background-color: #3498db; border: none; border-radius: 8px; color: white; font-size: 16px; cursor: pointer; margin-left: auto; margin-right: 20%; text-align:right;">
+   S'inscrire
 </button>
-<a href="Acceuil.php"></a>
   </div>
   <footer class="footer3">
     <div class="pied2"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
