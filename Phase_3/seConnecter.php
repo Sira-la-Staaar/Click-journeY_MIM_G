@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body class="seConnecter" style="background: url('https://www.bladi.net/img/logo/maroc-endroits-a-visiter.jpg') no-repeat center center fixed; background-size: cover;">
-    <a id="Logo1" href="Accueil.php"><img class="disp1" src="Images/logo4.png"/></a>
+    <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
+	<a id="Logo1" href="Accueil.php"><img class="disp1" src="Images/logo4.png"/></a>
     <form action="seConnecter.php" method="POST">
         <h1>Se connecter à TheWestAgency :</h1>
         <ul>
