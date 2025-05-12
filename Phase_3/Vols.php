@@ -1,21 +1,3 @@
-<?php
-session_start();
-
-// Vérification de l'envoi du formulaire
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Récupérer les données du formulaire
-    $_SESSION['selection'] = [
-        'ville_depart' => $_GET['ville_depart'] ?? '',
-        'ville_arrivee' => $_GET['ville_arrivee'] ?? '',
-        'formule' => $_GET['formule'] ?? '',
-        'type_voyage' => $_GET['type-voyage'] ?? '',
-        'month' => $_GET['month'] ?? '',
-        'week' => $_GET['week'] ?? '',
-        'time2' => $_GET['time2'] ?? ''
-    ];
-}
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -184,10 +166,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <option value="aller simple">aller simple</option>
 </select>
 
-	<p>Choisissez la date et l'heure de votre   vol:</p> 
-Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
-La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
-La date: <input type="datetime-local" name="time2" value="2025-03-01T12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
+	<p>Choisissez la date et l'heure de votre vol:</p> 
+Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12" required><br> 
+La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"required><br>
+La date: <input type="datetime-local" name="time2" value="2025-03-01T12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"required><br>
+
+	<p>Combien de voyageurs ?</p>
+<input type="number" name="voyageurs" min="1" max="10" value="1" required>
+	<p>Deux bagages de 23 kg par personne sont autorisés.</p>
 	
 	<button type="submit">Rechercher</button>    
     </form>
