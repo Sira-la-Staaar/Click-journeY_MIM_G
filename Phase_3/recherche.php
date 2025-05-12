@@ -71,7 +71,7 @@ foreach ($voyages as $voyage) {
       <form method="GET" action="recherche.php" class="barre-recherche">
         <input type="text" name="q" placeholder="Rechercher un voyage..." required>
         <button type="submit">
-            <img id="recherche" src="logo2.webp" alt="Rechercher">
+            <img id="recherche" src="Images/logo2.webp" alt="Rechercher">
         </button>
       </form>
 
