@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+// Vérification de l'envoi du formulaire
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Récupérer les données du formulaire
+    $_SESSION['selection'] = [
+        'ville_depart' => $_GET['ville_depart'] ?? '',
+        'ville_arrivee' => $_GET['ville_arrivee'] ?? '',
+        'formule' => $_GET['formule'] ?? '',
+        'type_voyage' => $_GET['type-voyage'] ?? '',
+        'month' => $_GET['month'] ?? '',
+        'week' => $_GET['week'] ?? '',
+        'time2' => $_GET['time2'] ?? ''
+    ];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
