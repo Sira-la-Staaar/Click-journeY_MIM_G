@@ -76,6 +76,7 @@ $error_message = "";
 <div>
     <a href="voyage.php">Retour à la sélection</a>
 </div>
-
+        
+    <?php endif; ?>
     </body>
 </html>
