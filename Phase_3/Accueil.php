@@ -12,7 +12,7 @@ if ($voyages === null) {
   <head lang="fr">
     <title>Accueil | The West Agency</title>
     <link type="text/css" rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" type="image/png" href="minilogo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <meta name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'accueil" />
   </head>
@@ -27,7 +27,7 @@ if ($voyages === null) {
               <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
               <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
             </ul>
-            <a id="Logo" href="Accueil.php"><img class="disp" src="logo.png" alt="Rechercher"/></a>
+            <a id="Logo" href="Accueil.php"><img class="disp" src="Images/logo.png" alt="Rechercher"/></a>
           </div>
     </div>
     <div class="section_connect">
@@ -57,7 +57,7 @@ if ($voyages === null) {
 
 
 <div class="acc1">
-  <video id="myVideo" src="Movie1.webm" autoplay muted loop>
+  <video id="myVideo" src="Images/Movie1.webm" autoplay muted loop>
     Votre navigateur ne supporte pas la balise vidéo.
   </video>
 
@@ -90,12 +90,12 @@ if ($voyages === null) {
       ?>
       <?php foreach ($voyages_limited as $voyage): ?>
         <div class="pin">
-          <img class="ACC" src="<?= $voyage['img'] ?>" alt="<?= htmlspecialchars($voyage['titre']) ?>">
+          <img class="ACC" src="Images/<?= $voyage['img'] ?>" alt="<?= htmlspecialchars($voyage['titre']) ?>">
           <div class="pin-content">
             <h3><?= htmlspecialchars($voyage['titre']) ?></h3>
             <p>Du <?= $voyage['date_debut'] ?> au <?= $voyage['date_fin'] ?></p>
             <p><strong><?= $voyage['prix'] ?> €</strong></p>
-            <a class="btn-details" href="detail_voyage.php?id=<?= $voyage['id'] ?>">Voir plus</a>
+            <a class="btn-details" href="recapitulatif.php?id=<?= $voyage['id'] ?>">Voir plus</a>
           </div>
         </div>
       <?php endforeach; ?>
@@ -107,7 +107,7 @@ if ($voyages === null) {
     
     
     <footer class="footer2">
-        <div class="pied1"><br><img class="pied11" src="logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
+        <div class="pied1"><br><img class="pied11" src="Images/logo5.png" alt="logo de The West Agency"/><br><br> * Selon les conditions tarifaires propres à chaque produit et précisées ci-après : <br><br>
           - Vols : Tarifs TTC par personne et « à partir de », valables à certaines dates, sous réserve de disponibilité et de confirmation de la compagnie aérienne<br><br>
           - Séjours : Tarifs TTC, hors taxes de séjour, par personne sur base d'une chambre double. Prix « à partir de » valables à certaines dates et sous réserve de disponibilités et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
           - Week-ends : Tarifs TTC hors taxes de séjours, indiqués par personne « à partir de », valables à certaines dates et sous réserve de disponibilité et de confirmation. Ces tarifs n'incluent pas les suppléments ou options susceptibles de s'appliquer à certaines réservations ou destinations.<br><br>
