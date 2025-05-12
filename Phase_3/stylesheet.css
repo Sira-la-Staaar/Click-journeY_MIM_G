@@ -2774,50 +2774,6 @@ img.disp1 {
     border-radius: 5px;
 }
 
-body.recapitulatif {
-    font-family: Futura, Tahoma, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Titre principal */
-h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* Sous-titres */
-h2 {
-    font-size: 22px;
-    color: #000000;
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
-/* Paragraphes */
-p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-/* Zones d'informations */
-div {
-    background-color: #73C6B6;
-    padding: 15px 20px;
-    border-radius: 10px;
-    border: 2px solid #000000;
-    margin-bottom: 20px;
-    width: 80%;
-    max-width: 700px;
-}
-
 /*css page recapitulatif*/
 .recapitulatif body {
     font-family: Futura, Tahoma, sans-serif;
