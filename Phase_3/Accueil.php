@@ -1,6 +1,11 @@
-<?php include("get_voyage.php");
+<?php
 $voyages_json = file_get_contents('voyages.json');
 $voyages = json_decode($voyages_json, true);
+
+if ($voyages === null) {
+    echo "Erreur de lecture JSON.";
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html>
