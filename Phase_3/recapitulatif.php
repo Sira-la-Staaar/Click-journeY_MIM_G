@@ -4,7 +4,7 @@ session_start();
 
 // Vérification si les données du voyage sont présentes
 if (!isset($_SESSION['selection'])) {
-    header("Location: voyage.php"); 
+    header("Location: vols.html"); 
     exit();
 }
 
