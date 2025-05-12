@@ -1,5 +1,5 @@
 <?php
-$voyages_json = file_get_contents('voyages.json');
+$voyages_json = file_get_contents('Data/voyages.json');
 $voyages = json_decode($voyages_json, true);
 
 if ($voyages === null) {
@@ -23,7 +23,7 @@ if ($voyages === null) {
     <div id="header">        
         <div id="navbar"> 
             <ul class="ulButton">
-              <a href="Vols.php"><li class="liButton">Vols</li></a>
+              <a href="Vols.html"><li class="liButton">Nos offres</li></a>
               <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
               <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
             </ul>
