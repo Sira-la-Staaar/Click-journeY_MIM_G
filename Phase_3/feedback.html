@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Feedback The West Agency Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body id="Feedback">
+  <a href="Accueil.php">
+            <img  class="mari12" src="Images/logo.png" alt="The West Agency"/>
+  </a>
   <form id="feedbackForm">
-    <h2>Que souhaitez-vous nous faire savoir ?</h2>
+    <h2 class="feedback">Que souhaitez-vous nous faire savoir ?</h2>
     <div class="buttons">
       <button type="button" onclick="selectType('suggestion')">Suggestion</button>
       <button type="button" onclick="selectType('negatif')">Je n'aime pas</button>
@@ -16,9 +19,9 @@
 
     <input type="hidden" name="type" id="type" required>
 
-    <h3>Quelle est la probabilité que vous recommandiez notre site Web ?</h3>
+    <h3 class="feedback">Quelle est la probabilité que vous recommandiez notre site Web ?</h3>
     <div class="rating">
-      <span>Tout à fait improbable</span>
+      <span>Tout à fait improbable  </span>
       <div>
         <label><input type="radio" name="note" value="0" required> 0 </label>
         <label><input type="radio" name="note" value="1"> 1 </label>
@@ -32,14 +35,14 @@
         <label><input type="radio" name="note" value="9"> 9 </label>
         <label><input type="radio" name="note" value="10"> 10 </label>
       </div>
-      <span>Extrêmement probable</span>
+      <span>  Extrêmement probable</span>
     </div>
 
-    <textarea name="commentaire" placeholder="Commentaire (optionnel)"></textarea>
+    <textarea class="feedback" name="commentaire" placeholder="Commentaire (optionnel)"></textarea>
 
-    <button type="submit">Soumettre</button>
+    <button class="feedback" type="submit">Soumettre</button>
   </form>
 
-  <script src="script.js"></script>
+  <script src="feedback.js"></script>
 </body>
 </html>
