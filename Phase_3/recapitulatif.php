@@ -2,9 +2,13 @@
 
 session_start();
 
-// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols pour faire son choix!!!
+// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols si il est deja connecte sinon directement la page seConnecter!
 if (!isset($_SESSION['selection'])) {
     header("Location: vols.html"); 
+    exit();
+}
+if (!isset($_SESSION['utilisateur'])) {
+    header("Location: seConnecter.php");
     exit();
 }
 
