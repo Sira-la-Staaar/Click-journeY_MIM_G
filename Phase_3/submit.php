@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "date" => date("Y-m-d H:i:s")
     ];
 
-    $file = 'feedback.json';
+    $file = 'Data/feedback.json';
 
     if (file_exists($file)) {
         $data = json_decode(file_get_contents($file), true);
