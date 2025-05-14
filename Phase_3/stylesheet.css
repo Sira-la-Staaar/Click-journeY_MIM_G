@@ -26,7 +26,7 @@ a.admin:visited{
 .acc1 {
   padding-left: 20%;
   padding-right: 20%;
-  margin-top: 6.10%;
+  margin-top:4%;
   background-color: rgb(21, 2, 70);
   position: relative;
   display: flex;
@@ -76,14 +76,14 @@ a:link{
   text-decoration: none;
 	color:#336666;
 }
+.mari12 a:hover{
+  color:white;
+}
 a.nom_profil1:active{
   color:rgb(255, 255, 255);
 }
 a.nom_profil1:visited{
   color:rgb(255, 255, 255);
-}
-a:visited{
-  color:rgb(0, 0, 0);
 }
 #apropos{
   margin:0;
@@ -101,6 +101,9 @@ a:visited{
   padding:2%;
   padding-bottom:5%;
   flex-wrap: wrap;
+}
+a:visited{
+  color:rgb(0, 0, 0);
 }
 .avis-section {
   flex: 1;
@@ -130,6 +133,7 @@ a:visited{
   background-color:rgba(255, 255, 255, 0.5);
   padding: 3px 6px;
   margin-left:78%;
+  maRgin-top:1.25%;
   margin-right:20px;
   border-radius: 6px;
   z-index:15;
@@ -265,7 +269,8 @@ footer.footer2 {
 }
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
+  align-items:center;
 }
 form.admin {
   display: inline-block;
@@ -384,7 +389,16 @@ input[type="submit"]:hover {
   text-decoration:none;
   margin-left:-45%;
   margin-top:3.1%; 
-}  
+} 
+#Logo2 {
+  position:absolute;
+  color:black;
+  height:15%;
+  width:auto;
+  text-decoration:none;
+  margin-left:5%;
+  margin-top:5%; 
+}
 
 .mari{
   width:80%;
@@ -398,6 +412,12 @@ input[type="submit"]:hover {
 }
 .mari12{
   width:30%;
+  text-align:center;
+  height:auto;
+}
+.mari12:hover{
+  width:30%;
+  font-size:2em;
   text-align:center;
   height:auto;
 }
@@ -449,12 +469,13 @@ input[type="submit"]:hover {
 }
 
 .overlay1 {
-  margin-top: 40%;
+  margin-top: 35%;
   left: 15%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   font-size: 4rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(21, 2, 70);
   z-index: 3;
 }
@@ -594,15 +615,29 @@ tr:hover {
 }
 
 #Feedback
-
 body#feedback {
   font-family: Arial, sans-serif;
-  max-width: 600px;
+  width: 60%;
+  min-height: 100vh;
   margin: 2em auto;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 8px;
+  background-color: #f9f9f9;
 }
+
+#feedbackForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  background-color: rgb(243, 239, 232);
+  border-radius: 8px;
+  width: fit-content;
+}
+
 h2.feedback, h3.feedback {
   margin-bottom: 0.5em;
 }
@@ -622,7 +657,7 @@ h2.feedback, h3.feedback {
   gap: 5px;
 }
 textarea.feedback {
-  width: 100%;
+  width: 90%;
   height: 100px;
   margin-top: 1em;
 }
@@ -634,8 +669,6 @@ button[type="submit"].feedback {
   border: none;
   cursor: pointer;
 }
-
-
 /*#Inscription*/
 .aida1 {
   color: #006633;
@@ -646,8 +679,15 @@ button[type="submit"].feedback {
   font-family: Roboto Slab;
   font-size: 100px; 
 }
-
-
+#profil{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: 65%;
+  width: auto;
+  margin-left:45%;
+  border-radius: 50%;
+  object-fit: cover;
+  position:absolute;
+}
 .aida2{
   color:#bfbf50;
   margin-left: 10%;
@@ -687,8 +727,13 @@ button[type="submit"].feedback {
   margin-right: auto;
   text-align: left;
 }
+
 .Inscription{
   background:url('Images/img224.jpg')no-repeat center center fixed;
+  background-size:cover;
+}
+.Profil{
+  background:url('Images/Profil.jpeg')no-repeat center center fixed;
   background-size:cover;
 }
 
@@ -776,7 +821,6 @@ footer.footer3 {
 
 .seConnecter strong{
     display: block;
-    text-align: center; 
     font-size: 20px;
     color: #000000;
 }
@@ -788,16 +832,16 @@ footer.footer3 {
     width: 250px;
 }
 
-.seConnecter form { /*crée le carre blanc*/
-  background-color: #73C6B6; 
+.seConnecter { /*crée le carre blanc*/
+  background-color: #73C6B6;
   position:relative;
-  padding: 5px; 
+  width:60%;
+  padding: 5%; 
   border-radius: 10px;
-  display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 35%;
+  flex-direction: column;*/
   margin:0 auto;
   margin-top:5%;
   margin-bottom:5%;
@@ -935,7 +979,6 @@ body.recapitulatif {
     padding: 10px;
     border-radius: 10px;
 }
-
 .voyage .etape {
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid #000;
