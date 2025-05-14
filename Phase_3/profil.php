@@ -3,7 +3,7 @@ session_start();
 if (empty($_SESSION['connecte'])) {
     header('Location: seConnecter.php');
     exit;
-}
+}    
 $userId        = $_SESSION['utilisateur']['id'];
 $json          = 'Data/utilisateurs.json';
 $utilisateurs  = json_decode(file_get_contents($json), true);
@@ -29,19 +29,19 @@ $info = $utilisateur['informations'][0];
   <body class="Profil">
     <?php include 'header.php'; ?>
     <div class="seConnecter">
-        <h1>Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
-        <div class="avatar">
-           <img id="uno" src="Images/<?= htmlspecialchars($utilisateur['img'], ENT_QUOTES) ?>"
+      <div class="avatar">
+           <img id="profil" src="Images/<?= htmlspecialchars($utilisateur['img'], ENT_QUOTES) ?>"
            alt="Photo de <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?>">
-        </div>
+      </div>
+      <h1>Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
       <p><strong>Nom :</strong> <?= htmlspecialchars($info['nom'], ENT_QUOTES) ?></p>
       <p><strong>Pseudo :</strong> <?= htmlspecialchars($info['pseudo'], ENT_QUOTES) ?></p>
       <p><strong>E‑mail :</strong> <?= htmlspecialchars($utilisateur['e-mail'], ENT_QUOTES) ?></p>
       <p><strong>Civilité :</strong> <?= htmlspecialchars($info['civilité'], ENT_QUOTES) ?></p>
       <p><strong>Naissance :</strong> <?= htmlspecialchars($info['naissance'], ENT_QUOTES) ?></p>
       <p><strong>Adresse :</strong> <?= htmlspecialchars($info['adresse'], ENT_QUOTES) ?></p>
-      <button id="edit-btn">Modifier mes infos</button>
-      <a href="seDeconnecter.php"><button id="logout">Se déconnecter</button></a>
+      <a href="edit_profil.php"><button class="btn-details">Modifier</button></a>
+      <a href="seDeconnecter.php"><button class="btn-details">Se déconnecter</button></a>
     </div>
     <script src="js/profil.js"></script>
     <?php include 'footer.php'; ?>
