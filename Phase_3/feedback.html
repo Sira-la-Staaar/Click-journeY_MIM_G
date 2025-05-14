@@ -11,12 +11,11 @@
   </a>
   <form id="feedbackForm">
     <h2 class="feedback">Que souhaitez-vous nous faire savoir ?</h2>
-    <div class="buttons">
-      <button type="button" onclick="selectType('suggestion')">Suggestion</button>
-      <button type="button" onclick="selectType('negatif')">Je n'aime pas</button>
-      <button type="button" onclick="selectType('positif')">J'apprécie</button>
+    <div>
+      <button class="btn-details" type="button" onclick="selectType('suggestion')">Suggestion</button>
+      <button class="btn-details" type="button" onclick="selectType('negatif')">Je n'aime pas</button>
+      <button class="btn-details" type="button" onclick="selectType('positif')">J'apprécie</button>
     </div>
-
     <input type="hidden" name="type" id="type" required>
 
     <h3 class="feedback">Quelle est la probabilité que vous recommandiez notre site Web ?</h3>
