@@ -1,81 +1,51 @@
 <?php
-
-session_start();
-
-// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols si il est deja connecte sinon directement la page seConnecter!
-if (!isset($_SESSION['selection'])) {
-    header("Location: vols.html"); 
+// Vérifie que toutes les données du formulaire sont bien présentes dans l'URL (GET)
+if (
+    !isset($_GET['ville_depart']) || !isset($_GET['ville_arrivee']) ||
+    !isset($_GET['formule']) || !isset($_GET['type-voyage']) ||
+    !isset($_GET['month']) || !isset($_GET['week']) ||
+    !isset($_GET['time2']) || !isset($_GET['voyageurs'])
+) {
+    // Si des champs sont manquants, on redirige vers vols.html
+    header("Location: vols.html");
     exit();
 }
-if (!isset($_SESSION['utilisateur'])) {
-    header("Location: seConnecter.php");
-    exit();
-}
 
-$selection = $_SESSION['selection'];
+// Récupération et sécurisation des données
+$ville_depart = htmlspecialchars($_GET['ville_depart']);
+$ville_arrivee = htmlspecialchars($_GET['ville_arrivee']);
+$formule = htmlspecialchars($_GET['formule']);
+$type_voyage = htmlspecialchars($_GET['type-voyage']);
+$mois = htmlspecialchars($_GET['month']);
+$semaine = htmlspecialchars($_GET['week']);
+$date = htmlspecialchars($_GET['time2']);
+$voyageurs = (int) $_GET['voyageurs'];
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
     <title>Récapitulatif du voyage</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
-    <body class="recapitulatif">
+<body class="recapitulatif">
+
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
-    <h1>Récapitulatif de votre voyage</h1>
-        
-    <div>
-        <p><?php echo $error_message; ?></p>
-    </div>
-<?php else: ?>
-    <p>Voici le récapitulatif de votre voyage personnalisé:</p>
     
-    <div>
-            <h2>Informations du voyage :</h2>
-            <p><strong>Ville de départ :</strong> <?php echo isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
-            <p><strong>Ville d'arrivée :</strong> <?php echo isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Nombre de voyageurs :</strong> <?php echo isset($selection['voyageurs']) ? $selection['voyageurs'] : 'Non spécifié'; ?></p>
-        </div>
+    <h1>Récapitulatif de votre voyage</h1>
 
-    <?php foreach ($selection as $index => $data): ?>
-        <?php if (is_int($index) && is_array($data)): ?>
-        <div>
-           <h2>Étape <?= $index + 1 ?></h2>
+    <ul>
+        <li><strong>Ville de départ :</strong> <?= $ville_depart ?></li>
+        <li><strong>Ville d’arrivée :</strong> <?= $ville_arrivee ?></li>
+        <li><strong>Formule choisie :</strong> <?= $formule ?></li>
+        <li><strong>Type de voyage :</strong> <?= $type_voyage ?></li>
+        <li><strong>Mois :</strong> <?= $mois ?></li>
+        <li><strong>Semaine :</strong> <?= $semaine ?></li>
+        <li><strong>Date et heure :</strong> <?= $date ?></li>
+        <li><strong>Nombre de voyageurs :</strong> <?= $voyageurs ?></li>
+        <li><strong>Bagages autorisés :</strong> <?= $voyageurs * 2 ?> bagages de 23 kg</li>
+    </ul>
 
-        <?php if (!empty($data['hebergement'])): ?>
-            <p>Hébergement : <?= $data['hebergement'] ?></p>
-        <?php endif; ?>
-
-        <?php if (!empty($data['restauration'])): ?>
-            <p>Restauration : <?= $data['restauration'] ?></p>
-        <?php endif; ?>
-
-        <?php if (!empty($data['activites'])): ?>
-            <p>Activités : <?= implode(', ', $data['activites']) ?></p>
-        <?php endif; ?>
-
-        <?php if (!empty($data['transport'])): ?>
-            <p>Transport vers la prochaine étape : <?= $data['transport'] ?></p>
-        <?php endif; ?>
-
-        <?php if (!empty($data['nb_personnes_activite'])): ?>
-            <p>Nombre de personnes par activité : <?= $data['nb_personnes_activite'] ?></p>
-        <?php endif; ?>
-    </div>
-        <?php endif; ?>
-    <?php endforeach; ?>
-
-<div>
-    <a href="paiement.php">Finaliser le voyage</a>
-</div>
-
-<div>
-    <a href="voyage.php">Retour à la sélection</a>
-</div>
-        
-    <?php endif; ?>
-    </body>
+</body>
 </html>
