@@ -8,13 +8,15 @@
     <meta name=”description” content="Vols" />
 	</head>
 	<body class="Vols" style="background: url('https://media.istockphoto.com/id/1057333524/fr/photo/kasbah-ait-ben-haddou-dans-le-d%C3%A9sert-pr%C3%A8s-de-montagnes-de-latlas-maroc.jpg?s=612x612&w=0&k=20&c=Zcr5WKI1URXHrsYqBFdydkW0EywJdJXRqKyb4MBzqjc=') no-repeat center center fixed; background-size: cover;">
-    <form action="recapitulatif.php" method="GET"> 
+    <form action="resultat.php" method="GET"> 
 <p>D'ou partez-vous?</p>
    <select name="ville_depart" id="ville_depart">
    <optgroup label="Maroc">
 <option value="Marrakech">Marrakech</option>
 <option value="Casablanca">Casablanca</option>
 <option value="Rabat">Rabat</option>
+    </optgroup>
+	
     </optgroup>
   <optgroup label="Guinee">
 <option value="Conakry">Conakry</option>
@@ -26,7 +28,8 @@
 <option value="Kayes">Kayes</option>
     </optgroup>
        <optgroup label="France">
-<option value="Paris">Paris</option>
+<option value="Paris-Orly">Paris-Orly</option>
+<option value="Paris-CDG">Paris-CDG</option>
     </optgroup>
     <optgroup label="Senegal">
 <option value="Dakar">Dakar</option>
@@ -183,7 +186,7 @@
 	<button type="submit">Rechercher</button>    
     </form>
 		
-    <!-- nombre de voyageurs avec valises (deux bagages de 23 kg par personne!! regarder pourquoi date n'est pas limite, ajouter un css pour ca. Enlevez se connecter avec facebook!!!! relier tous les css ensemble!-->
+    
     <p>Choisissez la date et l'heure de votre   vol:</p> 
  Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
       
