@@ -1,7 +1,7 @@
     <div id="header">        
         <div id="navbar"> 
             <ul class="ulButton">
-              <a href="Vols.html"><li class="liButton">Nos offres</li></a>
+              <a href="Vols.php"><li class="liButton">Nos offres</li></a>
               <a href="Apropos.php"><li class="liButton">A propos de nous</li></a>
               <a href="Apropos.php#avis-contact-wrapper"><li class="liButton">Contacts</li></a>
             </ul>
