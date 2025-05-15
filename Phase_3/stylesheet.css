@@ -26,7 +26,7 @@ a.admin:visited{
 .acc1 {
   padding-left: 20%;
   padding-right: 20%;
-  margin-top:4%;
+  margin-top:6.5%;
   background-color: rgb(21, 2, 70);
   position: relative;
   display: flex;
@@ -121,6 +121,8 @@ a:visited{
 #avis-container {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  align-items: center;
   gap: 1.2em;
 }
 
@@ -133,12 +135,22 @@ a:visited{
   background-color:rgba(255, 255, 255, 0.5);
   padding: 3px 6px;
   margin-left:78%;
-  maRgin-top:1.25%;
+  maRgin-top:4%;
   margin-right:20px;
   border-radius: 6px;
   z-index:15;
   width: 20%;
 }
+#Logo {
+  position: fixed; /*  Nécessaire pour appliquer z-index */
+  z-index: 15;/* Un z-index plus élevé que celui de l'image */
+  color:black;
+  height:7%;
+  width:auto;
+  text-decoration:none;
+  margin-left:-45%;
+  margin-top:3.1%; 
+} 
 .barre-recherche button {
   background: none;
   border: none;
@@ -318,12 +330,12 @@ h1#admin{
   margin-top:7%;
   color:#042c47;
 }
-#header {
+/*#header {
 	position: absolute;
   z-index: 15;
 	margin-top: -10px;
 	background-color: #3c4543;
-}
+}*/
 
 img.disp {
   position: fixed;
@@ -469,12 +481,12 @@ input[type="submit"]:hover {
 }
 
 .overlay1 {
-  margin-top: 35%;
-  left: 15%;
+  margin-top: 25%;
+  margin-left: 5%;
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 450%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(21, 2, 70);
   z-index: 3;
@@ -603,9 +615,9 @@ tr:hover {
 	position: fixed;
 	opacity:0.85;
 	margin-top: 5%;
-  	background-color: #336666;
+  background-color: #336666;
 	left: 0; /*L'élément commence du bord gauche de la fenêtre */
-	padding-left: 37%; /* Décale le contenu à 154px du bord gauche */
+	padding-left: 37% /* Décale le contenu à 154px du bord gauche */
 }
 #uno{
   z-index: 10;
@@ -772,7 +784,7 @@ footer.footer3 {
   font-size:20px;
 }
 
-.Profil pied1 {
+/*.Profil pied1 {
   color: #000; 
   text-align: left; 
   font-size: 14px;
