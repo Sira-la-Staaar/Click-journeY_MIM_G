@@ -14,5 +14,5 @@
           © 2024-2025 TheWestAgency. Tous droits réservés - société soumise au droit français, inscrite au registre du commerce de Paris, Cergy 95000, dont le siège social est à l’avenue du Parc, immatriculée au Registre des opérateurs de voyages et de séjours auprès d’Atout France sis 79/81 rue de Clichy 75009 Paris, sous le numéro IM099170015, agréée IATA. 
           Si vous avez soumis une réclamation auprès de notre Service Client, mais que notre réponse ne vous satisfait pas : vous pouvez contacter la Médiation Tourisme et Voyage sur leur site www.mtv.travel ou par voie postale MTV Médiation Tourisme Voyage BP 80 303 75 823 Paris cedex 17. Vous pouvez nous contacter au sujet de votre remboursement dès maintenant via notre Centre d'aide ou contactez nos agents ici.
            <br> <br>
-          Laissez-nous votre avis ! <br> <br><a href="feedback.html"><button class="pied1"><strong>Laisser un commentaire</strong></button></a></div>
+          Laissez-nous votre avis ! <br> <br><a href="feedback.html"><button class="btn-details"><strong>Laisser un commentaire</strong></button></a></div>
 </footer>
