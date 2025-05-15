@@ -9,7 +9,7 @@ $villes = [
     "Niamey", "Agadez", "Nouakchott", "Nouadhibou"
 ];
 
-// On récupère toutes les valeurs envoyées par le formulaire vols.php grâce à $_GET
+// On récupère toutes les valeurs envoyées par le formulaire vols.php grâce à $_GET, si la valeur n’est pas envoyée, mettre une chaîne vide pour éviter une erreur
 $ville_depart = $_GET['ville_depart'] ?? '';
 $ville_arrivee = $_GET['ville_arrivee'] ?? '';
 $formule = $_GET['formule'] ?? '';
@@ -18,18 +18,19 @@ $mois = $_GET['month'] ?? '';
 $semaine = $_GET['week'] ?? '';
 $date_heure = $_GET['time2'] ?? '';
 
-// Vérification des entrées
+// Vérification des entrées, Si la ville de départ = la ville d’arrivée donc erreur!
 if ($ville_depart == $ville_arrivee) {
     echo "<h2>Erreur : La ville de départ et la ville d'arrivée ne peuvent pas être les mêmes.</h2>";
     exit;
 }
 
+//si la ville de départ ou la ville d’arrivée n’est pas dans le tableau $villes donc erreur
 if (!in_array($ville_depart, $villes) || !in_array($ville_arrivee, $villes)) {
     echo "<h2>Erreur : Ville non reconnue.</h2>";
     exit;
 }
 
-// Génération d’un prix aléatoire selon la formule
+// Génération d’un prix aléatoire selon la formule (de switch) choisit par l'utilisateur
 switch ($formule) {
     case "economique":
         $prix = rand(60, 150);
@@ -40,11 +41,11 @@ switch ($formule) {
     case "premiere":
         $prix = rand(310, 500);
         break;
-    default:
+    default: //si jamais il y a une erreur donc prix entre 100€ et 200€
         $prix = rand(100, 200);
 }
 
-// Si c'est aller-retour, on double le prix
+// Si c'est aller-retour = prix * 2
 if ($type_voyage == "aller-retour") {
     $prix *= 2;
 }
@@ -58,13 +59,15 @@ if ($type_voyage == "aller-retour") {
 </head>
 <body>
     <h1>Récapitulatif de votre réservation</h1>
-    <p><strong>Départ :</strong> <?php echo htmlspecialchars($ville_depart); ?></p>
-    <p><strong>Arrivée :</strong> <?php echo htmlspecialchars($ville_arrivee); ?></p>
-    <p><strong>Formule choisie :</strong> <?php echo htmlspecialchars($formule); ?></p>
-    <p><strong>Type de voyage :</strong> <?php echo htmlspecialchars($type_voyage); ?></p>
-    <p><strong>Mois :</strong> <?php echo htmlspecialchars($mois); ?></p>
-    <p><strong>Semaine :</strong> <?php echo htmlspecialchars($semaine); ?></p>
-    <p><strong>Date et heure de départ :</strong> <?php echo htmlspecialchars($date_heure); ?></p>
-    <h2>Prix total estimé : <?php echo $prix; ?> €</h2>
+    // afficher toutes les informations récupérées:
+    //htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
+    <p>Départ :<?php echo htmlspecialchars($ville_depart); ?></p>
+    <p>Arrivée :<?php echo htmlspecialchars($ville_arrivee); ?></p>
+    <p>Formule choisie :<?php echo htmlspecialchars($formule); ?></p>
+    <p>Type de voyage :<?php echo htmlspecialchars($type_voyage); ?></p>
+    <p>Mois :<?php echo htmlspecialchars($mois); ?></p>
+    <p>Semaine :<?php echo htmlspecialchars($semaine); ?></p>
+    <p>Date et heure de départ :<?php echo htmlspecialchars($date_heure); ?></p>
+    <h2>Prix total estimé : <?php echo $prix; ?> €</h2> //mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!
 </body>
 </html>
