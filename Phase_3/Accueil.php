@@ -1,8 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header('Location: Accueil.php');
-    exit;
+    $est_connecte = isset($_SESSION['utilisateur']);
 }
 $voyages_json = file_get_contents('Data/voyages.json');
 $voyages = json_decode($voyages_json, true);
