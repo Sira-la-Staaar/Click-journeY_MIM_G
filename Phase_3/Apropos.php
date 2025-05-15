@@ -1,7 +1,6 @@
 <?php session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header('Location: Accueil.php');
-    exit;
+    $est_connecte = isset($_SESSION['utilisateur']);
 }
 ?>
 <!DOCTYPE html>
