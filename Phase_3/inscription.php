@@ -9,7 +9,7 @@
 
 <body class="Inscription">
     <form action="Accueil.php" method="POST">
-        <img src="logo4.png" alt="logo de The West Agency" class="logo">
+        <img src="Images/logo4.png" alt="logo de The West Agency" class="logo">
          <div class="encadre">
         <h1 class="aida1">-------------S'inscrire-------------</h1>
         <h2 class="aida3">Bienvenue sur notre site de voyage !</h2>
