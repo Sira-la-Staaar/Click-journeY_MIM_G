@@ -59,7 +59,7 @@ if ($voyages === null) {
             <h3><?= htmlspecialchars($voyage['titre']) ?></h3>
             <p>Du <?= $voyage['date_debut'] ?> au <?= $voyage['date_fin'] ?></p>
             <p><strong><?= $voyage['prix'] ?> €</strong></p>
-            <a class="btn-details" href="recapitulatif.php?id=<?= $voyage['id'] ?>">Voir plus</a>
+            <a class="btn-details" href="details.php?id=<?= $voyage['id'] ?>">Voir plus</a>
           </div>
         </div>
       <?php endforeach; ?>
