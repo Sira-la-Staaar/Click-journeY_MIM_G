@@ -1,8 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header('Location: Accueil.php');
-    exit;
+    $est_connecte = isset($_SESSION['utilisateur']);
 }
 // Fonction pour retirer les accents
 function remove_accents($string) {
@@ -71,7 +70,7 @@ foreach ($voyages as $voyage) {
                             <h3><?= htmlspecialchars($voyage['titre']) ?></h3>
                             <p>Du <?= $voyage['date_debut'] ?> au <?= $voyage['date_fin'] ?></p>
                             <p><strong><?= $voyage['prix'] ?> €</strong></p>
-                            <a class="btn-details" href="detail_voyage.php?id=<?= $voyage['id'] ?>">Voir plus</a>
+                            <a class="btn-details" href="details.php?id=<?= $voyage['id'] ?>">Voir plus</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
