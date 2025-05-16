@@ -91,10 +91,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
         <a href="#">Mot de passe oublié ?</a><br>
         <a href="#">Pas de compte ? Crée un compte</a>
 </div>
+		  
+        <button type="submit">Se connecter</button><br>
 </div>
 
-
-        <button type="submit">Se connecter</button><br>
     </form>
 
    <?php include 'footer.php'; ?>
