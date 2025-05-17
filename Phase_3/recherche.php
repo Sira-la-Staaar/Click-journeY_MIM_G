@@ -44,10 +44,15 @@ foreach ($voyages as $voyage) {
         Votre navigateur ne supporte pas la balise vidéo.
       </video>
 
-      <a href="inscription.php">
+      <a href="<?php 
+        if (isset($_SESSION['utilisateur'])) {
+          echo '#';  // 
+        } else {
+          echo 'inscription.php';
+        }
+        ?>">
         <div class="overlay"></div>
       </a>
-
       <div class="overlay1">
         <p>Laissez-vous tenter !</p>
       </div>
