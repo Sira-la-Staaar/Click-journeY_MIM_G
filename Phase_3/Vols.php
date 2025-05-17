@@ -202,8 +202,8 @@ session_start();
 	</div>
 
 		<script>
-  document.addEventListener("DOMContentLoaded", function () { //exécuter le code après le chargement complet de la page HTML.
-    const typeVoyage = document.querySelector('select[name="type-voyage"]'); //récupérer le menu déroulant soit aller simple soit aller-retour).
+  document.addEventListener("DOMContentLoaded", function () { // exécuter le code après le chargement complet de la page HTML.
+    const typeVoyage = document.querySelector('select[name="type-voyage"]'); // chercher un élément <select> dont le name est type-voyage !
     const dateAller = document.getElementById("date-aller"); // récupérer/cibler l’endroit où se trouve la date d’aller.
     const dateRetour = document.getElementById("date-retour"); // récupérer/cibler l’endroit où se trouve la date d’aller et retour.
 
