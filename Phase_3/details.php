@@ -83,7 +83,7 @@ if (!$voyage) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
-    <link rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
     <title>Détails du voyage | The West Agency</title>
     <link rel="shortcut icon" href="Images/minilogo.png" type="image/png"/>
 </head>
