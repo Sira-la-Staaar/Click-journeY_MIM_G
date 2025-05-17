@@ -56,19 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
         <div class="encadre">
         <h1 class="aida1">Se connecter à TheWestAgency</h1>
         </div>
-        <ul>
-            <div class="encadre1">
-            <h2 class="aida2">Se connecter avec :</h2>
-            <li id="Google">
-                <div class="input-box">
-                <div class="aida3">
-                <a href="seConnecter_google.php">Se connecter avec Google</a>
-                </div>
-</div>
-            </li>
-        </ul>
-
-        <strong class="strong">OU</strong>
 
         <ul> 
           <div class="encadre1">
