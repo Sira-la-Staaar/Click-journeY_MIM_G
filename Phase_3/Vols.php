@@ -191,9 +191,37 @@ session_start();
     </form>
 		
     
-    <p>Choisissez la date et l'heure de votre vol:</p> 
-      
-La date: <input type="date" name="date_vol" min="2025-03-01" max="2025-12-31"><br>
+	<p>Choisissez la date de votre vol:</p> 
+		
+      	<div id="date-aller">
+ 	 Date aller : <input type="date" name="date_aller" min="2025-03-01" max="2025-12-31"><br>
+	</div>
+
+	<div id="date-retour">
+ 	 Date retour : <input type="date" name="date_retour" min="2025-03-01" max="2025-12-31"><br>
+	</div>
+
+		<script>
+  document.addEventListener("DOMContentLoaded", function () { //exécuter le code après le chargement complet de la page HTML.
+    const typeVoyage = document.querySelector('select[name="type-voyage"]'); //récupérer le menu déroulant soit aller simple soit aller-retour).
+    const dateAller = document.getElementById("date-aller"); // récupérer/cibler l’endroit où se trouve la date d’aller.
+    const dateRetour = document.getElementById("date-retour"); // récupérer/cibler l’endroit où se trouve la date d’aller et retour.
+
+    function toggleDates() { //gérer quand afficher ou cacher les dates
+      if (typeVoyage.value === "aller simple") { // vérifier si l’utilisateur a choisi aller simple.
+        dateAller.style.display = "block"; //si l'utilisateur choisit un aller simple, donc la date aller sera visible (block)
+        dateRetour.style.display = "none"; //et donc on cache la date de retour
+      } else { //sinon, si c un aller retour, les deux dates seront visibles
+        dateAller.style.display = "block"; //afficher la date aller 
+        dateRetour.style.display = "block";// afficher la date retour
+      }
+    }
+
+    toggleDates(); // pour bien afficher au chargement
+
+    typeVoyage.addEventListener("change", toggleDates);
+  });
+		</script>
 
 	
 <?php include 'footer.php'; ?>
