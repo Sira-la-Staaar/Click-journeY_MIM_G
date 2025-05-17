@@ -12,6 +12,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Transaction en cours...";
     }
 }
+require('getapikey.php');
+
+$vendeur = "MIM_G";
+$api_key = getAPIKey($vendeur);
+
+if (preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
+    echo "API Key valide";
+} else {
+    echo "API Key invalide";
+}
+
+
+$id_transaction = "A7g3B9kL2xW5rQeT";
+$montant = "150.00";
+$vendeur = "MIM_G";
+$retour = "http://localhost:7180/retour_paiement.php?session=s";
+$control = "MaCleAPISecrete123#A7g3B9kL2xW5rQeT#150.00#MIM_G#https://mon-site.fr/retour_paiement#";
+
+
+
+is_numeric($montant);
+if (is_numeric($montant)) {
+    echo "Le montant est valide.";
+} else {
+    echo "Le montant n'est pas valide.";
+}
 
 ?>
 
@@ -26,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="paiement">
   <img src ="Images/logo3.png" alt="logo de The West Agency" class="logo"/>
   <div class="encadre">
-    <h1 class="aida1">Paiement</h1>
+    <h1 class="aida1">------------Paiement-------------</h1>
     <h2 class="aida2">Merci de remplir les cases ci-dessous pour proceder au paiement!</h2>
     </div>
     <div class="encadre1">
@@ -50,10 +76,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br><br>
 </div>
 </div>   
-    <button class="btn-details" type="submit">Valider le paiement</button>
+<form action="https://www.plateforme-smc.fr/cybank/index.php" method="POST">
+    <input type="hidden" name="transaction" value="<?= "A7g3B9kL2xW5rQeT" ?>">
+    <input type="hidden" name="montant" value="<?= 150.00 ?>">
+    <input type="hidden" name="vendeur" value="<?= "MIM_G" ?>">
+    <input type="hidden" name="retour" value="<?= "http://localhost:7180/retour_paiement.php?session=s" ?>">
+    <input type="hidden" name="control" value="<?= "MaCleAPISecrete123#A7g3B9kL2xW5rQeT#150.00#MIM_G#https://mon-site.fr/retour_paiement#"?>">
+    <input type="submit" value="Payer maintenant">
+</form>
+
 </div>
     <?php include 'footer.php'; ?>
   </body>
-
+</form>
 </html>
 
