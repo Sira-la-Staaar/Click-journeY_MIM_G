@@ -33,13 +33,21 @@ $info = $utilisateur['informations'][0];
            <img id="profil" src="Images/<?= htmlspecialchars($utilisateur['img'], ENT_QUOTES) ?>"
            alt="Photo de <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?>">
       </div>
+      <div class="encadre2">
+
       <h1>Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
-      <p><strong>Nom :</strong> <?= htmlspecialchars($info['nom'], ENT_QUOTES) ?></p>
-      <p><strong>Pseudo :</strong> <?= htmlspecialchars($info['pseudo'], ENT_QUOTES) ?></p>
-      <p><strong>E‑mail :</strong> <?= htmlspecialchars($utilisateur['e-mail'], ENT_QUOTES) ?></p>
-      <p><strong>Civilité :</strong> <?= htmlspecialchars($info['civilité'], ENT_QUOTES) ?></p>
-      <p><strong>Naissance :</strong> <?= htmlspecialchars($info['naissance'], ENT_QUOTES) ?></p>
-      <p><strong>Adresse :</strong> <?= htmlspecialchars($info['adresse'], ENT_QUOTES) ?></p>
+      <p class="aida4"><strong>Nom :</strong> <?= htmlspecialchars($info['nom'], ENT_QUOTES) ?></p>
+      <br><br>
+      <p class="aida4"><strong>Pseudo :</strong> <?= htmlspecialchars($info['pseudo'], ENT_QUOTES) ?></p>
+      <br><br>
+      <p class="aida4"><strong>E‑mail :</strong> <?= htmlspecialchars($utilisateur['e-mail'], ENT_QUOTES) ?></p>
+      <br><br>
+      <p class="aida4"><strong>Civilité :</strong> <?= htmlspecialchars($info['civilité'], ENT_QUOTES) ?></p>
+      <br><br>
+      <p class="aida4"><strong>Naissance :</strong> <?= htmlspecialchars($info['naissance'], ENT_QUOTES) ?></p>
+      <br><br>
+      <p class="aida4"><strong>Adresse :</strong> <?= htmlspecialchars($info['adresse'], ENT_QUOTES) ?></p>
+      <br><br>
       <a href="edit_profil.php"><button class="btn-details">Modifier</button></a>
       <a href="seDeconnecter.php"><button class="btn-details">Se déconnecter</button></a>
     </div>
