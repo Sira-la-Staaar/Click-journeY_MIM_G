@@ -2,14 +2,17 @@
 
 session_start();
 
-// Vérification si les données du voyage sont présentes
+// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols si il est deja connecte sinon directement la page seConnecter!
 if (!isset($_SESSION['selection'])) {
-    header("Location: voyage.php"); 
+    header("Location: vols.html"); 
+    exit();
+}
+if (!isset($_SESSION['utilisateur'])) {
+    header("Location: seConnecter.php");
     exit();
 }
 
 $selection = $_SESSION['selection'];
-$error_message = "";
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +24,9 @@ $error_message = "";
     <title>Récapitulatif du voyage</title>
 </head>
     <body class="recapitulatif">
-
+    <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Récapitulatif de votre voyage</h1>
-
-    <?php if (!empty($error_message)): ?>
+        
     <div>
         <p><?php echo $error_message; ?></p>
     </div>
@@ -35,10 +37,7 @@ $error_message = "";
             <h2>Informations du voyage :</h2>
             <p><strong>Ville de départ :</strong> <?php echo isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
             <p><strong>Ville d'arrivée :</strong> <?php echo isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Date d'arrivée :</strong> <?php echo isset($selection['date_arrivee']) ? $selection['date_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Durée du voyage :</strong> <?php echo isset($selection['duree_voyage']) ? $selection['duree_voyage'] : 'Non spécifiée'; ?></p>
-            <p><strong>Prix total :</strong> <?php echo isset($selection['prix_total']) ? $selection['prix_total'] : 'Non spécifié'; ?></p>
-            <p><strong>Nombre de personnes :</strong> <?php echo isset($selection['nb_personnes']) ? $selection['nb_personnes'] : 'Non spécifié'; ?></p>
+            <p><strong>Nombre de voyageurs :</strong> <?php echo isset($selection['voyageurs']) ? $selection['voyageurs'] : 'Non spécifié'; ?></p>
         </div>
 
     <?php foreach ($selection as $index => $data): ?>
