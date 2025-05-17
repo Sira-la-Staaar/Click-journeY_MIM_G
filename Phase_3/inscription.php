@@ -5,6 +5,7 @@
 <head>
   <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
+  <script src="Validation.js" defer></script>
 
   <title>S'inscrire</title>
 </head>
