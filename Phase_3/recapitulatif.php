@@ -73,7 +73,7 @@ $selection = $_SESSION['selection'];
     </div>
 
     <div>
-        <a href="vols.php">Modifier le voyage</a>
+        <a href="Vols.php">Modifier le voyage</a>
     </div>
 
 </body>
