@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
 	<title>Se Connecter</title>
 	<link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
 	<link rel="stylesheet" href="stylesheet.css">
-	<script src="seConnecter.js" defer></script>
+	<script src="Validation.js" defer></script>
 </head>
 <body class="seConnecter">
     <img src="Images/logo4.png" alt="logo de The West Agency" class="logo">
