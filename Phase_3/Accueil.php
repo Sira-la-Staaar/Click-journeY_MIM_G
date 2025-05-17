@@ -1,4 +1,4 @@
-
+<?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
     $est_connecte = isset($_SESSION['utilisateur']);
@@ -40,10 +40,7 @@ if ($voyages === null) {
         <p>Laissez-vous tenter !</p>
       </div>
       
-      <script>
-        const video = document.getElementById('myVideo');
-        // Désactive l'option Picture-in-Picture
-        video.disablePictureInPicture = true;
+      <script src="JS/Myvideo.js" type="text/javascript">
       </script>
     </div>
 
@@ -76,4 +73,3 @@ if ($voyages === null) {
     <?php include 'footer.php'; ?>
  </body>
 </html>
-
