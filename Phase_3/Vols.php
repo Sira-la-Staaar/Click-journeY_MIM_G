@@ -217,9 +217,9 @@ session_start();
       }
     }
 
-    toggleDates(); // pour bien afficher au chargement
+    toggleDates(); // Appelle tout de suite cette fonction pour que les dates s'affichent bien au moment où la page apparaît: Au tout début, quand la page se charge (car il faut afficher les bons champs selon ce qui est sélectionné) ou Quand l'utilisateur change le type de voyage.
 
-    typeVoyage.addEventListener("change", toggleDates);
+    typeVoyage.addEventListener("change", toggleDates); //si l’utilisateur change le type de voyage, rappelle la fonction toggleDates!
   });
 		</script>
 
