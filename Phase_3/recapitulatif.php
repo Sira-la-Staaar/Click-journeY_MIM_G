@@ -3,7 +3,7 @@ session_start();
 
 // Vérifie si l'utilisateur est connecté et a sélectionné un vol
 if (!isset($_SESSION['selection'])) {
-    header("Location: vols.html"); 
+    header("Location: vols.php"); 
     exit();
 }
 if (!isset($_SESSION['utilisateur'])) {
