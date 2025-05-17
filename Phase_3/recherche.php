@@ -56,11 +56,7 @@ foreach ($voyages as $voyage) {
       <div class="overlay1">
         <p>Laissez-vous tenter !</p>
       </div>
-      <script>
-        const video = document.getElementById('myVideo');
-        // Désactive l'option Picture-in-Picture
-        video.disablePictureInPicture = true;
-      </script>
+      <script src="JS/Myvideo.js" type="text/javascript"></script>
     </div>
     <h1>Résultats de la recherche pour "<?php echo htmlspecialchars($query); ?>"</h1>
 
