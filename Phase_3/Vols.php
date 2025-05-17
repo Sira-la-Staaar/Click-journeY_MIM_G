@@ -10,14 +10,14 @@ session_start(); //cela permet de stocker et récupérer des données (comme un 
     		<link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     		<meta charset="UTF-8" />
     		<meta name="description" content="Vols" />
-		<script src="Vols.js" defer></script> // avec "defer" le navigateur attend que la page HTML soit prête, puis execute le JavaScript sinon le navigateur execute le JavaScript tout de suite, avant d’avoir fini de charger le HTML.
+		<script src="Vols.js" defer></script> <!-- avec "defer" le navigateur attend que la page HTML soit prête, puis execute le JavaScript sinon le navigateur execute le JavaScript tout de suite, avant d’avoir fini de charger le HTML.-->
 	</head>
 	<body class="Vols" style="background: url('https://media.istockphoto.com/id/1057333524/fr/photo/kasbah-ait-ben-haddou-dans-le-d%C3%A9sert-pr%C3%A8s-de-montagnes-de-latlas-maroc.jpg?s=612x612&w=0&k=20&c=Zcr5WKI1URXHrsYqBFdydkW0EywJdJXRqKyb4MBzqjc=') no-repeat center center fixed; background-size: cover;">
-    <form action="resultat.php" method="GET"> //form c pour commence un formulaire. action="resultat.php" : quand l’utilisateur clique sur “Rechercher”, les infos partent vers resultat.php.
+    <form action="resultat.php" method="GET"> <!--form c pour commence un formulaire. action="resultat.php" : quand l’utilisateur clique sur “Rechercher”, les infos partent vers resultat.php.-->
 <p>D'ou partez-vous?</p>
-   <select name="ville_depart" id="ville_depart"> //select c pour le menu déroulant.
+   <select name="ville_depart" id="ville_depart"> <!--select c pour le menu déroulant.-->
    <optgroup label="Maroc"> //groupe d'option!
-<option value="Marrakech">Marrakech</option> //une option que l'utilisateur peut choisir
+<option value="Marrakech">Marrakech</option> <!--une option que l'utilisateur peut choisir.-->
 <option value="Casablanca">Casablanca</option>
 <option value="Rabat">Rabat</option>
     </optgroup>
