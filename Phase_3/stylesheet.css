@@ -716,12 +716,6 @@ font-family: Futura, Tahoma, sans-serif;
   cursor: pointer;
   text-align:center;
 }
-.Inscription button{
-  margin-left: 10%;
-  margin-right: auto;
-  text-align: center;
-}
-
 footer.footer3 {
   position:relative;
   padding: 10px;
@@ -736,32 +730,7 @@ footer.footer3 {
   background: rgba(255, 255, 255, 0.05); 
 }
 
-.submit-button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 20%;
-  text-align: right;
-}
-
 /*#Mon profil*/
-.dana2 {
-  color: #556B2F; 
-  font-family: 'Nunito', serif;
-  font-size: 60px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px; 
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
-  padding: 20px;
-  border-bottom: 3px solid #FFD700; 
-  display: inline-block;
-}
 #profil{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   height: 65%;
@@ -776,11 +745,7 @@ footer.footer3 {
   background:url('Images/Profil.jpeg')no-repeat center center fixed;
   background-size:cover;
 }
-.dana1{
-  color: #f5f5f5;
-  font-family: 'Nunito', serif;
-  font-size:20px;
-}
+
 
 /*.Profil pied1 {
   color: #000; 
@@ -790,24 +755,9 @@ footer.footer3 {
   max-width: 80%;
 }
 /*#Paiement*/
-.el1 {
-  color: #FF7F50; 
-  font-family: 'Nunito', serif;
-  font-size: 60px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px; 
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
-  padding: 20px;
-  border-bottom: 3px solid #FF7F50; 
-  display: inline-block;
-}
-.el2{
-  color: #D3D3D3;
-  font-family: 'Nunito', serif;
-  font-size:20px;
-  
-
+.paiement{
+  background:url('Images/img15.jpg')no-repeat center center fixed;
+  background-size:cover;
 }
 
 /*css pour "seConnecter"*/	
