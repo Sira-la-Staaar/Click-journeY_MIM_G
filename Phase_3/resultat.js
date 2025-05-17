@@ -6,7 +6,7 @@
     "Ouagadougou", "Bobo-Dioulasso", "Banjul", "Farafenni", "Praia", "Mindelo",
     "Niamey", "Agadez", "Nouakchott", "Nouadhibou"
 ];
-// tant que i est inférieur à la taille du tableau, on continue, et on affichera toutes les villes!
+// tant que i est inférieur à la taille du tableau, on continue, et on affichera toutes les villes! (Ville: Marrakech....)
 for (var i = 0; i < villes.length; i++) {
   console.log("Ville : " + villes[i]);
 }
