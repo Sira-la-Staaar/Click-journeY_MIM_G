@@ -1,8 +1,7 @@
 <?php
-
 session_start();
 
-// Vérification si les données du vols sont présentes, Si jamais l’utilisateur accède à cette page sans avoir fait de choix avant, il n’y a rien à afficher donc on le redirige vers la page vols si il est deja connecte sinon directement la page seConnecter!
+// Vérifie si l'utilisateur est connecté et a sélectionné un vol
 if (!isset($_SESSION['selection'])) {
     header("Location: vols.html"); 
     exit();
@@ -23,63 +22,59 @@ $selection = $_SESSION['selection'];
     <link rel="stylesheet" href="stylesheet.css">
     <title>Récapitulatif du voyage</title>
 </head>
-    <body class="recapitulatif">
+<body class="recapitulatif">
+
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Récapitulatif de votre voyage</h1>
-        
-    <?php if (!empty($error_message)): ?>
-    <div>
-        <p><?php echo $error_message; ?></p>
-    </div>
-<?php else: ?>
-    <p>Voici le récapitulatif de votre voyage personnalisé:</p>
-    <!-- ... le reste -->
-<?php endif; ?>
+
     <p>Voici le récapitulatif de votre voyage personnalisé:</p>
     
     <div>
-            <h2>Informations du voyage :</h2>
-            <p><strong>Ville de départ :</strong> <?php echo isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
-            <p><strong>Ville d'arrivée :</strong> <?php echo isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
-            <p><strong>Nombre de voyageurs :</strong> <?php echo isset($selection['voyageurs']) ? $selection['voyageurs'] : 'Non spécifié'; ?></p>
-        </div>
+        <h2>Informations du voyage :</h2>
+        <p><strong>Ville de départ :</strong> <?= isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
+        <p><strong>Ville d'arrivée :</strong> <?= isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
+        <p><strong>Nombre de voyageurs :</strong> <?= isset($selection['voyageurs']) ? $selection['voyageurs'] : 'Non spécifié'; ?></p>
+    </div>
 
     <?php foreach ($selection as $index => $data): ?>
         <?php if (is_int($index) && is_array($data)): ?>
-        <div>
-           <h2>Étape <?= $index + 1 ?></h2>
+            <div>
+                <h2>Étape <?= $index + 1 ?></h2>
 
-        <?php if (!empty($data['hebergement'])): ?>
-            <p>Hébergement : <?= $data['hebergement'] ?></p>
-        <?php endif; ?>
+                <?php if (!empty($data['hebergement'])): ?>
+                    <p>Hébergement : <?= $data['hebergement'] ?></p>
+                <?php endif; ?>
 
-        <?php if (!empty($data['restauration'])): ?>
-            <p>Restauration : <?= $data['restauration'] ?></p>
-        <?php endif; ?>
+                <?php if (!empty($data['restauration'])): ?>
+                    <p>Restauration : <?= $data['restauration'] ?></p>
+                <?php endif; ?>
 
-        <?php if (!empty($data['activites'])): ?>
-            <p>Activités : <?= implode(', ', $data['activites']) ?></p>
-        <?php endif; ?>
+                <?php if (!empty($data['activites'])): ?>
+                    <p>Activités : <?= implode(', ', $data['activites']) ?></p>
+                <?php endif; ?>
 
-        <?php if (!empty($data['transport'])): ?>
-            <p>Transport vers la prochaine étape : <?= $data['transport'] ?></p>
-        <?php endif; ?>
+                <?php if (!empty($data['transport'])): ?>
+                    <p>Transport vers la prochaine étape : <?= $data['transport'] ?></p>
+                <?php endif; ?>
 
-        <?php if (!empty($data['nb_personnes_activite'])): ?>
-            <p>Nombre de personnes par activité : <?= $data['nb_personnes_activite'] ?></p>
-        <?php endif; ?>
-    </div>
+                <?php if (!empty($data['nb_personnes_activite'])): ?>
+                    <p>Nombre de personnes par activité : <?= $data['nb_personnes_activite'] ?></p>
+                <?php endif; ?>
+            </div>
         <?php endif; ?>
     <?php endforeach; ?>
 
-<div>
-    <a href="paiement.php">Finaliser le voyage</a>
-</div>
+    <div>
+        <a href="paiement.php">Finaliser le voyage</a>
+    </div>
 
-<div>
-    <a href="voyage.php">Retour à la sélection</a>
-</div>
-        
-    <?php endif; ?>
-    </body>
+    <div>
+        <a href="voyage.php">Retour à la sélection</a>
+    </div>
+
+    <div>
+        <a href="vols.php">Modifier le voyage</a>
+    </div>
+
+</body>
 </html>
