@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 
 // Vérifie si l'utilisateur est connecté et a sélectionné un vol
 if (!isset($_SESSION['selection'])) {
