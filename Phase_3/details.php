@@ -5,14 +5,14 @@ session_start();
     //header('Location: inscription.php');
     //exit;
 //}
-$utilisateur = $_SESSION['utilisateur'];
-
 // Traitement du formulaire d'ajout au panier
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
     if (!isset($_SESSION['utilisateur'])) {
         header('Location: inscription.php');
         exit;
     }
+    $utilisateur = $_SESSION['utilisateur'];
+
 
     $id_ajout  = $_POST['ajouter_panier'];
     $personnes = $_POST['personnes'] ?? [];
@@ -34,11 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
     }
     unset($p);
 
-    if (!isset($_SESSION['panier'])) {
-        $_SESSION['panier'] = [];
+    if (!isset($_SESSION['panier_actif'])) {
+        $_SESSION['panier_actif'] = [];
     }
 
-    $_SESSION['panier'][] = [
+    $_SESSION['panier_actif'][] = [
         'id'        => $id_ajout,
         'personnes' => $personnes
     ];
