@@ -57,6 +57,7 @@ if ($type_voyage == "aller-retour") {
     <meta charset="UTF-8">
     <title>Résultat | The West Agency</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="resultat.js"></script>
 </head>
     <body class="resultat" style="background: url('https://ulysse.com/news/wp-content/uploads/2025/03/Le-Maroc.jpg') no-repeat center center fixed; background-size: cover;">
         <h1>Récapitulatif de votre réservation</h1>
