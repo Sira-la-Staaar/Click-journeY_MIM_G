@@ -3,10 +3,10 @@
 session_start();
 
 // Vérification si les données du voyage sont présentes
-//if (!isset($_SESSION['selection'])) {
-//    header("Location: voyage.php"); 
-//    exit();
-//}
+if (!isset($_SESSION['selection'])) {
+    header("Location: voyage.php"); 
+    exit();
+}
 
 $selection = $_SESSION['selection'];
 $error_message = "";
