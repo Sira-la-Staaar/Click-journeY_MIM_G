@@ -11,8 +11,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Transaction en cours...";
     }
-  
-} else {
-    echo "Veuillez soumettre le formulaire.";
 }
+
 ?>
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
+    <link rel="stylesheet" href="stylesheet.css">
+  <title>Page de paiement</title>
+</head>
+<body class="paiement">
+  <img src ="Images/logo3.png" alt="logo de The West Agency" class="logo"/>
+  <div class="encadre">
+    <h1 class="aida1">Paiement</h1>
+    <h2 class="aida2">Merci de remplir les cases ci-dessous pour proceder au paiement!</h2>
+    </div>
+    <div class="encadre1">
+    <div class=input-box>
+    <h2 class="aida3">Nom du titulaire de la carte</h2>
+    <br><br>
+    <input type="text" class="input-box" placeholder="Nom du titulaire de la carte" required maxlength="30" pattern="[A-Za-z\s]{1,30}"/>
+    <br><br>
+    <div class="input-box">
+        <h2 class=aida3>Numéro de carte bancaire</h2>
+        <br><br>
+    <input type="text" class="input-box" placeholder="Numero de carte bancaire" required 16 maxlength="16" pattern="[0-9]{16}"/>
+    <br><br>
+    <h2 class="aida3">Date d'expiration</h2>
+    <br><br>
+    <input type="text" class="input-box" placeholder="MM/AA" required maxlength="5" pattern="(0[1-9]|1[0-2])/[0-9]{2}"/>
+    <br><br>
+    <h2 class="aida3">Cryptogramme</h2>
+    <br><br>
+    <input type="text" class="input-box" placeholder="Cryptogramme" required maxlength="3" pattern="[0-9]{3}"/> 
+    <br><br>
+</div>
+</div>   
+    <button class="btn-details" type="submit">Valider le paiement</button>
+</div>
+    <?php include 'footer.php'; ?>
+  </body>
+
+</html>
+
