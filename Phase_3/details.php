@@ -14,25 +14,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
         exit;
     }
 
-    $id_ajout = $_POST['ajouter_panier'];
+    $id_ajout  = $_POST['ajouter_panier'];
     $personnes = $_POST['personnes'] ?? [];
+
     if (count($personnes) < 1 || count($personnes) > 10) {
         die("Le nombre de personnes doit être entre 1 et 10.");
     }
+
+    foreach ($personnes as &$p) {
+        $p['nom']       = trim($p['nom']);
+        $p['prenom']    = trim($p['prenom']);
+        $p['passport']  = trim($p['passport']);
+        $p['naissance'] = trim($p['naissance']);
+        $p['type']      = trim($p['type']);
+
+        if (!preg_match('/^[A-Za-z0-9]{9}$/', $p['passport'])) {
+            die("Le numéro de passeport doit contenir exactement 9 caractères alphanumériques.");
+        }
+    }
+    unset($p);
 
     if (!isset($_SESSION['panier'])) {
         $_SESSION['panier'] = [];
     }
 
     $_SESSION['panier'][] = [
-        'id' => $id_ajout,
+        'id'        => $id_ajout,
         'personnes' => $personnes
     ];
 
-    header("Location:panier.php");  
+    $reservation = [
+        'user'      => $_SESSION['utilisateur']['email'] ?? 'guest',
+        'voyage_id' => $id_ajout,
+        'personnes' => $personnes,
+        'date'      => date('c'),
+    ];
+
+    $file = 'Data/reservations.json';
+    $reservations = file_exists($file) ? (json_decode(file_get_contents($file), true) ?: []) : [];
+    $reservations[] = $reservation;
+    file_put_contents($file, json_encode($reservations, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+    header("Location: panier.php");
     exit;
 }
-
 // Chargement des données
 $json = file_get_contents('Data/voyages.json');
 $voyages = json_decode($json, true);
@@ -53,6 +78,7 @@ foreach ($voyages as $v) {
 if (!$voyage) {
     die("Voyage non trouvé.");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
