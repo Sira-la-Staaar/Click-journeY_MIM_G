@@ -31,7 +31,7 @@ foreach ($voyages as $voyage) {
 <html>
   <head lang="fr">
     <title>Accueil | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
     <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'accueil" />
