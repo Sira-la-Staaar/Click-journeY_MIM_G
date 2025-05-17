@@ -57,7 +57,7 @@ if ($type_voyage == "aller-retour") {
     <meta charset="UTF-8">
     <title>Résultat | The West Agency</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="resultat.js"></script>
+    <script src="resultat.js" defer></script> // avec "defer" le navigateur attend que la page HTML soit prête, puis execute le JavaScript sinon le navigateur execute le JavaScript tout de suite, avant d’avoir fini de charger le HTML. 
 </head>
     <body class="resultat" style="background: url('https://ulysse.com/news/wp-content/uploads/2025/03/Le-Maroc.jpg') no-repeat center center fixed; background-size: cover;">
         <h1>Récapitulatif de votre réservation</h1>
