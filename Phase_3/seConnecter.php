@@ -2,7 +2,7 @@
 session_start();
 // Rediriger vers accueil si l'utilisateur est déjà connecté
 if (isset($_SESSION["connecte"])) {
-    header("Location: accueil.php");
+    header("Location: Accueil.php");
     exit();
 }
 
