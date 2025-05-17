@@ -1,0 +1,19 @@
+  document.addEventListener("DOMContentLoaded", function () { // exécuter le code après le chargement complet de la page HTML.
+    const typeVoyage = document.querySelector('select[name="type-voyage"]'); // chercher un élément <select> dont le name est type-voyage !
+    const dateAller = document.getElementById("date-aller"); // récupérer/cibler l’endroit où se trouve la date d’aller.
+    const dateRetour = document.getElementById("date-retour"); // récupérer/cibler l’endroit où se trouve la date d’aller et retour.
+
+    function toggleDates() { //gérer quand afficher ou cacher les dates
+      if (typeVoyage.value === "aller simple") { // vérifier si l’utilisateur a choisi aller simple.
+        dateAller.style.display = "block"; //si l'utilisateur choisit un aller simple, donc la date aller sera visible (block)
+        dateRetour.style.display = "none"; //et donc on cache la date de retour
+      } else { //sinon, si c un aller retour, les deux dates seront visibles
+        dateAller.style.display = "block"; //afficher la date aller 
+        dateRetour.style.display = "block";// afficher la date retour
+      }
+    }
+
+    toggleDates(); // Appelle tout de suite cette fonction pour que les dates s'affichent bien au moment où la page apparaît: Au tout début, quand la page se charge (car il faut afficher les bons champs selon ce qui est sélectionné) ou Quand l'utilisateur change le type de voyage.
+
+    typeVoyage.addEventListener("change", toggleDates); //si l’utilisateur change le type de voyage, rappelle la fonction toggleDates!
+  });
