@@ -30,14 +30,16 @@
       <input type="text" name="q" placeholder="Rechercher un voyage..." required>
     </form>
     <li >
-    <a href="panier.php">
+     <div > 
+    </span><a href="panier.php">
       <img class="panier" src="Images/panier.png" alt="Panier">
-      <?php
-      if (!empty($_SESSION['panier'])) {
-        echo '<span>(' . count($_SESSION['panier']) . ')</span>';
+      <span class="panier"><?php
+      if (!empty($_SESSION['panier_actif'])) {
+        echo '(' . count($_SESSION['panier_actif']) . ')';
       }
       ?>
-    </a>
+    </span></a>
+    </div>
     </li>
   </div>
 
