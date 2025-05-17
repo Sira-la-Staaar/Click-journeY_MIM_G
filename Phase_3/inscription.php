@@ -3,7 +3,7 @@
 
 <html lang="fr">
 <head>
-  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
 
   <title>S'inscrire</title>
@@ -97,7 +97,7 @@
 ?>
 
   <div class="input box" style="margin-top: 20px;">
-  <button type="submit" class="button">
+  <button type="submit" class="btn-details">
    S'inscrire
    </div>
 </button>
