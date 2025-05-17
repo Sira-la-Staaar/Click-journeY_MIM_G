@@ -948,6 +948,10 @@ body.recapitulatif {
     color: #fff;
 }
 
+/*cacher la date de retour par défaut, pour ne pas la voir si on choisit "aller simple".*/
+#date-retour {
+  display: none;
+}
 
 
 
