@@ -5,11 +5,12 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head lang="fr">
-    <title>Vols | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
-    <meta charset="UTF-8" />
-    <meta name=”description” content="Vols" />
+		<title>Vols | The West Agency</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css">
+    		<link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
+    		<meta charset="UTF-8" />
+    		<meta name=”description” content="Vols" />
+		<script src="Vols.js" defer></script>
 	</head>
 	<body class="Vols" style="background: url('https://media.istockphoto.com/id/1057333524/fr/photo/kasbah-ait-ben-haddou-dans-le-d%C3%A9sert-pr%C3%A8s-de-montagnes-de-latlas-maroc.jpg?s=612x612&w=0&k=20&c=Zcr5WKI1URXHrsYqBFdydkW0EywJdJXRqKyb4MBzqjc=') no-repeat center center fixed; background-size: cover;">
     <form action="resultat.php" method="GET"> 
@@ -200,28 +201,6 @@ session_start();
 	<div id="date-retour">
  	 Date retour : <input type="date" name="date_retour" min="2025-03-01" max="2025-12-31"><br>
 	</div>
-
-		<script>
-  document.addEventListener("DOMContentLoaded", function () { // exécuter le code après le chargement complet de la page HTML.
-    const typeVoyage = document.querySelector('select[name="type-voyage"]'); // chercher un élément <select> dont le name est type-voyage !
-    const dateAller = document.getElementById("date-aller"); // récupérer/cibler l’endroit où se trouve la date d’aller.
-    const dateRetour = document.getElementById("date-retour"); // récupérer/cibler l’endroit où se trouve la date d’aller et retour.
-
-    function toggleDates() { //gérer quand afficher ou cacher les dates
-      if (typeVoyage.value === "aller simple") { // vérifier si l’utilisateur a choisi aller simple.
-        dateAller.style.display = "block"; //si l'utilisateur choisit un aller simple, donc la date aller sera visible (block)
-        dateRetour.style.display = "none"; //et donc on cache la date de retour
-      } else { //sinon, si c un aller retour, les deux dates seront visibles
-        dateAller.style.display = "block"; //afficher la date aller 
-        dateRetour.style.display = "block";// afficher la date retour
-      }
-    }
-
-    toggleDates(); // Appelle tout de suite cette fonction pour que les dates s'affichent bien au moment où la page apparaît: Au tout début, quand la page se charge (car il faut afficher les bons champs selon ce qui est sélectionné) ou Quand l'utilisateur change le type de voyage.
-
-    typeVoyage.addEventListener("change", toggleDates); //si l’utilisateur change le type de voyage, rappelle la fonction toggleDates!
-  });
-		</script>
 
 	
 <?php include 'footer.php'; ?>
