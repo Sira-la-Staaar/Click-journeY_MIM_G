@@ -9,7 +9,7 @@
           </div>
     <div class="section_connect">
       <?php
-        if (isset($_SESSION["connecte"]) && $_SESSION["connecte"] === true):
+        if (isset($_SESSION["connecte"]) && $_SESSION["connecte"] === true){
           $lien_profil = ($_SESSION['utilisateur']['role'] === 'A') ? 'PageAdmin.php' : 'profil.php';
           ?>
           <a href="<?= $lien_profil ?>"><span>
@@ -19,12 +19,12 @@
           <span><a href="<?= $lien_profil ?>" class="nom_profil">
             <?= $_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom']; ?>
           </a></span>
-        <?php else: ?>
+        <?php }else{ ?>
           <span><li>
             <a href="inscription.php">S'inscrire</a>
             <a href="seConnecter.php">/Se connecter</a>
         </li></span>
-        <?php endif; ?>
+        <?php }; ?>
       </div>
     <form method="GET" action="recherche.php" class="barre-recherche">
       <input type="text" name="q" placeholder="Rechercher un voyage..." required>
