@@ -59,7 +59,7 @@ $info = $user['informations'][0];
 <html lang="fr">
   <head>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
-    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
     <title>Profil | The West Agency</title>
   </head>
 
