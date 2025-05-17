@@ -1,14 +1,19 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['utilisateur'])) {
-    header('Location: inscription.php');
-    exit;
-}
+//if (!isset($_SESSION['utilisateur'])) {
+    //header('Location: inscription.php');
+    //exit;
+//}
 $utilisateur = $_SESSION['utilisateur'];
 
 // Traitement du formulaire d'ajout au panier
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
+    if (!isset($_SESSION['utilisateur'])) {
+        header('Location: inscription.php');
+        exit;
+    }
+
     $id_ajout = $_POST['ajouter_panier'];
     $personnes = $_POST['personnes'] ?? [];
     if (count($personnes) < 1 || count($personnes) > 10) {
@@ -24,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
         'personnes' => $personnes
     ];
 
-    header("Location: " . strtok($_SERVER["REQUEST_URI"], '?') . "?id=" . urlencode($id_ajout));
+    header("Location:panier.php");  
     exit;
 }
 
@@ -103,7 +108,8 @@ if (!$voyage) {
                     <input type="text" name="personnes[${i}][prenom]" value="${prenom}" required><br>
 
                     <label>Numéro de passeport :</label>
-                    <input type="text" name="personnes[${i}][prenom]" value="" required><br>
+                    <input type="text" name="personnes[${i}][passport]" value="" required
+                    minlength="9" maxlength="9" pattern=".{9}" title="Le numéro de passeport doit contenir 9 caractères."><br>
 
 
                     <label>Date de naissance :</label>
