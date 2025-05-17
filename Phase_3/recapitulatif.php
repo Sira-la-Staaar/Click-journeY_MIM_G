@@ -27,10 +27,14 @@ $selection = $_SESSION['selection'];
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Récapitulatif de votre voyage</h1>
         
+    <?php if (!empty($error_message)): ?>
     <div>
         <p><?php echo $error_message; ?></p>
     </div>
 <?php else: ?>
+    <p>Voici le récapitulatif de votre voyage personnalisé:</p>
+    <!-- ... le reste -->
+<?php endif; ?>
     <p>Voici le récapitulatif de votre voyage personnalisé:</p>
     
     <div>
