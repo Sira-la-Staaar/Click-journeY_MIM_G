@@ -15,7 +15,7 @@ if ($voyages === null) {
 <html>
   <head lang="fr">
     <title>Accueil | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
     <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'accueil" />
@@ -55,7 +55,7 @@ if ($voyages === null) {
 
         $voyages_limited = array_slice($voyages, 0, 6);
       ?>
-      <?php foreach ($voyages_limited as $voyage): ?>
+      <?php foreach ($voyages_limited as $voyage){ ?>
         <div class="pin">
           <img class="ACC" src="Images/<?= $voyage['img'] ?>" alt="<?= htmlspecialchars($voyage['titre']) ?>">
           <div class="pin-content">
@@ -65,7 +65,7 @@ if ($voyages === null) {
             <a class="btn-details" href="details.php?id=<?= $voyage['id'] ?>">Voir plus</a>
           </div>
         </div>
-      <?php endforeach; ?>
+      <?php }?>
       </div>
 
       </div>
