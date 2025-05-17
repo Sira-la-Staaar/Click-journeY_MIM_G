@@ -11,8 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
         header('Location: inscription.php');
         exit;
     }
-    $utilisateur = $_SESSION['utilisateur'];
-
 
     $id_ajout  = $_POST['ajouter_panier'];
     $personnes = $_POST['personnes'] ?? [];
@@ -58,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_panier'])) {
     header("Location: panier.php");
     exit;
 }
+$utilisateur = $_SESSION['utilisateur'];
 // Chargement des données
 $json = file_get_contents('Data/voyages.json');
 $voyages = json_decode($json, true);
@@ -87,69 +86,8 @@ if (!$voyage) {
     <link rel="stylesheet" href="stylesheet.css">
     <title>Détails du voyage | The West Agency</title>
     <link rel="shortcut icon" href="Images/minilogo.png" type="image/png"/>
-<script>
-    window.addEventListener('DOMContentLoaded', function () {
-        afficherChamps();
-    });
-
-    function afficherChamps() {
-        const nbInput = document.getElementById('nb_personnes');
-        const nb = parseInt(nbInput.value);
-        const container = document.getElementById('types_personnes');
-        container.innerHTML = '';
-        if (isNaN(nb) || nb < 1 || nb > 10) {
-            alert("Le nombre de personnes doit être entre 1 et 10.");
-            nbInput.value = 1;
-            return;
-        }
-
-        const user = <?= json_encode($utilisateur ?? null) ?>;
-
-        for (let i = 0; i < nb; i++) {
-            const div = document.createElement('div');
-
-            let nom = '', prenom = '', passport = '', naissance = '', type = '';
-
-            if (i === 0 && user) {
-                nom = user.nom;
-                prenom = user.prenom;
-                passport = user.passport;
-                naissance = user.naissance;
-                type = 'adulte';
-            }
-
-            div.innerHTML = `
-                <fieldset>
-                    <legend>Personne ${i + 1}</legend>
-                    <label>Type :</label>
-                    <select name="personnes[${i}][type]">
-                        <option value="adulte" ${type === 'adulte' ? 'selected' : ''}>Adulte</option>
-                        <option value="enfant" ${type === 'enfant' ? 'selected' : ''}>Enfant</option>
-                    </select><br>
-
-                    <label>Nom :</label>
-                    <input type="text" name="personnes[${i}][nom]" value="${nom}" required><br>
-
-                    <label>Prénom :</label>
-                    <input type="text" name="personnes[${i}][prenom]" value="${prenom}" required><br>
-
-                    <label>Numéro de passeport :</label>
-                    <input type="text" name="personnes[${i}][passport]" value="" required
-                    minlength="9" maxlength="9" pattern=".{9}" title="Le numéro de passeport doit contenir 9 caractères."><br>
-
-
-                    <label>Date de naissance :</label>
-                    <input type="date" name="personnes[${i}][naissance]" value="${naissance}" required><br>
-                </fieldset>
-                <br>`;
-            container.appendChild(div);
-        }
-    }
-</script>
-
-
 </head>
-<body id="admin">
+<body id="admin" data-user='<?= json_encode($utilisateur ?? null, JSON_HEX_APOS | JSON_HEX_QUOT) ?>'>
     <h1><?= htmlspecialchars($voyage['titre']) ?></h1>
     <p><strong>Du :</strong> <?= $voyage['date_debut'] ?> <strong>au</strong> <?= $voyage['date_fin'] ?></p>
     <p><strong>Prix :</strong> <?= $voyage['prix'] ?> €</p>
@@ -186,9 +124,7 @@ if (!$voyage) {
             $numero++;
         } ?>
     </ul>
-    <script>
-        window.onload = afficherChamps;
-    </script>
+    <script type="module" src="JS/details.js"></script>
 
 
 </body>
