@@ -154,6 +154,7 @@ a:visited{
   margin-top: 10px;
   background-color: #FF9900;
   color: white;
+  max-width: 25%;
   padding: 5px 10px;
   border-radius: 10px;
   text-decoration: none;
@@ -313,7 +314,7 @@ img.section_connect {
 input:focus, textarea:focus {
   outline: none;
 }
-input[type="submit"] {
+input[type="submit"],input[type="number"] {
   padding: 10px 15px;
   margin: 5px;
   border: none;
@@ -321,6 +322,7 @@ input[type="submit"] {
   color: white;
   font-size: 14px;
   border-radius: 5px;
+  max-width: 15%;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -450,6 +452,15 @@ input[type="submit"]:hover {
   z-index: 3;
 }
 
+#panier{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image:url('Images/fond8.jpg');
+  background-size:100%; 
+  height:auto;
+  color:white;
+}
 p.sira{
   color:#EFDCC3;
   font-size:110%;
@@ -679,7 +690,7 @@ font-family: Futura, Tahoma, sans-serif;
 .encadre {
   border: 2px solid #5499c7; 
   padding: 15px;             
-  margin: 20px;              
+  margin: 6%;              
   border-radius: 10px;       
   background-color: #45b39d;
   opacity: 0.80;          
@@ -764,6 +775,7 @@ footer.footer3 {
 .Profil{
   background:url('Images/Profil.jpeg')no-repeat center center fixed;
   background-size:cover;
+}
 .dana1{
   color: #f5f5f5;
   font-family: 'Nunito', serif;
@@ -835,16 +847,6 @@ footer.footer3 {
     height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
 }
 
-.Vols form{
-    background-color: #rrggbbaa; :/*##73C6B6*/
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 60%; /* Largeur du grand cadre */
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espacement entre les éléments */
-}
 
 .Vols form select, .Vols form input {
     width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
