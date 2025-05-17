@@ -58,7 +58,7 @@ if ($type_voyage == "aller-retour") {
     <title>Résultat | The West Agency</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-    <body style="background: url('https://ulysse.com/news/wp-content/uploads/2025/03/Le-Maroc.jpg') no-repeat center center fixed; background-size: cover;">
+    <body class="resultat" style="background: url('https://ulysse.com/news/wp-content/uploads/2025/03/Le-Maroc.jpg') no-repeat center center fixed; background-size: cover;">
         <h1>Récapitulatif de votre réservation</h1>
         // afficher toutes les informations récupérées:
         // htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
