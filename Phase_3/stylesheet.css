@@ -26,7 +26,7 @@ a.admin:visited{
 .acc1 {
   padding-left: 20%;
   padding-right: 20%;
-  margin-top:2.9%;
+  margin-top: calc(48px + 5vh); 
   background-color: rgb(21, 2, 70);
   position: relative;
   display: flex;
@@ -159,37 +159,6 @@ a:visited{
   text-decoration: none;
   font-size: 0.9em;
 }
-/*button.pied1{
-  background-color:#181818;
-  color:white;
-  padding:8px;
-  border-radius:15px;
-  border-color:white;
-}
-button.pied1:hover{
-  background-color:white;
-  color:white;
-  padding:8px;
-  color:#181818;
-  border-radius:15px;
-  border-color:white;
-}
-button.pied2{
-  background-color:#181818;
-  color:white;
-  padding:8px;
-  text-align:center;
-  border-radius:15px;
-  border-color:white;
-}
-button.pied2:hover{
-  background-color:white;
-  color:white;
-  color:#181818;
-  padding:8px;
-  border-radius:15px;
-  border-color:white;
-}*/
 
 .debut{
   z-index:1;
@@ -312,7 +281,7 @@ h1#admin{
   color:#042c47;
 }
 /*#header {
-	position: absolute;
+	position:absolute;
   z-index: 15;
 	margin-top: -10px;
 	background-color: #3c4543;
@@ -432,7 +401,7 @@ input[type="submit"]:hover {
 }
 
 #navbar {
-	position: fixed;
+	position:fixed;
   z-index: 15;
 	left: 50%;
 }
@@ -459,7 +428,7 @@ input[type="submit"]:hover {
   opacity: 0.7;
   z-index: 2;
 }
-.overlay:hover {
+.overlay:hover{
   position: absolute;
   top: 0;
   left: 0;
@@ -469,7 +438,6 @@ input[type="submit"]:hover {
   opacity: 0;
   z-index: 2;
 }
-
 .overlay1 {
   margin-top: 25%;
   margin-left: 5%;
