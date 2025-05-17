@@ -60,7 +60,7 @@ if ($type_voyage == "aller-retour") {
 <body>
     <h1>Récapitulatif de votre réservation</h1>
     // afficher toutes les informations récupérées:
-    //htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
+    // htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
     <p>Départ :<?php echo htmlspecialchars($ville_depart); ?></p>
     <p>Arrivée :<?php echo htmlspecialchars($ville_arrivee); ?></p>
     <p>Formule choisie :<?php echo htmlspecialchars($formule); ?></p>
