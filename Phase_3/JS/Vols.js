@@ -7,9 +7,11 @@
       if (typeVoyage.value === "aller simple") { // vérifier si l’utilisateur a choisi aller simple.
         dateAller.style.display = "block"; //si l'utilisateur choisit un aller simple, donc la date aller sera visible (block)
         dateRetour.style.display = "none"; //et donc on cache la date de retour
+        document.getElementById("retour").required = false; // date retour non obligatoire
       } else { //sinon, si c un aller retour, les deux dates seront visibles
         dateAller.style.display = "block"; //afficher la date aller 
-        dateRetour.style.display = "block";// afficher la date retour
+        dateRetour.style.display = "block"; // afficher la date retour
+        document.getElementById("retour").required = true; // date retour obligatoire
       }
     }
 
