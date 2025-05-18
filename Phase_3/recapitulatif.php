@@ -2,7 +2,7 @@
 session_start(); 
 
 // Vérifie si l'utilisateur est connecté et a sélectionné un vol
-if (!isset($_SESSION['selection'])) {
+if (!isset($_SESSION['vol_selectionne'])) {
     header("Location: Vols.php"); 
     exit();
 }
@@ -14,12 +14,8 @@ if (!isset($_SESSION['utilisateur'])) {
 $selection = $_SESSION['selection'];
 $prix_final = $selection['prix'];
 
-
-// Supposons que tu as déjà le prix dans une variable comme ceci :
-$prix = $selection['prix']; // ou n’importe quelle autre logique
-
-$_SESSION['prix'] = $prix;
-
+$selection = $_SESSION['vol_selectionne'];
+$_SESSION['prix'] = $selection['prix'];
 
 ?>
 
