@@ -43,8 +43,8 @@ $_SESSION['prix'] = $selection['prix'];
         <p><strong>Prix final estimé :</strong> <?= $selection['prix']; ?> €</p>
     </div>
 
-    <?php foreach ($selection as $index => $data): ?>
-        <?php if (is_int($index) && is_array($data)): ?>
+     <?php/* foreach ($selection as $index => $data): ?>
+       <?php if (is_int($index) && is_array($data)): ?>
             <div>
                 <h2>Étape <?= $index + 1 ?></h2>
 
@@ -69,15 +69,13 @@ $_SESSION['prix'] = $selection['prix'];
                 <?php endif; ?>
             </div> 
         <?php endif; ?>
-    <?php endforeach; ?>
+    <?php endforeach; */?>
 
     <div>
         <a href="paiement.php">Finaliser le voyage</a>
     </div>
 
-    <div>
-        <a href="voyage.php">Retour à la sélection</a>
-    </div>
+    <!-- <div> <a href="voyage.php">Retour à la sélection</a> </div> -->
 
     <div>
         <a href="vols.php">Modifier le voyage</a>
