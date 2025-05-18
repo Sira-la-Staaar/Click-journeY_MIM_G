@@ -25,6 +25,7 @@ function trouverVoyageParId($voyages, $id){
 }
 
 $total_global = 0;
+$selection = $_SESSION['selection'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -39,26 +40,25 @@ $total_global = 0;
 <script src="JS/theme.js" defer></script>
 <body id="panier">
     <?php include 'header.php'; ?>
-
     <div class="encadre">
         <h1>Mon panier</h1>
         <ul>
             <?php foreach ($panier as $item){ ?>
             <?php
-            $voyage = trouverVoyageParId($voyages, $item['id']);
-            if (!$voyage) {
-                continue;
-            }
-            $nb_personnes = count($item['personnes']);
-            $prix_unitaire = $voyage['prix'];
-            $total = $prix_unitaire * $nb_personnes;
-            $total_global += $total;
+                $voyage = trouverVoyageParId($voyages, $item['id']);
+                if (!$voyage) continue;
+
+                $nb_personnes  = count($item['personnes']);
+                $prix_unitaire = $voyage['prix'];
+                $total         = $prix_unitaire * $nb_personnes;
+                $total_global += $total;
             ?>
             <li>
                 <h2><?= htmlspecialchars($voyage['titre']) ?></h2>
                 <p>Prix unitaire : <?= $prix_unitaire ?> €</p>
                 <p>Nombre de personnes : <?= $nb_personnes ?></p>
                 <p>Total pour ce voyage : <?= $total ?> €</p>
+
                 <h3>Personnes</h3>
                 <ul>
                     <?php foreach ($item['personnes'] as $index => $personne): ?>
@@ -66,7 +66,8 @@ $total_global = 0;
                         <p>Personne <?= $index + 1 ?></p>
                         <p>Nom : <?= htmlspecialchars($personne['nom']) ?></p>
                         <p>Prénom : <?= htmlspecialchars($personne['prenom']) ?></p>
-                        <p>Passeport : <?= isset($personne['passport']) ? htmlspecialchars($personne['passport']) : 'Non renseigné' ?></p>                        <p>Date de naissance : <?= htmlspecialchars($personne['naissance']) ?></p>
+                        <p>Passeport : <?= isset($personne['passport']) ? htmlspecialchars($personne['passport']) : 'Non renseigné' ?></p>
+                        <p>Date de naissance : <?= htmlspecialchars($personne['naissance']) ?></p>
                         <p>Type : <?= htmlspecialchars($personne['type']) ?></p>
                     </li>
                     <?php endforeach; ?>
@@ -74,13 +75,54 @@ $total_global = 0;
             </li>
             <?php } ?>
         </ul>
+
+        <?php if ($selection) { ?>
+        <div class="recapitulatif-voyage">
+            <h2>Récapitulatif de votre voyage personnalisé :</h2>
+            <p><strong>Ville de départ :</strong> <?= htmlspecialchars($selection['ville_depart'] ?? 'Non spécifiée') ?></p>
+            <p><strong>Ville d'arrivée :</strong> <?= htmlspecialchars($selection['ville_arrivee'] ?? 'Non spécifiée') ?></p>
+            <p><strong>Nombre de voyageurs :</strong> <?= htmlspecialchars($selection['voyageurs'] ?? 'Non spécifié') ?></p>
+            <p><strong>Prix final estimé :</strong> <?= htmlspecialchars($selection['prix'] ?? 'N/A') ?> €</p>
+
+            <?php foreach ($selection as $idx => $etape){ ?>
+                <?php if (is_int($idx) && is_array($etape)){ ?>
+                <div>
+                    <h3>Étape <?= $idx + 1 ?></h3>
+                    <?php if (!empty($etape['hebergement'])){ ?>
+                        <p>Hébergement : <?= htmlspecialchars($etape['hebergement']) ?></p>
+                    <?php } ?>
+                    <?php if (!empty($etape['restauration'])){ ?>
+                        <p>Restauration : <?= htmlspecialchars($etape['restauration']) ?></p>
+                    <?php } ?>
+                    <?php if (!empty($etape['activites'])){ ?>
+                        <p>Activités : <?= htmlspecialchars(implode(', ', $etape['activites'])) ?></p>
+                    <?php } ?>
+                    <?php if (!empty($etape['transport'])){ ?>
+                        <p>Transport vers la prochaine étape : <?= htmlspecialchars($etape['transport']) ?></p>
+                    <?php } ?>
+                    <?php if (!empty($etape['nb_personnes_activite'])){ ?>
+                        <p>Nombre de personnes par activité : <?= htmlspecialchars($etape['nb_personnes_activite']) ?></p>
+                    <?php } ?>
+                </div>
+                <?php } ?>
+            <?php } ?>
+        </div>
+        <?php } 
+        if ($selection && isset($selection['prix'])) {
+            $total_global += floatval($selection['prix']);
+        }
+        $_SESSION['prix']=$total_global?>
+
         <h2>Total général : <?= $total_global ?> €</h2>
+
         <form method="post" action="vider_panier.php">
             <button class="btn-details" type="submit">Vider le panier</button>
         </form>
         <a href="Accueil.php"><button class="btn-details">Continuer mes achats</button></a>
-        <a href="paiement.php"><button class="btn-details">Payer</button>
+        <a href="paiement.php"><button class="btn-details">Payer</button></a>
     </div>
-    <?php include 'footer.php'; ?>    
+
+    <?php include 'footer.php'; ?>
 </body>
+
 </html>
