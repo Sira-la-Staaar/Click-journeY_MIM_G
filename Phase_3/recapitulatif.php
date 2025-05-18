@@ -79,7 +79,7 @@ if ($selection['type_voyage'] === 'aller-retour') {
                 <?php if (!empty($data['nb_personnes_activite'])): ?>
                     <p>Nombre de personnes par activité : <?= $data['nb_personnes_activite'] ?></p>
                 <?php endif; ?>
-            </div>
+            </div> 
         <?php endif; ?>
     <?php endforeach; ?>
 
