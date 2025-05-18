@@ -2,32 +2,32 @@
 
 a:active{
   text-decoration: none;
-	color:black;
+	color:rgb(242, 240, 240);
 }
 a.admin {
   text-decoration: none;
-  color: #2980b9;
+  color: #023353;
 }
 a.admin:active{
-  color:rgb(51, 98, 199);
+  color:rgb(6, 44, 126);
 }
 a.admin:hover {
-  color: #2ecc71;
+  color: #0a5c2c;
 }
 a.admin:visited{
-  color:rgb(51, 98, 199);
+  color:rgb(10, 8, 127);
 }
 .ACC {
   width: 100%;
   height: auto;
   display: block;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000000;
 }
 .acc1 {
   padding-left: 20%;
   padding-right: 20%;
   margin-top: calc(48px + 5vh); 
-  background-color: rgb(21, 2, 70);
+  background-color: rgb(81, 110, 223);
   position: relative;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@ a.admin:visited{
   background-image:url('../Images/fond2.jpeg');
   background-size:100%; 
   height:auto;
-  color:white;
+  color:rgb(0, 0, 0);
 }
 .Accueil12 {
   width: 25%;                 /* ➤ 3 éléments de 30% = 90%, avec 10% pour l'espace/gap */
@@ -54,10 +54,10 @@ a.admin:visited{
   width:100%;
   margin-top:5%;
   height:auto;
-  color:#3A2610;
+  color:#f2bb81;
   text-align:center;
   font-size:175%;
-  background-color:#FF9900;
+  background-color:#f0bf76;
 }
 #admin{
   margin:0;
@@ -66,27 +66,23 @@ a.admin:visited{
  /* background-image:url('Images/fond4.jpg');*/
   background-size:100%; 
   height:auto;
-  background-color:rgb(200, 227, 239);
+  background-color:rgb(5, 32, 44);
 }
-a:hover{
+a:hover,a:link{
   text-decoration: none;
-	color:#336666;
+	color:#9de2e2;
 } 
-a:link{
-  text-decoration: none;
-	color:#336666;
-}
 a.nom_profil1:active,.mari12 a:hover,a.nom_profil1:visited{
-  color:white;
+  color:rgb(0, 0, 0);
 }
 #apropos{
   margin:0;
   padding:0;
   overflow-x:hidden;
-  background-image:url('../Images/clair1.jpg');
+  background-image:url('../Images/fond3.jpeg');
   background-size:100%; 
   height:auto;
-  color:white;
+  color:rgb(0, 0, 0);
 }
 #avis-contact-wrapper {
   display: flex;
@@ -97,19 +93,19 @@ a.nom_profil1:active,.mari12 a:hover,a.nom_profil1:visited{
   flex-wrap: wrap;
 }
 a:visited{
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
 }
 .avis-section {
   flex: 1;
-  background-color: #dca870;
-  color: #000000;
+  background-color: #3A2610;
+  color: #ffffff;
   padding: 2em;
   border-radius: 15px;
   min-width: 300px;
 }
 .avis-section h2 {
   font-size: 200%;
-  color: #ac6b0b;
+  color: #db9123;
   margin-bottom: 1em;
 }
 #avis-container {
@@ -125,8 +121,8 @@ a:visited{
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgb(193, 93, 11);
-  background-color:rgba(255, 255, 255, 0.5);
+  border: 1px solid #45b39d;
+  background-color:rgba(0, 0, 0, 0.5);
   padding: 3px 6px;
   margin-left:74%;
   margin-top:1.3%;
@@ -140,14 +136,14 @@ a:visited{
   outline: none;
   padding: 8px;
   font-size: 14px;
-  background-color:rgba(255, 255, 255, 0.2);
+  background-color:rgba(214, 183, 183, 0.2);
   width: 85%;
 }
 .btn-details {
   display: inline-block;
   margin-top: 10px;
-  background-color: #FF9900;
-  color: white;
+  background-color:black;
+  color:rgb(141, 186, 121);
   max-width: 35%;
   padding: 5px 10px;
   border-radius: 10px;
@@ -161,38 +157,38 @@ a:visited{
   width:100%;
   height:auto;
   padding-bottom:5%;
-  background-color:#388163ab;
+  background-color:#002818;
 }
 .debut2{
-  color:#3A2610;
+  color:#3a260f;
   text-align:center;
   font-size:250%;
   background-image:url("../Images/debut2.png");
   width:100%;
   min-height:350px;
-  background-color:#D7C4AB;
+  background-color:#a87d45;
 }
 .debut31{
   flex-wrap: wrap;
   display:flex;
   justify-content: center;  /* centre les éléments horizontalement */
-  color:#3A2610;
+  color:#caa87c;
   text-align:center;
   font-size:30%;
   padding-bottom:1%;
   width:100%;
   height:auto;
-  background-color:#D7C4AB;
+  background-color:#3A2610;
 }
 .debut3{
   width:100%;
   height:auto;
-  color:#3A2610;
+  color:#D7C4AB;
   text-align:center;
   font-size:175%;
   margin-top:15%;
   margin-bottom:5%;
-  background-color:#D7C4AB;
+  background-color:#3A2610;
 }
 div.pied1 {
   text-align:center;
@@ -216,6 +212,14 @@ div.pied2 {
   left:20%;
 }
 
+footer.footer3 {
+  background-image: url('../Images/pj1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 40px;
+  height: auto;
+}
 form {
   display: flex;
   flex-direction:column;
@@ -297,7 +301,7 @@ input[type="submit"],input[type="number"],.btn {
   padding: 10px 15px;
   margin: 5px;
   border: none;
-  background-color: #3498db;
+  background-color: #012842;
   color: white;
   font-size: 14px;
   border-radius: 5px;
@@ -314,12 +318,12 @@ input[type="submit"]:hover {
 
 .liButton {
 	display: inline-block; /* Change display pour inline-block afin que les éléments puissent être centrés */
-	border: 1px solid #000000;
+	border: 1px solid #45b39d;
 	font-family: Tahoma, sans-serif;
 	font-size: 20px;
-	color: black; /* Corrige la couleur du texte */
+	color: #45b39d; /* Corrige la couleur du texte */
 	padding: 10px;
-	background-color: #45b39d;
+	background-color: #000000;
 }
 .liCompte {
   direction:rtl;
@@ -452,7 +456,7 @@ input[type="submit"]:hover {
   background-color:rgba(51,102,102, 0.5);
 }
 p.sira{
-  color:#000000;
+  color:#EFDCC3;
   font-size:110%;
 	margin-left:20%;
 	width:40%;
@@ -505,14 +509,14 @@ p.sira2{
 /* Section du formulaire de contact */
 .section-formulaire-contact {
   flex: 1;
-  background-color: #dca870; /* Fond marron */
-  color: #3A2610; /* Texte en couleur crème */
+  background-color: #3A2610; /* Fond marron */
+  color: #D7C4AB; /* Texte en couleur crème */
   padding: 2em;
   border-radius: 15px;
   min-width: 300px;
 }
 .section-formulaire-contact h2 {
-  color: #ac6b0b; /* Titre en jaune */
+  color: #FF9900; /* Titre en jaune */
   margin-bottom: 1em;
   font-size: 24px;
   font-weight: bold;
@@ -556,12 +560,12 @@ th{
 	margin-left:20%;
 	font-family:Onyx;
 	font-size:500%;
-	color:rgb(56, 56, 56);}
+	color:grey;}
 
 .titre2{
 	margin-left:20%;
   font-size:150%;
-	color:rgb(215, 199, 199); 
+	color:white; 
 }
 .titre22{
 	margin-right:20%;
@@ -581,8 +585,8 @@ tr:hover {
 	opacity:0.85;
   padding-top:5%;
 	margin-top: 0%;
-  background-color: #336666;
-	left: 0; /*L'élément commence du bord gauche de la fenêtre */
+  background-color: #000000;
+	left: 0; /*L'élément commence du bord gauche de la fenêtre #336666*/
 	padding-left: 37% /* Décale le contenu à 154px du bord gauche */
 }
 #uno{
@@ -679,11 +683,11 @@ text-align: center;
 font-family: Futura, Tahoma, sans-serif;
 }
 .encadre {
-  border: 2px solid #5499c7; 
+  border: 2px solid #01243b; 
   padding: 15px;             
   margin: 6%;              
   border-radius: 10px;       
-  background-color: #45b39d;
+  background-color: #0a5848;
   opacity: 0.80;          
 }
 .encadre1 {
@@ -707,32 +711,19 @@ font-family: Futura, Tahoma, sans-serif;
   cursor: pointer;
   text-align:center;
 }
-footer.footer3 {
-  position:relative;
-  padding: 10px;
-  height: auto;
-  color: black;
-  z-index: 0;
-  overflow: hidden;
-  background: transparent; 
-  content: "";
-  inset: 0;
-  backdrop-filter: blur(10px) brightness(0.8);
-  background: rgba(255, 255, 255, 0.05); 
-}
 .aida4{
-  color:#334155;
+  color:#e9f4a6;
   text-align: left;
   margin: auto;
   font-size: 20px;
   font-family: 'Nunito', serif;
 }
 .encadre2 {
-  border: 2px solid #5499c7; 
+  border: 2px solid rgb(182, 186, 121); 
   padding: 20px;             
-  margin:  5% 0% 5% 5%;       
+  margin: 5% 0% 5% 5%;       
   border-radius: 30px;       
-  background-color: #45b39d;
+  background-color: #000000;
   opacity: 0.75;          
   width: 50%;               
   max-width: 400px;          
@@ -770,7 +761,7 @@ footer.footer3 {
 
 /*css pour "seConnecter"*/	
 .seConnecter{
-  background:url('../Images/img254.jpg')no-repeat center center fixed;
+  background:url('../Images/sombre1.jpg')no-repeat center center fixed;
   background-size:cover;
 }
 .seConnecter li { /*code cours, site 3W*/
@@ -792,6 +783,7 @@ footer.footer3 {
   font-family: Futura, Tahoma, sans-serif;
   text-align: center;
 }
+
 
 /*css pour "Vols"*/	
 .Vols body{
