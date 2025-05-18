@@ -25,7 +25,7 @@ if (!isset($_SESSION['utilisateur'])) {
     <img id="dos" src="Images/img6.jpg"/>
     </div>
     <div class="debut2"><br><br>Pourquoi choisir <strong>The West Agency</strong>?
-    <div class="debut3"><br>Nos destinations phares <br><br> <div class="debut31"><br><br><div class="mari12"><a href="http://projet2.local/Phase_3/recherche.php?q=mali"><img class="mari" src="Images/p2.jpg"/><br>Sûgû bâ, Bko, MLI</a></div><div class="mari12"><a href="http://projet2.local/Phase_3/recherche.php?q=maroc"><img class="mari1" src="Images/p1.jpg"/><br>Jardin majorelle, Kech, MAR</a></div><div class="mari12"><a href="http://projet2.local/Phase_3/recherche.php?q=gambie"><img class="mari" src="Images/p3.jpg"/><br>Banjul, GMB</a></div></div></div>
+    <div class="debut3"><br>Nos destinations phares <br><br> <div class="debut31"><br><br><div class="mari12"><a href="recherche.php?q=mali"><img class="mari" src="Images/p2.jpg"/><br>Sûgû bâ, Bko, MLI</a></div><div class="mari12"><a href="recherche.php?q=maroc"><img class="mari1" src="Images/p1.jpg"/><br>Jardin majorelle, Kech, MAR</a></div><div class="mari12"><a href="recherche.php?q=gambie"><img class="mari" src="Images/p3.jpg"/><br>Banjul, GMB</a></div></div></div>
     </div>
 
 <div id="avis-contact-wrapper">
@@ -39,8 +39,8 @@ if (!isset($_SESSION['utilisateur'])) {
           if ($avis) {
               foreach ($avis as $a) {
                   echo '<div class="avis">';
-                  echo '<p><strong>' . htmlspecialchars($a["pseudo"]) . '</strong> - ⭐ ' . htmlspecialchars($a["note"]) . '/5</p>';
-                  echo '<p>' . htmlspecialchars($a["commentaire"]) . '</p>';
+                  echo '<p class="sira3"><strong>' . htmlspecialchars($a["pseudo"]) . '</strong> - ⭐ ' . htmlspecialchars($a["note"]) . '/5</p>';
+                  echo '<p class="sira3">' . htmlspecialchars($a["commentaire"]) . '</p>';
                   echo '</div>';
               }
           } else {
@@ -53,15 +53,15 @@ if (!isset($_SESSION['utilisateur'])) {
   <div class="section-formulaire-contact">
     <h2 class="titre-contact">Contactez-nous</h2>
     <form method="post" action="Messages.php">
-        <label for="nom">Nom :</label>
+        <label class="sira3" for="nom">Nom :</label>
         <input class="champ-texte" type="text" id="nom" name="nom" required>
 
-        <br><label for="email">Email :</label><input class="champ-texte" type="email" id="email" name="email" required>
+        <br><label class="sira3" for="email">Email :</label><input class="champ-texte" type="email" id="email" name="email" required>
 
-        <br><label for="message">Message :</label>
+        <br><label class="sira3" for="message">Message :</label>
         <textarea name="message" id="message" rows="5" required></textarea>
 
-        <button type="submit">Envoyer</button>
+        <button class="btn-details" type="submit">Envoyer</button>
     </form>
 </div>
   <?php include 'footer.php'; ?>
