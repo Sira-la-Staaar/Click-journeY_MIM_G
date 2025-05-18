@@ -24,6 +24,9 @@
       const villeDepart = document.getElementById("ville_depart").value;
       const villeArrivee = document.getElementById("ville_arrivee").value;
 
+      console.log("Départ:", villeDepart);
+      console.log("Arrivée:", villeArrivee);
+
       // Si une ville n'est pas sélectionnée
       if (villeDepart === "" || villeArrivee === "") {
         alert("Veuillez sélectionner une ville de départ et une ville d'arrivée.");
