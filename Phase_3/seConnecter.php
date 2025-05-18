@@ -113,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
     <li class="aida2">Mot de passe :</li>
     <br>
     <input type="password" name="password" required class="input-box">
+	  <span id="togglePassword" style="cursor:pointer">👁️</span>
   </div>
     <br><br>
    
