@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est chargé, faites function(), tout ce qu’il y a à l’intérieur se lancera une fois que la page est prête.
   const passwordInput = document.getElementById("motdepasse");
   const togglePassword = document.getElementById("togglePassword");
+  
   const form = document.querySelector("form"); //chercher le premier élément "form" de la page.
   if (!form) return; //si le formulaire n’existe pas, on arrete le script
 
   const emailInput = form.querySelector('input[type="email"]'); //chercher "email" dans le formulaire
-  const passwordInput = form.querySelector('input[type="password"]'); //chercher "password" dans le formulaire
   const emailError = document.createElement("p"); // on cree des nv elements qui n'existent pas dans le html! le "p" sert à afficher un message d'erreur pour l'e-mail
   const passwordError = document.createElement("p"); //erreur pour le mot de passe,
   const counter = document.createElement("p"); //compter et afficher le nombre de caractères tapés dans le mot de passe :
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est
  
   form.addEventListener("submit", function (event) {
     let valid = true;
+    
     if (emailInput) {
       emailError.textContent = "";
       if (!emailInput.value.includes("@")) {
