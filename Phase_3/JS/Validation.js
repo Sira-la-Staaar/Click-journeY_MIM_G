@@ -36,12 +36,12 @@ if (emailInput) {
   
   // Compteur, 
   if (passwordInput) { // vérifier que l'élément du mot de passe existe
-    passwordInput.addEventListener("input", () => {
-      counter.textContent = `${passwordInput.value.length} caractères`;
+    passwordInput.addEventListener("input", () => { // "input" se déclenche à chaque fois que l'utilisateur écrit ou modifie le champ.
+      counter.textContent = `${passwordInput.value.length} caractères`; // mettre à jour counter avec le nombre de caractères tapés dans le champ mot de passe.
     });
 
-    togglePassword.addEventListener("click", () => {
-      const type = passwordInput.getAttribute("type");
+    togglePassword.addEventListener("click", () => { // si l'utilisateur cliques sur l'icone oeil, on executera le code suivant! 
+      const type = passwordInput.getAttribute("type"); // On récupère le type actuel du champ mot de passe.
       passwordInput.setAttribute("type", type === "password" ? "text" : "password");
     });
   }
