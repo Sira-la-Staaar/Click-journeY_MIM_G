@@ -6,7 +6,7 @@ function setCookie(name,val,days=365){
   document.cookie = `${name}=${val};path=/;max-age=${days*86400}`;
 }
 
-const THEMES = ['clair','sombre','contraste','large'];
+const THEMES = ['clair','sombre','large'];
 
 function applyTheme(t){
   if(!THEMES.includes(t)) t = 'clair';           // sécurité
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const file = {
       clair   : 'CSS/theme-clair.css',
       sombre  : 'CSS/theme-sombre.css',
-      contraste: 'CSS/theme-contraste.css',
       large   : 'CSS/theme-large.css'
     }[name] || 'CSS/theme-clair.css';
 
