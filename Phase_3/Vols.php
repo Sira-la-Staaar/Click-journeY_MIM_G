@@ -11,9 +11,13 @@
   <script src="JS/Vols.js" defer></script>
 	<body id="Vols">
     <?php include 'header.php'; ?>
-    <div class="encadre">
       <form action="resultat.php" method="post" id="form-vol">
-        <p class="sol">D'ou partez-vous?</p>
+        <div class="encadre">
+        <h1 class="aida1">-------------Vols-------------</h1>
+</div>
+        <div class="encadre1">
+          <br><br>
+        <p class="aida3">D'ou partez-vous?</p>
           <select class="btn" name="ville_depart" id="ville_depart">
             <optgroup label="Maroc">
               <option value="Marrakech">Marrakech</option>
@@ -94,8 +98,8 @@
               <option value="Nouadhibou">Nouadhibou</option>
             </optgroup>
           </select>
-
-        <p class="sol">D'ou allez-vous?</p>
+<br><br>
+        <p class="aida3">D'ou allez-vous?</p>
           <select class="btn" name="ville_depart" id="ville_depart">
             <optgroup label="Maroc">
               <option value="Marrakech">Marrakech</option>
@@ -176,18 +180,21 @@
               <option value="Nouadhibou">Nouadhibou</option>
             </optgroup>
           </select>
-          <p class="sol">Choisissez votre formule:</p>
+          <br><br>
+          <p class="aida3">Choisissez votre formule:</p>
           <select class="btn" name="formule">
             <option value="economique">economique</option>
             <option value="affaire">affaire</option>
             <option value="premiere">premiere</option>
           </select>
-          <p class="sol">Type de voyage:</p>
+          <br><br>
+          <p class="aida3">Type de voyage:</p>
           <select class="btn" name="type-voyage" onchange="afficherChamps()">
             <option value="aller-retour">aller-retour</option>
             <option value="aller simple">aller simple</option>
           </select>
-          <p class="sol">Choisissez la date du vol:</p> 
+          <br><br>
+          <p class="aida3">Choisissez la date du vol:</p> 
           <?php $today = date('Y-m-d');     // ex. 2025-05-18?>
           <div id="date-aller">
             <label for="aller" class="sol">Date aller :</label>
@@ -198,12 +205,15 @@
             <label for="retour" class="sol">Date retour :</label>
             <input type="date" class="btn" id="retour" name="date_retour" min="<?= $today ?>" max="2025-12-31">
           </div>
+          <br><br>
           <label for="voyageurs">Nombre de voyageurs :</label>
           <input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1">
           <p>-À noter: <span id="valises">chaque voyageur bénéficie de l'inclusion de deux valises de 23 kg chacune!</span></p>
           <button class="btn-details" type="submit">Rechercher</button>    
       </form>    
 	  </div> 
+</div>
+</div>
     <?php include 'footer.php'; ?>
   </body>
 </html>
