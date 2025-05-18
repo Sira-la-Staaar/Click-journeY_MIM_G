@@ -48,10 +48,10 @@ $control = md5($api_key . "#" . $id_transaction . "#" . $montant . "#" . $vendeu
 
 <html lang="fr">
 <head>
-   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
-    <link rel="stylesheet" href="stylesheet.css">
-  <title>Page de paiement</title>
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">  <title>Page de paiement</title>
 </head>
+<script src="JS/theme.js" defer></script>
 <body class="paiement">
   <img src ="Images/logo3.png" alt="logo de The West Agency" class="logo"/>
 
