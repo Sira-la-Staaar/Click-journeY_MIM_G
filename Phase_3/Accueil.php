@@ -30,7 +30,7 @@ if ($voyages === null) {
 
       <a href="<?php 
         if (isset($_SESSION['utilisateur'])) {
-          echo '#';  // 
+          echo 'Vols.php';  // 
         } else {
           echo 'inscription.php';
         }
@@ -45,15 +45,9 @@ if ($voyages === null) {
       </script>
     </div>
 
-
     <div class="Accueil3">
-      <div class="Accueil31">
-
-    <div class="grid-pinterest">
       <?php
-
         shuffle($voyages);
-
         $voyages_limited = array_slice($voyages, 0, 6);
       ?>
       <?php foreach ($voyages_limited as $voyage){ ?>
@@ -67,10 +61,7 @@ if ($voyages === null) {
           </div>
         </div>
       <?php }?>
-      </div>
-
-      </div>
-      </div>
+    </div>
     <?php include 'footer.php'; ?>
  </body>
 </html>
