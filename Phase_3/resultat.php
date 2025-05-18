@@ -67,6 +67,7 @@ $_SESSION['selection'] = [
     <title>Résultat | The West Agency</title>
 </head>
 <script src="js/theme.js" defer></script>
+<script src="JS/resultat.js" defer></script>
 <body>
     <h1>Récapitulatif de votre réservation</h1>
     <!-- afficher toutes les informations récupérées: -->
