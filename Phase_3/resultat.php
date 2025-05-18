@@ -60,7 +60,9 @@ $_SESSION['selection'] = [
     "formule" => $formule,
     "type_voyage" => $type_voyage,
     "date_heure" => $date_heure,
-    "prix" => $prix
+    "prix" => $prix,
+
+    $_SESSION['selection']['nb_personnes'] = $nb_personnes;
 ];
 ?>
 
