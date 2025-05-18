@@ -775,23 +775,9 @@ footer.footer3 {
 
 
 /*css pour "Vols"*/	
-.Vols body{
-    display: flex;
-    flex-direction: column; /* Placer les éléments en colonne */
-    justify-content: center; /* Centrer verticalement */
-    align-items: center; /* Centrer horizontalement */
-    margin: 0;
-    color: #000000;
-    height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
-}
-
-
-.Vols form select, .Vols form input {
-    width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#Vols{
+  background: url('../Images/img360.jpg') no-repeat center center fixed; 
+  background-size: cover;
 }
 
 body.recapitulatif {
