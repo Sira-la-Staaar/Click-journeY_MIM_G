@@ -769,17 +769,8 @@ footer.footer3 {
 
 /*css pour "Vols"*/	
 #Vols{
-  background: url('../Images/Vols.jpg') no-repeat center center fixed; 
+  background: url('../Images/img360.jpg') no-repeat center center fixed; 
   background-size: cover;
-}
-
-
-.Vols form select, .Vols form input {
-    width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 body.recapitulatif {
