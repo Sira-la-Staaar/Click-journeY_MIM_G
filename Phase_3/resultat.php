@@ -15,8 +15,6 @@ $ville_depart = $_GET['ville_depart'] ?? '';
 $ville_arrivee = $_GET['ville_arrivee'] ?? '';
 $formule = $_GET['formule'] ?? '';
 $type_voyage = $_GET['type-voyage'] ?? '';
-$mois = $_GET['month'] ?? '';
-$semaine = $_GET['week'] ?? '';
 $date_heure = $_GET['time2'] ?? '';
 
 // Vérification des entrées, Si la ville de départ = la ville d’arrivée donc erreur!
@@ -57,8 +55,6 @@ $_SESSION['selection'] = [
     "ville_arrivee" => $ville_arrivee,
     "formule" => $formule,
     "type_voyage" => $type_voyage,
-    "mois" => $mois,
-    "semaine" => $semaine,
     "date_heure" => $date_heure,
     "prix" => $prix
 ];
