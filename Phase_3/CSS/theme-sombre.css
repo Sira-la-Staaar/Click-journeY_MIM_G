@@ -749,29 +749,11 @@ font-family: Futura, Tahoma, sans-serif;
   font-family: Calibri, sans-serif;
   max-width: 80%;
 }
-/*#Paiement*/
-.paiement{
-  background:url('../Images/img15.jpg')no-repeat center center fixed;
-  background-size:cover;
-}
 
 /*css pour "seConnecter"*/	
 .seConnecter{
   background:url('../Images/sombre1.jpg')no-repeat center center fixed;
   background-size:cover;
-}
-.seConnecter li { /*code cours, site 3W*/
-  font-family: Futura, Tahoma, sans-serif;
-  padding: 10px;
-  border-radius: 5px 5px;
-  width: 250px;
-  text-align:center;
-}
-.seConnecter #Google, .seConnecter #Facebook{
-    display: block;
-    text-align: center;
-    padding: 10px;
-    width: 250px;
 }
 .strong{
   color: #000000;
