@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Tableau des villes existantes, comme ça l'utilisateur ne choisira pas une ville inexistante!
 $villes = [ 
     "Marrakech", "Casablanca", "Rabat", "Conakry", "Kankan", "Bamako", "Mopti", "Kayes",
