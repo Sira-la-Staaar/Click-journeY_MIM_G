@@ -1,5 +1,6 @@
 <?php
 session_start();
+// Assure la connexion de l'utilisateur
 if (empty($_SESSION['connecte'])) {
     header('Location: seConnecter.php');
     exit;
@@ -14,6 +15,7 @@ foreach ($utilisateurs as $u) {
         break;
     }
 }
+//Arret du script
 if ($utilisateur === null) {
     exit;
 }
@@ -22,22 +24,24 @@ $info = $utilisateur['informations'][0];
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
+    
+    <meta charset="UTF-8"> <!-- Nous permet de lire correctement le script -->
     <link rel="stylesheet" href="CSS/theme-clair.css" id="theme">
     <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <title>Profil | The West Agency</title>
   </head>
   <script src="JS/theme.js" defer></script>
-  <body class="seConnecter">
+  <body class="Profil">
     <?php include 'header.php'; ?>
     <div class="seConnecter">
-      <div>
+      <div class="avatar">
            <img id="profil" src="Images/<?= htmlspecialchars($utilisateur['img'], ENT_QUOTES) ?>"
            alt="Photo de <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?>">
       </div>
       <div class="encadre2">
 
-      <h1 class="sol">Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
+      <h1>Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
+      <!--Informations de l'utilisateur-->
       <p class="aida4"><strong>Nom :</strong> <?= htmlspecialchars($info['nom'], ENT_QUOTES) ?></p>
       <br><br>
       <p class="aida4"><strong>Pseudo :</strong> <?= htmlspecialchars($info['pseudo'], ENT_QUOTES) ?></p>
@@ -60,7 +64,6 @@ $info = $utilisateur['informations'][0];
       </select>
 
     </div>
-  </div>
     <script src="JS/theme.js" defer></script>
     <!--<script src="JS/profil.js"></script>-->
     <?php include 'footer.php'; ?>
