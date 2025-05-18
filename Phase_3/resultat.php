@@ -17,6 +17,8 @@ $formule = $_POST['formule'] ?? '';
 $type_voyage = $_POST['type-voyage'] ?? '';
 $date_heure = $_POST['time2'] ?? '';
 
+$nb_personnes = $_POST['nb_personnes'] ?? 1;
+
 //si la ville de départ ou la ville d’arrivée n’est pas dans le tableau $villes donc erreur
 //if (!in_array($ville_depart, $villes) || !in_array($ville_arrivee, $villes)) {
   //  echo "<h2>Erreur : Ville non reconnue.</h2>";
@@ -48,6 +50,8 @@ switch ($formule) {
 if ($type_voyage == "aller-retour") {
     $prix *= 2;
 }
+
+$prix *= $nb_personnes;
 
     // stocker tout dans la session pour l’utiliser dans recapitulatif.php
 $_SESSION['selection'] = [
