@@ -191,9 +191,6 @@
     <p>Choisissez la date et l'heure de votre   vol:</p> 
  Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
       
-La semaine: <input type="week" name="week" value="2025-W09" min="2025-W09" max="2025-W52"><br>
-      
-La date: <input type="datetime-local" name="time2" value="2025-03-01T12:00" min="2025-03-01T12:00" max="2025-12-31T11:59"><br> 
 		
 <?php include 'footer.php'; ?>
 
