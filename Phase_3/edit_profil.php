@@ -115,6 +115,7 @@ $info = $user['informations'][0];
             <input type="text" name="adresse" value="<?= htmlspecialchars($info['adresse']) ?>">
         </label><br><br>
         <button class="btn-details" type="submit">Enregistrer</button>
+        <button class="btn-details" type="reset">Annuler</button>
         <a href="seDeconnecter.php"><button class="btn-details" id="logout">Se déconnecter</button><a>
        </div>     
       </form>
