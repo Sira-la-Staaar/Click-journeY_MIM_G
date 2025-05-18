@@ -59,7 +59,6 @@ $info = $utilisateur['informations'][0];
       <select id="switchTheme" class="btn">
         <option value="clair">Thème clair</option>
         <option value="sombre">Thème sombre</option>
-        <option value="contraste">Contraste élevé</option>
         <option value="large">Grand texte</option>
       </select>
 
