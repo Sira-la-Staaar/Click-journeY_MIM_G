@@ -12,6 +12,23 @@ if (!isset($_SESSION['utilisateur'])) {
 }
 
 $selection = $_SESSION['selection'];
+
+$prix_final = 0;
+switch ($selection['formule']) {
+    case 'economique':
+        $prix_final = 100;
+        break;
+    case 'affaire':
+        $prix_final = 200;
+        break;
+    case 'premiere':
+        $prix_final = 300;
+        break;
+}
+
+if ($selection['type_voyage'] === 'aller-retour') {
+    $prix_final *= 2;
+}
 ?>
 
 <!DOCTYPE html>
