@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est
       passwordInput.setAttribute("type", type === "password" ? "text" : "password");
     });
   }
-
+ 
   form.addEventListener("submit", function (event) {
     let valid = true;
     if (emailInput) {
