@@ -15,7 +15,8 @@ $ville_depart = $_POST['ville_depart'] ?? '';
 $ville_arrivee = $_POST['ville_arrivee'] ?? '';
 $formule = $_POST['formule'] ?? '';
 $type_voyage = $_POST['type-voyage'] ?? '';
-$date_heure = $_POST['time2'] ?? '';
+$date_aller = $_POST['date_aller'] ?? '';
+$date_retour = $_POST['date_retour'] ?? '';
 $nb_personnes = $_POST['nb_personnes'] ?? 1;
 
 //si la ville de départ ou la ville d’arrivée n’est pas dans le tableau $villes donc erreur
