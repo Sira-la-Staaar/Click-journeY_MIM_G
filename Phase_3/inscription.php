@@ -97,7 +97,7 @@
   }  
 ?>
 
-  <div class="input box" style="margin-top: 20px;">
+  <div class="input box">
   <button type="submit" class="btn-details">
    S'inscrire
    </div>
