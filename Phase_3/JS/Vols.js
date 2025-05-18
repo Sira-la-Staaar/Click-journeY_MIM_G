@@ -18,13 +18,26 @@
     typeVoyage.addEventListener("change", toggleDates); //si l’utilisateur change le type de voyage, rappelle la fonction toggleDates!
 
     const form = document.querySelector("form");
-  const depart = document.getElementById("ville_depart");
-  const arrivee = document.getElementById("ville_arrivee");
 
-  form.addEventListener("submit", function (event) {
-    if (depart.value === arrivee.value) {
-      alert("Erreur : La ville de départ et la ville d'arrivée ne peuvent pas être les mêmes !");
-      event.preventDefault();
-    }
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      const villeDepart = document.getElementById("ville_depart").value;
+      const villeArrivee = document.getElementById("ville_arrivee").value;
+
+      // Si une ville n'est pas sélectionnée
+      if (villeDepart === "" || villeArrivee === "") {
+        alert("Veuillez sélectionner une ville de départ et une ville d'arrivée.");
+        event.preventDefault(); // bloque l'envoi car y a rien!
+        return;
+      }
+
+      // Si les villes sont identiques
+      if (villeDepart === villeArrivee) {
+        alert("La ville de départ et la ville d'arrivée doivent être différentes.");
+        event.preventDefault(); // bloque l'envoi car les villes sont identiques!
+        return;
+      }
+
     });
+  }
   });
