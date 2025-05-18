@@ -67,49 +67,51 @@ $info = $user['informations'][0];
       <?php include 'header.php'; ?>
       <form method="post" action="edit_profil.php" enctype="multipart/form-data">       
        <div class="seConnecter">
-        <h1>Modification</h1>
+        <div class="encadre2">
+        <h1 class="aida4">Modification</h1>
         <?php if (!empty($user['img'])): ?>
             <img id="profil" src="Images/<?= htmlspecialchars($user['img']) ?>" alt="Photo de profil"><br>
         <?php endif; ?>
 
-        <label>Photo de profil<br>
+        <label class="aida4">Photo de profil<br>
+
             <input type="file" name="photo">
         </label><br><br>
 
-        <label>Adresse e‑mail<br>
+        <label class="aida4">Adresse e‑mail<br>
           <input type="email" name="email" value="<?= htmlspecialchars($user['e-mail']) ?>">
         </label><br><br>
 
-        <label>Mot de passe<br>
+        <label class="aida4">Mot de passe<br>
             <input type="text" name="password" value="<?= htmlspecialchars($user['mdp']) ?>">
         </label><br><br>
 
-        <label>Nom<br>
+        <label class="aida4">Nom<br>
             <input type="text" name="nom" value="<?= htmlspecialchars($info['nom']) ?>">
         </label><br><br>
 
-        <label>Prénom<br>
+        <label class="aida4">Prénom<br>
           <input type="text" name="prenom" value="<?= htmlspecialchars($info['prenom']) ?>">
         </label><br><br>
 
-        <label>Pseudo<br>
+        <label class="aida4">Pseudo<br>
           <input type="text" name="pseudo" value="<?= htmlspecialchars($info['pseudo']) ?>">
         </label><br><br>
 
-        <label>Civilité<br>
+        <label class="aida4">Civilité<br>
           <select name="civilite">
             <option value="F" <?= $info['civilité']==='F'?'selected':'' ?>>F</option>
             <option value="H" <?= $info['civilité']==='H'?'selected':'' ?>>H</option>
           </select>
         </label><br><br>
 
-        <label>Date de naissance<br>
+        <label class="aida4">Date de naissance<br>
           <input type="date" name="naissance" value="<?php
           $d = DateTime::createFromFormat('d/m/Y', $info['naissance']);
           echo $d ? $d->format('Y-m-d') : '';?>">
         </label><br><br>
 
-        <label>Adresse<br>
+        <label class="aida4">Adresse<br>
             <input type="text" name="adresse" value="<?= htmlspecialchars($info['adresse']) ?>">
         </label><br><br>
         <button class="btn-details" type="submit">Enregistrer</button>
