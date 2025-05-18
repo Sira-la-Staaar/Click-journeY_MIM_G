@@ -28,16 +28,16 @@ $info = $utilisateur['informations'][0];
     <title>Profil | The West Agency</title>
   </head>
   <script src="JS/theme.js" defer></script>
-  <body class="Profil">
+  <body class="seConnecter">
     <?php include 'header.php'; ?>
     <div class="seConnecter">
-      <div class="avatar">
+      <div>
            <img id="profil" src="Images/<?= htmlspecialchars($utilisateur['img'], ENT_QUOTES) ?>"
            alt="Photo de <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?>">
       </div>
       <div class="encadre2">
 
-      <h1>Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
+      <h1 class="sol">Bienvenue, <?= htmlspecialchars($info['prenom'], ENT_QUOTES) ?></h1>
       <p class="aida4"><strong>Nom :</strong> <?= htmlspecialchars($info['nom'], ENT_QUOTES) ?></p>
       <br><br>
       <p class="aida4"><strong>Pseudo :</strong> <?= htmlspecialchars($info['pseudo'], ENT_QUOTES) ?></p>
@@ -60,6 +60,7 @@ $info = $utilisateur['informations'][0];
       </select>
 
     </div>
+  </div>
     <script src="JS/theme.js" defer></script>
     <!--<script src="JS/profil.js"></script>-->
     <?php include 'footer.php'; ?>
