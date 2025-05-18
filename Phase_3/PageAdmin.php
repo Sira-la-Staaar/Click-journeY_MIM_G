@@ -17,8 +17,7 @@ $nombreDePages = ceil($totalUtilisateurs / $utilisateursParPage);
 
 $pageActuelle = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $debut = ($pageActuelle - 1) * $utilisateursParPage;
-$utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
-?>
+$utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);?>
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +29,8 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
     <meta name="description" content="page admin" />
   </head>
   <script src="JS/theme.js" defer></script>
+  <script src="JS/admin.js" defer></script>
+
   <body id="admin">
     <!--<div class="container">
     <div class="div1"></div>
@@ -48,24 +49,24 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($utilisateursPage as $u): ?>
+            <?php foreach ($utilisateursPage as $u){?>
                 <tr>
                     <td><?= htmlspecialchars($u['id']) ?></td>
                     <td><?= isset($u['informations'][0]['nom']) ? htmlspecialchars($u['informations'][0]['nom']) : 'Nom non défini' ?></td>
                     <td><?= htmlspecialchars($u['e-mail']) ?></td>
                     <td>
-                        <form method="post" action="scripts/modifier_utilisateur.php" style="display:inline;">
+                        <form method="post" action="modifier_utilisateurs.php">
                             <input type="hidden" name="id" value="<?= $u['id'] ?>">
                             <?php if ($u['role'] !== 'A') { ?>
-                              <input type="submit" name="action" value="Mettre Admin">
-                            <?php } ?>
-                            <input type="submit" name="action" value="Bannir">
+                                <input type="submit" class="btn-admin" data-id="<?= $u['id'] ?>" name="action" value="Mettre Admin">
+                            <?php } ?>    
+                                <input type="submit" class="btn-admin" name="action" value="Bannir">    
                         </form>
                         
-                        <a class="admin" href="voyages_utilisateur.php?id=<?= $u['id'] ?>" style="text-decoration:none; color:blue;">Voir les voyages</a>
+                        <a class="admin" href="voyages_utilisateur.php?id=<?= $u['id'] ?>">Voir les voyages</a>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+            <?php } ?>
         </tbody>
     </table>
     <a href="seDeconnecter.php"><button class="btn-details" id="logout">Se déconnecter</button><a>
@@ -77,7 +78,7 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
         <?php endif; ?>
 
         <?php for ($i = 1; $i <= $nombreDePages; $i++): ?>
-            <a href="?page=<?= $i ?>" <?= $i == $pageActuelle ? 'style="font-weight: bold;"' : '' ?>><?= $i ?></a>
+            <a href="?page=<?= $i ?>" <?= $i == $pageActuelle ? : '' ?>><?= $i ?></a>
         <?php endfor; ?>
 
         <?php if ($pageActuelle < $nombreDePages): ?>
