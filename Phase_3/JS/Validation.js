@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est chargé, faites function(), tout ce qu’il y a à l’intérieur se lancera une fois que la page est prête.
+  const passwordInput = document.getElementById("motdepasse");
+  const togglePassword = document.getElementById("togglePassword");
   const form = document.querySelector("form"); //chercher le premier élément "form" de la page.
   if (!form) return; //si le formulaire n’existe pas, on arrete le script
 
