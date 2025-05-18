@@ -76,7 +76,7 @@
   
   <div class="input box">
     <h2 class="aida2">Mot de passe</h2>
-    <input type="password" class="input-box" placeholder="Mot de passe"required minlength="8">
+    <input type="password" class="input-box" placeholder="Mot de passe"required minlength="8" id="motdepasse">
     <span id="togglePassword" style="cursor:pointer">👁️</span>
   </div>
 
