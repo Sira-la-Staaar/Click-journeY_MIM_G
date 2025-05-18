@@ -10,12 +10,12 @@ $villes = [
     "Niamey", "Agadez", "Nouakchott", "Nouadhibou"
 ];
 
-// On récupère toutes les valeurs envoyées par le formulaire vols.php grâce à $_GET, si la valeur n’est pas envoyée, mettre une chaîne vide pour éviter une erreur
-$ville_depart = $_GET['ville_depart'] ?? '';
-$ville_arrivee = $_GET['ville_arrivee'] ?? '';
-$formule = $_GET['formule'] ?? '';
-$type_voyage = $_GET['type-voyage'] ?? '';
-$date_heure = $_GET['time2'] ?? '';
+// On récupère toutes les valeurs envoyées par le formulaire vols.php grâce à $_POST, si la valeur n’est pas envoyée, mettre une chaîne vide pour éviter une erreur
+$ville_depart = $_POST['ville_depart'] ?? '';
+$ville_arrivee = $_POST['ville_arrivee'] ?? '';
+$formule = $_POST['formule'] ?? '';
+$type_voyage = $_POST['type-voyage'] ?? '';
+$date_heure = $_POST['time2'] ?? '';
 
 //si la ville de départ ou la ville d’arrivée n’est pas dans le tableau $villes donc erreur
 //if (!in_array($ville_depart, $villes) || !in_array($ville_arrivee, $villes)) {
