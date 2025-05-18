@@ -100,7 +100,7 @@
           </select>
 <br><br>
         <p class="aida3">D'ou allez-vous?</p>
-          <select class="btn" name="ville_depart" id="ville_depart">
+          <select class="btn" name="ville_arrivee" id="ville_arrivee">
             <optgroup label="Maroc">
               <option value="Marrakech">Marrakech</option>
               <option value="Casablanca">Casablanca</option>
