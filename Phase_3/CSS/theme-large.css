@@ -1,5 +1,4 @@
 /*#Page d'accueil*/
-
 a:active{
   text-decoration: none;
 	color:black;
@@ -26,7 +25,7 @@ a.admin:visited{
 .acc1 {
   padding-left: 20%;
   padding-right: 20%;
-  margin-top: calc(48px + 5vh); 
+  margin-top: 8%; 
   background-color: rgb(21, 2, 70);
   position: relative;
   display: flex;
@@ -38,12 +37,11 @@ a.admin:visited{
 #accueil{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background-image:url('Images/fond2.jpeg');
+  background-image:url('../Images/fond2.jpeg');
   background-size:100%; 
   height:auto;
   color:white;
-}
+}              
 .Accueil12 {
   width: 25%;                 /* ➤ 3 éléments de 30% = 90%, avec 10% pour l'espace/gap */
   margin-bottom: 1%;          /* ➤ espace entre les lignes */
@@ -54,9 +52,8 @@ a.admin:visited{
   width:100%;
   margin-top:5%;
   height:auto;
-  color:#3A2610;
   text-align:center;
-  font-size:175%;
+  font-size:250%;
   background-color:#FF9900;
 }
 #admin{
@@ -76,20 +73,14 @@ a:link{
   text-decoration: none;
 	color:#336666;
 }
-.mari12 a:hover{
+a.nom_profil1:active,.mari12 a:hover,a.nom_profil1:visited{
   color:white;
-}
-a.nom_profil1:active{
-  color:rgb(255, 255, 255);
-}
-a.nom_profil1:visited{
-  color:rgb(255, 255, 255);
 }
 #apropos{
   margin:0;
   padding:0;
   overflow-x:hidden;
-  background-image:url('Images/fond3.jpeg');
+  background-image:url('../Images/clair1.jpg');
   background-size:100%; 
   height:auto;
   color:white;
@@ -107,15 +98,15 @@ a:visited{
 }
 .avis-section {
   flex: 1;
-  background-color: #3A2610;
-  color: #D7C4AB;
+  background-color: #dca870;
+  color: #000000;
   padding: 2em;
   border-radius: 15px;
   min-width: 300px;
 }
 .avis-section h2 {
   font-size: 200%;
-  color: #FF9900;
+  color: #ac6b0b;
   margin-bottom: 1em;
 }
 #avis-container {
@@ -133,78 +124,79 @@ a:visited{
   justify-content: space-between;
   border: 1px solid rgb(193, 93, 11);
   background-color:rgba(255, 255, 255, 0.5);
-  padding: 3px 6px;
-  margin-left:74%;
-  margin-top:1.3%;
+  margin-left:70%;
+  margin-top:-5%;
   margin-right:20px;
   border-radius: 6px;
   z-index:15;
-  width: 20%;
+  width: 28%;
 }
 .barre-recherche input {
   border: none;
   outline: none;
   padding: 8px;
-  font-size: 14px;
+  font-size: 28px;
   background-color:rgba(255, 255, 255, 0.2);
-  width: 85%;
+  width: 80%;
+  height:auto;
 }
 .btn-details {
   display: inline-block;
   margin-top: 10px;
   background-color: #FF9900;
   color: white;
-  max-width: 25%;
+  max-width: 40%;
   padding: 5px 10px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 3em;
 }
 
 .debut{
   z-index:1;
-  margin-top:5%;
+  margin-top:10%;
   width:100%;
   height:auto;
   padding-bottom:5%;
-  background-color:#002818;
+  background-color:#388163ab;
 }
 .debut2{
   color:#3A2610;
   text-align:center;
-  font-size:250%;
-  background-image:url("Images/debut2.png");
+  font-size:350%;
+  background-image:url("../Images/debut2.png");
   width:100%;
-  min-height:350px;
+  margin:-20px;
+  min-height:400px;
   background-color:#D7C4AB;
 }
 .debut31{
   flex-wrap: wrap;
   display:flex;
   justify-content: center;  /* centre les éléments horizontalement */
-  color:#D7C4AB;
+  color:#3A2610;
   text-align:center;
   font-size:30%;
   padding-bottom:1%;
   width:100%;
   height:auto;
-  background-color:#3A2610;
+  background-color:#D7C4AB;
 }
 .debut3{
   width:100%;
   height:auto;
-  color:#D7C4AB;
+  color:#3A2610;
   text-align:center;
   font-size:175%;
   margin-top:15%;
   margin-bottom:5%;
-  background-color:#3A2610;
+  background-color:#D7C4AB;
 }
 div.pied1 {
   text-align:center;
   padding:5%;
   color:rgb(238, 233, 233);
-  font-size:14px;
+  font-size:25px;
   font-family: Calibri;
 }
 div.pied2 {
@@ -215,21 +207,12 @@ div.pied2 {
   font-family: Calibri;
 }
 #dos{
-  position:absolute;
   height:auto;
-  margin-top:1%;
-	width:40%;
+  margin:1%;
+	width:95%;
   left:20%;
 }
 
-footer.footer2 {
-  background-image: url('Images/pj1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 40px 40px;
-  height: auto;
-}
 form {
   display: flex;
   flex-direction:column;
@@ -272,34 +255,28 @@ form label {
 }
 
 .grid-pinterest {
-  column-count: 3; /* nombre de colonnes */
-  column-gap: 1em; /* espace entre colonnes */
-  padding: 2em;
+  column-count: 2; /* nombre de colonnes */
+  column-gap: 2em; /* espace entre colonnes */
+  padding: 3em;
 }
 
 h1#admin{
   margin-top:7%;
   color:#042c47;
 }
-/*#header {
-	position:absolute;
-  z-index: 15;
-	margin-top: -10px;
-	background-color: #3c4543;
-}*/
 
 img.disp {
   position: fixed;
   z-index: 10;  
-  width: 18%;
+  width: 25%;
   height: auto;
 }
 img.pied11 {
   height:auto;
-  width:25%;
+  width:35%;
 }
 img.section_connect {
-  height: 60px;
+  height: 90px;
   width: auto;
   border-radius: 50%;
   object-fit: cover;
@@ -307,19 +284,19 @@ img.section_connect {
 input:focus, textarea:focus {
   outline: none;
 }
-input[type="submit"],input[type="number"] {
+input[type="submit"],input[type="number"],.btn {
   padding: 10px 15px;
   margin: 5px;
   border: none;
   background-color: #3498db;
   color: white;
-  font-size: 14px;
+  font-size: 25px;
   border-radius: 5px;
-  max-width: 15%;
+  max-width: 60%;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-input[type="submit"]:focus {
+input[type="submit"]:focus, input[type="number"]:focus,.btn:focus {
   outline: none;
 }
 input[type="submit"]:hover {
@@ -330,7 +307,7 @@ input[type="submit"]:hover {
 	display: inline-block; /* Change display pour inline-block afin que les éléments puissent être centrés */
 	border: 1px solid #000000;
 	font-family: Tahoma, sans-serif;
-	font-size: 20px;
+	font-size: 40px;
 	color: black; /* Corrige la couleur du texte */
 	padding: 10px;
 	background-color: #45b39d;
@@ -348,11 +325,11 @@ input[type="submit"]:hover {
   position: fixed; /*  Nécessaire pour appliquer z-index */
   z-index: 11;/* Un z-index plus élevé que celui de l'image */
   color:black;
-  height:7%;
+  height:14%;
   width:auto;
   text-decoration:none;
-  margin-left:-47%;
-  margin-top:2.3%; 
+  margin-left:-49%;
+  margin-top:6%; 
 } 
 #Logo2 {
   position:absolute;
@@ -401,15 +378,8 @@ input[type="submit"]:hover {
 	left: 50%;
 }
 .nom_profil {
-  font-size: 18px;
+  font-size: 30px;
   color: black;
-  text-decoration: none;
-}
-.nom_profil1 {
-  font-size: 18px;
-  color: white;
-  display:flex;
-  z-index:15;
   text-decoration: none;
 }
 
@@ -440,7 +410,7 @@ input[type="submit"]:hover {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  font-size: 450%;
+  font-size: 800%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(21, 2, 70);
   z-index: 3;
@@ -450,7 +420,7 @@ input[type="submit"]:hover {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-image:url('Images/fond8.jpg');
+  background-image:url('../Images/fond8.jpg');
   background-size:100%; 
   height:auto;
   color:white;
@@ -458,17 +428,17 @@ input[type="submit"]:hover {
 .panier{
   position: fixed;
   z-index:15;
-  height:40px; 
-  margin-top:1.3%;
-  margin-left:96%;
-  gap: 2%;
+  height:70px; 
+  margin-top:2%;
+  margin-left:92%;
+  gap:2%;
   display: flex;
   background-color:rgba(51,102,102, 0.5);
 }
 p.sira{
-  color:#EFDCC3;
-  font-size:110%;
-	margin-left:20%;
+  color:#000000;
+  font-size:200%;
+	margin-left:5%;
 	width:40%;
 	font-family:Verdana;
 	}
@@ -478,6 +448,9 @@ p.sira2{
   margin-left:auto;
   width:40%;
   font-family:Verdana;
+}
+.sira3{
+  font-size:60px;
 }
 .pin {
   background-color: #fff;
@@ -519,22 +492,26 @@ p.sira2{
 /* Section du formulaire de contact */
 .section-formulaire-contact {
   flex: 1;
-  background-color: #3A2610; /* Fond marron */
-  color: #D7C4AB; /* Texte en couleur crème */
+  background-color: #dca870; /* Fond marron */
+  color: #3A2610; /* Texte en couleur crème */
   padding: 2em;
   border-radius: 15px;
   min-width: 300px;
 }
 .section-formulaire-contact h2 {
-  color: #FF9900; /* Titre en jaune */
+  color: #ac6b0b; /* Titre en jaune */
   margin-bottom: 1em;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
+.sol{
+  font-size:40px;
+}
 span{
   display:flex;
   z-index:15;
+  font-size:35px;
   gap: 2%;
 }
 
@@ -569,13 +546,13 @@ th{
   margin-top:1%;
 	margin-left:20%;
 	font-family:Onyx;
-	font-size:500%;
-	color:grey;}
+	font-size:600%;
+	color:rgb(56, 56, 56);}
 
 .titre2{
-	margin-left:20%;
-  font-size:150%;
-	color:white; 
+	margin-left:5%;
+  font-size:300%;
+	color:rgb(215, 199, 199); 
 }
 .titre22{
 	margin-right:20%;
@@ -590,27 +567,28 @@ tr:hover {
 .ulButton {
 	list-style-type: none;
 	width: 100%; /* L'élément <ul> occupe toute la largeur */
-	height: 48px;
+	height: 96px;
 	position: fixed;
 	opacity:0.85;
-  padding-top:5%;
-	margin-top: 0%;
+  padding-top:8%;
+  margin-top:0%;
   background-color: #336666;
 	left: 0; /*L'élément commence du bord gauche de la fenêtre */
-	padding-left: 37% /* Décale le contenu à 154px du bord gauche */
+	padding-left: 27% /* Décale le contenu à 154px du bord gauche */
 }
 #uno{
+  position:absolute;
   z-index: 10;
-	margin-left:65%;
-	width:29.63%;
-	margin-top:-25%;
+	margin-left:48%;
+	width:50%;
+	margin-top:-125%;
 }
 
 #Feedback
 body#feedback {
   font-family: Arial, sans-serif;
-  width: 60%;
-  min-height: 100vh;
+  width: 80%;
+  min-height: 150vh;
   margin: 2em auto;
   padding: 1em;
   border: 1px solid #ffffff;
@@ -632,6 +610,7 @@ body#feedback {
 
 h2.feedback, h3.feedback {
   margin-bottom: 0.5em;
+  font-size: 60px;
 }
 .feedback button {
   margin: 0.3em;
@@ -646,12 +625,14 @@ h2.feedback, h3.feedback {
 }
 .rating div {
   display: flex;
+  font-size:40px;
   gap: 5px;
 }
 textarea.feedback {
   width: 90%;
   height: 100px;
   margin-top: 1em;
+  font-size:50px;
 }
 button[type="submit"].feedback {
   margin-top: 1em;
@@ -663,7 +644,7 @@ button[type="submit"].feedback {
 }
 /*#Inscription*/
 .Inscription{
-  background:url('Images/img212.jpg')no-repeat center center fixed;
+  background:url('../Images/img212.jpg')no-repeat center center fixed;
   background-size:cover;
 }
 
@@ -695,7 +676,7 @@ font-family: Futura, Tahoma, sans-serif;
 .encadre {
   border: 2px solid #5499c7; 
   padding: 15px;             
-  margin: 6%;              
+  margin-top: 15%;              
   border-radius: 10px;       
   background-color: #45b39d;
   opacity: 0.80;          
@@ -721,10 +702,10 @@ font-family: Futura, Tahoma, sans-serif;
   cursor: pointer;
   text-align:center;
 }
-
 footer.footer3 {
   position:relative;
   padding: 10px;
+  font-size:50%;
   height: auto;
   color: black;
   z-index: 0;
@@ -735,9 +716,25 @@ footer.footer3 {
   backdrop-filter: blur(10px) brightness(0.8);
   background: rgba(255, 255, 255, 0.05); 
 }
-
+.aida4{
+  color:#334155;
+  text-align: left;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'Nunito', serif;
+}
+.encadre2 {
+  border: 2px solid #5499c7; 
+  padding: 20px;             
+  margin:  5% 0% 5% 5%;       
+  border-radius: 30px;       
+  background-color: #45b39d;
+  opacity: 0.75;          
+  width: 50%;               
+  max-width: 400px;          
+  box-sizing: border-box;    
+}
 /*#Mon profil*/
-
 #profil{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   height: 65%;
@@ -748,10 +745,11 @@ footer.footer3 {
   position:absolute;
 }
 
-.Profil{
-  background:url('Images/Profil.jpeg')no-repeat center center fixed;
-  background-size:cover;
+#Profil{
+  background-image:url('../Images/Profil.jpeg')no-repeat center center fixed;
+  background-size: cover;
 }
+
 
 /*.Profil pied1 {
   color: #000; 
@@ -760,11 +758,29 @@ footer.footer3 {
   font-family: Calibri, sans-serif;
   max-width: 80%;
 }
+/*#Paiement*/
+.paiement{
+  background:url('../Images/img15.jpg')no-repeat center center fixed;
+  background-size:cover;
+}
 
 /*css pour "seConnecter"*/	
 .seConnecter{
-  background:url('Images/img254.jpg')no-repeat center center fixed;
+  background:url('../Images/img254.jpg')no-repeat center center fixed;
   background-size:cover;
+}
+.seConnecter li { /*code cours, site 3W*/
+  font-family: Futura, Tahoma, sans-serif;
+  padding: 10px;
+  border-radius: 5px 5px;
+  width: 250px;
+  text-align:center;
+}
+.seConnecter #Google, .seConnecter #Facebook{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 250px;
 }
 .strong{
   color: #000000;
@@ -773,11 +789,19 @@ footer.footer3 {
   text-align: center;
 }
 
-
 /*css pour "Vols"*/	
 #Vols{
-  background: url('../Images/img360.jpg') no-repeat center center fixed; 
+  background: url('../Images/Vols.jpg') no-repeat center center fixed; 
   background-size: cover;
+}
+
+
+.Vols form select, .Vols form input {
+    width: 100%; /* Les éléments de formulaire prennent toute la largeur du conteneur */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 body.recapitulatif {
@@ -922,9 +946,7 @@ body.recapitulatif {
     color: #fff;
 }
 
-
-
-
-
-
-
+/*cacher la date de retour par défaut, pour ne pas la voir si on choisit "aller simple".*/
+#date-retour {
+  display: none;
+}
