@@ -1,7 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    $est_connecte = isset($_SESSION['utilisateur']);
+    $est_connecte = false;
+} else {
+    $est_connecte = true;
 }
 $voyages_json = file_get_contents('Data/voyages.json');
 $voyages = json_decode($voyages_json, true);
@@ -34,8 +36,7 @@ if ($voyages === null) {
               <option value="Casablanca">Casablanca</option>
               <option value="Rabat">Rabat</option>
             </optgroup>
-	
-            </optgroup>
+		  
             <optgroup label="Guinee">
               <option value="Conakry">Conakry</option>
               <option value="Kankan">Kankan</option>
@@ -116,7 +117,6 @@ if ($voyages === null) {
               <option value="Rabat">Rabat</option>
             </optgroup>
 	
-            </optgroup>
             <optgroup label="Guinee">
               <option value="Conakry">Conakry</option>
               <option value="Kankan">Kankan</option>
