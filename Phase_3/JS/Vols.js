@@ -16,4 +16,15 @@
     toggleDates(); // Appelle tout de suite cette fonction pour que les dates s'affichent bien au moment où la page apparaît: Au tout début, quand la page se charge (car il faut afficher les bons champs selon ce qui est sélectionné) ou Quand l'utilisateur change le type de voyage.
 
     typeVoyage.addEventListener("change", toggleDates); //si l’utilisateur change le type de voyage, rappelle la fonction toggleDates!
+
+    const form = document.querySelector("form");
+  const depart = document.getElementById("ville_depart");
+  const arrivee = document.getElementById("ville_arrivee");
+
+  form.addEventListener("submit", function (event) {
+    if (depart.value === arrivee.value) {
+      alert("Erreur : La ville de départ et la ville d'arrivée ne peuvent pas être les mêmes !");
+      event.preventDefault();
+    }
+    });
   });
