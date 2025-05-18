@@ -17,16 +17,16 @@ document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est
   togglePassword.style.cursor = "pointer"; // .cursor : changer le style du curseur de la souris quand on passe sur l’œil, "pointer" ca devient une main pour que l'utilisateur puisse comprendre qu'il peut cliquer dessus!
   togglePassword.style.marginLeft = "10px"; //ajoute un espace à gauche: 10px, entre le champ mot de passe et l’icône 👁️!
 
-  // Ajout dynamique, 
-  if (emailInput) emailInput.parentNode.appendChild(emailError);
-  if (passwordInput) {
-    passwordInput.parentNode.appendChild(passwordError);
-    passwordInput.parentNode.appendChild(counter);
-    passwordInput.parentNode.appendChild(togglePassword);
+  // on ajoute dynamiquement des elements de html qui n'etaient pas presents dans nos pages .html/.php
+  if (emailInput) emailInput.parentNode.appendChild(emailError); //Si le champ de l’e-mail existe (<input type="email">), alors on ajoute le message d’erreur emailError juste après lui(si besoin). parentNode: Le parent direct HTML de ce champs, on lui ajoute un enfant. const emailError = document.createElement("p");
+  if (passwordInput) { //Si le champ mot de passe existe
+    passwordInput.parentNode.appendChild(passwordError);  // On ajoute une zone d’erreur 
+    passwordInput.parentNode.appendChild(counter); // On ajoute un compteur de caractères.
+    passwordInput.parentNode.appendChild(togglePassword); // On ajoute l’icône œil 
   }
 
-  // Compteur
-  if (passwordInput) {
+  // Compteur, 
+  if (passwordInput) { // vérifier que l'élément du mot de passe existe
     passwordInput.addEventListener("input", () => {
       counter.textContent = `${passwordInput.value.length} caractères`;
     });
