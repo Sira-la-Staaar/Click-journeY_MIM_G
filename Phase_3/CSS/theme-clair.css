@@ -54,7 +54,6 @@ a.admin:visited{
   width:100%;
   margin-top:5%;
   height:auto;
-  color:#3A2610;
   text-align:center;
   font-size:175%;
   background-color:#FF9900;
@@ -267,12 +266,6 @@ h1#admin{
   margin-top:7%;
   color:#042c47;
 }
-/*#header {
-	position:absolute;
-  z-index: 15;
-	margin-top: -10px;
-	background-color: #3c4543;
-}*/
 
 img.disp {
   position: fixed;
@@ -681,7 +674,7 @@ font-family: Futura, Tahoma, sans-serif;
 .encadre {
   border: 2px solid #5499c7; 
   padding: 15px;             
-  margin: 6%;              
+  margin: 7%;              
   border-radius: 10px;       
   background-color: #45b39d;
   opacity: 0.80;          
@@ -794,14 +787,9 @@ footer.footer3 {
 }
 
 /*css pour "Vols"*/	
-.Vols body{
-    display: flex;
-    flex-direction: column; /* Placer les éléments en colonne */
-    justify-content: center; /* Centrer verticalement */
-    align-items: center; /* Centrer horizontalement */
-    margin: 0;
-    color: #000000;
-    height: 100vh; /* Assure que le body occupe toute la hauteur de la page */
+#Vols{
+  background: url('../Images/Vols.jpg') no-repeat center center fixed; 
+  background-size: cover;
 }
 
 
