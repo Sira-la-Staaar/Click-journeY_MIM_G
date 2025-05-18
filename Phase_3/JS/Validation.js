@@ -41,30 +41,30 @@ if (emailInput) {
     });
 
     togglePassword.addEventListener("click", () => { // si l'utilisateur cliques sur l'icone oeil, on executera le code suivant! 
-      const type = passwordInput.getAttribute("type"); // On récupère le type actuel du champ mot de passe.
-      passwordInput.setAttribute("type", type === "password" ? "text" : "password");
+      const type = passwordInput.getAttribute("type"); // On récupère le type actuel du champ mot de passe, soit "password" pour cacher, soit "text" pour afficher en clair.
+      passwordInput.setAttribute("type", type === "password" ? "text" : "password"); // Si le type est "password", on le change en "text" sinon on remet "password"
     });
   }
  
-  form.addEventListener("submit", function (event) {
-    let valid = true;
+  form.addEventListener("submit", function (event) { // cliquer sur le bitton submit, on lance la fonction! 
+    let valid = true; // on part du principe que le formulaire est valide
     
-    if (emailInput) {
-      emailError.textContent = "";
-      if (!emailInput.value.includes("@")) {
-        emailError.textContent = "Adresse e-mail invalide.";
-        valid = false;
+    if (emailInput) { //verifier que le champ email existe!
+      emailError.textContent = ""; // On vide le message d’erreur pour l’email (s’il y avait une erreur précédente).
+      if (!emailInput.value.includes("@")) { // Si l’email ne contient pas le caractère @, c’est qu’il est probablement invalide.
+        emailError.textContent = "Adresse e-mail invalide."; // On affiche un message d’erreur
+        valid = false; // on indique que le formulaire n’est pas valide.
       }
     }
 
-    if (passwordInput) {
-      passwordError.textContent = "";
-      if (passwordInput.value.length < 6) {
-        passwordError.textContent = "Le mot de passe doit contenir au moins 6 caractères.";
-        valid = false;
+    if (passwordInput) { // On vérifie que le champ mot de passe existe.
+      passwordError.textContent = ""; // on vide l’ancien message d’erreur s’il y en avait un.
+      if (passwordInput.value.length < 6) { // Si le mot de passe a moins de 6 caractères, on considère qu’il est trop court.
+        passwordError.textContent = "Le mot de passe doit contenir au moins 6 caractères."; // on affiche ce message d'erreur!
+        valid = false; // on indique que le formulaire n’est pas valide.
       }
     }
 
-    if (!valid) event.preventDefault();
+    if (!valid) event.preventDefault(); // Si au moins une erreur a été détectée, on empêche l’envoi du formulaire
   });
 });
