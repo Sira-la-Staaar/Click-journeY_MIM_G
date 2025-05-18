@@ -69,14 +69,14 @@ $_SESSION['selection'] = [
 <script src="js/theme.js" defer></script>
 <body>
     <h1>Récapitulatif de votre réservation</h1>
-    // afficher toutes les informations récupérées:
-    //htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
+    <!-- afficher toutes les informations récupérées: -->
+    <!-- htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.-->
     <p>Départ :<?php echo htmlspecialchars($ville_depart); ?></p>
     <p>Arrivée :<?php echo htmlspecialchars($ville_arrivee); ?></p>
     <p>Formule choisie :<?php echo htmlspecialchars($formule); ?></p>
     <p>Type de voyage :<?php echo htmlspecialchars($type_voyage); ?></p>
     <p>Date et heure de départ :<?php echo htmlspecialchars($date_heure); ?></p>
-    <h2>Prix total estimé : <?php echo $prix; ?> €</h2> //mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!
+    <h2>Prix total estimé : <?php echo $prix; ?> €</h2> <!--mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!-->
         
         <form action="recapitulatif.php" method="POST">
             <button type="submit">Confirmer ce voyage</button>
