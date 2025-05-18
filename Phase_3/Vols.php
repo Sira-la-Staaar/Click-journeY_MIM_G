@@ -37,8 +37,6 @@ if ($voyages === null) {
               <option value="Casablanca">Casablanca</option>
               <option value="Rabat">Rabat</option>
             </optgroup>
-	
-            </optgroup>
             <optgroup label="Guinee">
               <option value="Conakry">Conakry</option>
               <option value="Kankan">Kankan</option>
@@ -118,8 +116,6 @@ if ($voyages === null) {
               <option value="Marrakech">Marrakech</option>
               <option value="Casablanca">Casablanca</option>
               <option value="Rabat">Rabat</option>
-            </optgroup>
-	
             </optgroup>
             <optgroup label="Guinee">
               <option value="Conakry">Conakry</option>
