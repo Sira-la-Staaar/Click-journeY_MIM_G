@@ -32,10 +32,11 @@ foreach ($voyages as $voyage) {
   <head lang="fr">
     <title>Accueil | The West Agency</title>
     <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
-    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png" id="theme"/>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'accueil" />
   </head>
+  <script src="JS/theme.js" defer></script>
   <body id="accueil">
     <?php include 'header.php'; ?>
 

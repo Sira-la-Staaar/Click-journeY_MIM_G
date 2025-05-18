@@ -7,12 +7,13 @@ if (!isset($_SESSION['utilisateur'])) {
 <html>
   <head lang="fr">
     <title>A propos de nous | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
     <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'informations" />
   </head>
-  <body id="accueil">
+  <script src="JS/theme.js" defer></script>
+  <body id="apropos">
     <?php include 'header.php'; ?>
 
     <div class="debut"><h1 class="titre1">  A propos de nous</h1>

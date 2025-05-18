@@ -83,10 +83,11 @@ if (!$voyage) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
     <title>Détails du voyage | The West Agency</title>
     <link rel="shortcut icon" href="Images/minilogo.png" type="image/png"/>
 </head>
+<script src="JS/theme.js" defer></script>
 <body id="admin" data-user='<?= json_encode($utilisateur ?? null, JSON_HEX_APOS | JSON_HEX_QUOT) ?>'>
     <h1><?= htmlspecialchars($voyage['titre']) ?></h1>
     <p><strong>Du :</strong> <?= $voyage['date_debut'] ?> <strong>au</strong> <?= $voyage['date_fin'] ?></p>

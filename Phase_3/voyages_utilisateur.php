@@ -22,7 +22,10 @@ foreach ($voyages as $voyage) {
 <head>
     <meta charset="UTF-8">
     <title>Voyages de l'utilisateur</title>
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme" />
+
 </head>
+<script src="JS/theme.js" defer></script>
 <body>
     <h1>Voyages de l'utilisateur <?= htmlspecialchars($idUtilisateur) ?></h1>
     <?php if (count($voyagesUtilisateur) > 0): ?>

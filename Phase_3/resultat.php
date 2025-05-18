@@ -56,22 +56,19 @@ if ($type_voyage == "aller-retour") {
 <head>
     <meta charset="UTF-8">
     <title>Résultat | The West Agency</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="resultat.js" defer></script> <!-- avec "defer" le navigateur attend que la page HTML soit prête, puis execute le JavaScript sinon le navigateur execute le JavaScript tout de suite, avant d’avoir fini de charger le HTML.--> 
 </head>
-    <body class="resultat" style="background: url('https://ulysse.com/news/wp-content/uploads/2025/03/Le-Maroc.jpg') no-repeat center center fixed; background-size: cover;">
-        <h1>Récapitulatif de votre réservation</h1>
-        <!-- afficher toutes les informations récupérées:-->
-        <!-- htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.-->
-        <div class="container">
-            <p>Départ :<?php echo htmlspecialchars($ville_depart); ?></p>
-            <p>Arrivée :<?php echo htmlspecialchars($ville_arrivee); ?></p>
-            <p>Formule choisie :<?php echo htmlspecialchars($formule); ?></p>
-            <p>Type de voyage :<?php echo htmlspecialchars($type_voyage); ?></p>
-            <p>Mois :<?php echo htmlspecialchars($mois); ?></p>
-            <p>Semaine :<?php echo htmlspecialchars($semaine); ?></p>
-            <p>Date et heure de départ :<?php echo htmlspecialchars($date_heure); ?></p>
-            <h2>Prix total estimé : <?php echo $prix; ?> €</h2> <!--mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!-->
-        </div>
-    </body>
+<script src="js/theme.js" defer></script>
+<body>
+    <h1>Récapitulatif de votre réservation</h1>
+    // afficher toutes les informations récupérées:
+    //htmlspecialchars() protège des erreurs si l’utilisateur a mis des caractères spéciaux, Elle transforme les caractères spéciaux HTML (comme < devient &lt, >, &, ", etc.) en leur forme sécurisée.
+    <p>Départ :<?php echo htmlspecialchars($ville_depart); ?></p>
+    <p>Arrivée :<?php echo htmlspecialchars($ville_arrivee); ?></p>
+    <p>Formule choisie :<?php echo htmlspecialchars($formule); ?></p>
+    <p>Type de voyage :<?php echo htmlspecialchars($type_voyage); ?></p>
+    <p>Mois :<?php echo htmlspecialchars($mois); ?></p>
+    <p>Semaine :<?php echo htmlspecialchars($semaine); ?></p>
+    <p>Date et heure de départ :<?php echo htmlspecialchars($date_heure); ?></p>
+    <h2>Prix total estimé : <?php echo $prix; ?> €</h2> //mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!
+</body>
 </html>

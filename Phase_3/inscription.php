@@ -3,13 +3,12 @@
 
 <html lang="fr">
 <head>
-  <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+  <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
-  <script src="Validation.js" defer></script>
 
   <title>S'inscrire</title>
 </head>
-
+<script src="JS/theme.js" defer></script>
 <body class="Inscription">
     <form action="Accueil.php" method="POST">
         <img src="Images/logo4.png" alt="logo de The West Agency" class="logo">

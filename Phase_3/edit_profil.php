@@ -59,10 +59,10 @@ $info = $user['informations'][0];
 <html lang="fr">
   <head>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
     <title>Profil | The West Agency</title>
   </head>
-
+  <script src="JS/theme.js" defer></script>
   <body class="Profil">
       <?php include 'header.php'; ?>
       <form method="post" action="edit_profil.php" enctype="multipart/form-data">       

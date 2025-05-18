@@ -23,9 +23,11 @@ $info = $utilisateur['informations'][0];
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="CSS/theme-clair.css" id="theme">
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <title>Profil | The West Agency</title>
   </head>
+  <script src="JS/theme.js" defer></script>
   <body class="Profil">
     <?php include 'header.php'; ?>
     <div class="seConnecter">
@@ -50,8 +52,16 @@ $info = $utilisateur['informations'][0];
       <br><br>
       <a href="edit_profil.php"><button class="btn-details">Modifier</button></a>
       <a href="seDeconnecter.php"><button class="btn-details">Se déconnecter</button></a>
+      <select id="switchTheme" class="btn">
+        <option value="clair">Thème clair</option>
+        <option value="sombre">Thème sombre</option>
+        <option value="contraste">Contraste élevé</option>
+        <option value="large">Grand texte</option>
+      </select>
+
     </div>
-    <script src="js/profil.js"></script>
+    <script src="JS/theme.js" defer></script>
+    <!--<script src="JS/profil.js"></script>-->
     <?php include 'footer.php'; ?>
   </body>
 </html>

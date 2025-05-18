@@ -41,9 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme"/>
     <title>Vue détaillée du voyage</title>
 </head>
+<script src="JS/theme.js" defer></script>
 <body class="voyage" style="background: url('https://media.istockphoto.com/id/1057333524/fr/photo/kasbah-ait-ben-haddou-dans-le-d%C3%A9sert-pr%C3%A8s-de-montagnes-de-latlas-maroc.jpg?s=612x612&w=0&k=20&c=Zcr5WKI1URXHrsYqBFdydkW0EywJdJXRqKyb4MBzqjc=') no-repeat center center fixed; background-size: cover;">
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
     <h1>Personnalisez votre voyage</h1>

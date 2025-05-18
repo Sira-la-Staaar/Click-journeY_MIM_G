@@ -24,11 +24,12 @@ $utilisateursPage = array_slice($utilisateurs, $debut, $utilisateursParPage);
 <html>
   <head lang="fr">
     <title>Page Admin | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
     <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name="description" content="page admin" />
   </head>
+  <script src="JS/theme.js" defer></script>
   <body id="admin">
     <!--<div class="container">
     <div class="div1"></div>

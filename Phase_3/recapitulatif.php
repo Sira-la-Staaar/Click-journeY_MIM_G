@@ -19,9 +19,10 @@ $selection = $_SESSION['selection'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme"/>
     <title>Récapitulatif du voyage</title>
 </head>
+<script src="JS/theme.js" defer></script>
 <body class="recapitulatif">
 
     <img src="logo4.png" alt="logo de The West Agency" style="float: right; margin: 20px; width: 400px;">
@@ -73,7 +74,7 @@ $selection = $_SESSION['selection'];
     </div>
 
     <div>
-        <a href="Vols.php">Modifier le voyage</a>
+        <a href="vols.php">Modifier le voyage</a>
     </div>
 
 </body>
