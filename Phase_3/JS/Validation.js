@@ -18,7 +18,17 @@ document.addEventListener("DOMContentLoaded", function () { // Quand le HTML est
   togglePassword.style.marginLeft = "10px"; //ajoute un espace à gauche: 10px, entre le champ mot de passe et l’icône 👁️!
 
   // on ajoute dynamiquement des elements de html qui n'etaient pas presents dans nos pages .html/.php
-  if (emailInput) emailInput.parentNode.appendChild(emailError); //Si le champ de l’e-mail existe (<input type="email">), alors on ajoute le message d’erreur emailError juste après lui(si besoin). parentNode: Le parent direct HTML de ce champs, on lui ajoute un enfant. const emailError = document.createElement("p");
+if (emailInput) {
+  emailInput.parentNode.appendChild(emailError); // zone d’erreur email
+
+  const emailCounter = document.createElement("p"); // compteur
+  emailCounter.style.color = "gray";
+  emailInput.parentNode.appendChild(emailCounter);
+
+  emailInput.addEventListener("input", () => {
+    emailCounter.textContent = `${emailInput.value.length} caractères`;
+  });
+}
   if (passwordInput) { //Si le champ mot de passe existe
     passwordInput.parentNode.appendChild(passwordError);  // On ajoute une zone d’erreur 
     passwordInput.parentNode.appendChild(counter); // On ajoute un compteur de caractères.
