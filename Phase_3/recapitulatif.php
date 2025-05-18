@@ -14,6 +14,13 @@ if (!isset($_SESSION['utilisateur'])) {
 $selection = $_SESSION['selection'];
 $prix_final = $selection['prix'];
 
+
+// Supposons que tu as déjà le prix dans une variable comme ceci :
+$prix = $selection['prix']; // ou n’importe quelle autre logique
+
+$_SESSION['prix'] = $prix;
+
+
 ?>
 
 <!DOCTYPE html>
