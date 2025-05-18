@@ -187,9 +187,15 @@
 	<button type="submit">Rechercher</button>    
     </form>
 		
-    
+<form>
     <p>Choisissez la date et l'heure de votre   vol:</p> 
  la date: <input type="date" name="time2" value="2025-03-01" min="2025-03-01" max="2025-12-31"> 
+		<p><u>Nombre de voyageurs avec valises:</u></p>
+  <label for="voyageurs">Nombre de voyageurs :</label>
+<input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1">
+
+<p>-À noter: <span id="valises">chaque voyageur bénéficie de l'inclusion de deux valises de 23 kg chacune!</span></p>
+</form>
       
 		
 <?php include 'footer.php'; ?>
