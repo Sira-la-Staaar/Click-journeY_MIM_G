@@ -216,7 +216,7 @@ if ($voyages === null) {
           </div>
          
           <label for="voyageurs">Nombre de voyageurs :</label>
-          <input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1">
+          <input type="number" id="voyageurs" name="voyageurs" min="1" max="10" value="1" required>
           <p>-À noter: <span id="valises">chaque voyageur bénéficie de l'inclusion de deux valises de 23 kg chacune!</span></p>
           <button class="btn-details" type="submit">Rechercher</button>    
       </form>    
