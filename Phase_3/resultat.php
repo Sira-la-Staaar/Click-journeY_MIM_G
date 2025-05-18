@@ -49,6 +49,18 @@ switch ($formule) {
 if ($type_voyage == "aller-retour") {
     $prix *= 2;
 }
+
+    // stocker tout dans la session pour l’utiliser dans recapitulatif.php
+$_SESSION['selection'] = [
+    "ville_depart" => $ville_depart,
+    "ville_arrivee" => $ville_arrivee,
+    "formule" => $formule,
+    "type_voyage" => $type_voyage,
+    "mois" => $mois,
+    "semaine" => $semaine,
+    "date_heure" => $date_heure,
+    "prix" => $prix
+];
 ?>
 
 <!DOCTYPE html>
@@ -70,5 +82,9 @@ if ($type_voyage == "aller-retour") {
     <p>Semaine :<?php echo htmlspecialchars($semaine); ?></p>
     <p>Date et heure de départ :<?php echo htmlspecialchars($date_heure); ?></p>
     <h2>Prix total estimé : <?php echo $prix; ?> €</h2> //mettre en valeur le prix car c une information importante = c ce que l'utilisateur veut savoir!
+        
+        <form action="recapitulatif.php" method="POST">
+            <button type="submit">Confirmer ce voyage</button>
+        </form>
 </body>
 </html>
