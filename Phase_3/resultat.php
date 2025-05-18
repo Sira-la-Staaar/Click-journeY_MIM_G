@@ -17,15 +17,15 @@ $formule = $_GET['formule'] ?? '';
 $type_voyage = $_GET['type-voyage'] ?? '';
 $date_heure = $_GET['time2'] ?? '';
 
-// Vérification des entrées, Si la ville de départ = la ville d’arrivée donc erreur!
-if ($ville_depart == $ville_arrivee) {
-    echo "<h2>Erreur : La ville de départ et la ville d'arrivée ne peuvent pas être les mêmes.</h2>";
-    exit;
-}
-
 //si la ville de départ ou la ville d’arrivée n’est pas dans le tableau $villes donc erreur
 if (!in_array($ville_depart, $villes) || !in_array($ville_arrivee, $villes)) {
     echo "<h2>Erreur : Ville non reconnue.</h2>";
+    exit;
+}
+
+// Vérification des entrées, Si la ville de départ = la ville d’arrivée donc erreur!
+if ($ville_depart == $ville_arrivee) {
+    echo "<h2>Erreur : La ville de départ et la ville d'arrivée ne peuvent pas être les mêmes.</h2>";
     exit;
 }
 
