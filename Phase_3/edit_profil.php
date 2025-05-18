@@ -1,14 +1,19 @@
 <?php
 session_start();
+//assure la connexion de l'utulisateur
 if (!isset($_SESSION['utilisateur'])) {
     header('Location: Accueil.php');
     exit;
 }
+// fichier contenant les données des utilisateurs
 $dataFile = 'Data/utilisateurs.json';
+//lit le fichier JSON
 $users = json_decode(file_get_contents($dataFile), true);
 
 $userId = $_SESSION['utilisateur']['id'];
+//Initialisation
 $userIndex = null;
+// REcherche de l'identifiant de l'utilisateur
 foreach ($users as $i => $u) {
     if ($u['id'] === $userId) {
         $userIndex = $i;
@@ -20,7 +25,7 @@ if ($userIndex === null) {
     echo "Utilisateur introuvable.";
     exit;
 }
-
+//Mise à jour des informations de l'utilisateur
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $users[$userIndex]['e-mail'] = $_POST['email'];
     $users[$userIndex]['mdp']    = $_POST['password'];
@@ -31,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $info['civilité'] = $_POST['civilite'];
     $info['naissance']= $_POST['naissance'];
     $info['adresse']  = $_POST['adresse'];
-
+// Supression/ Reinsertion des informations tq la photo ou le nom
   if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
     $ext = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
     $allowed = ['jpg', 'jpeg', 'png', 'gif'];
@@ -46,12 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 
-
+// Sauvaegarde
     file_put_contents($dataFile, json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     $message = "Vos informations ont été mises à jour.";
 }
 
-
+// Données finales 
 $user = $users[$userIndex];
 $info = $user['informations'][0];
 ?>
