@@ -1,14 +1,14 @@
 <?php
 session_start();
 // Tableau des villes existantes, comme ça l'utilisateur ne choisira pas une ville inexistante!
-$villes = [ 
-    "Marrakech", "Casablanca", "Rabat", "Conakry", "Kankan", "Bamako", "Mopti", "Kayes",
-    "Paris-Orly", "Paris-CDG", "Paris", "Dakar", "Ziguinchor", "Thiès", "Saint-Louis",
-    "Monrovia", "Buchanan", "Bissau", "Bafata", "Freetown", "Bo", "Cotonou", "Parakou",
-    "Lomé", "Niamtougou", "Accra", "Kumasi", "Lagos", "Abuja", "Abidjan", "Yamoussoukro",
-    "Ouagadougou", "Bobo-Dioulasso", "Banjul", "Farafenni", "Praia", "Mindelo",
-    "Niamey", "Agadez", "Nouakchott", "Nouadhibou"
-];
+//$villes = [ 
+  //  "Marrakech", "Casablanca", "Rabat", "Conakry", "Kankan", "Bamako", "Mopti", "Kayes",
+  //  "Paris-Orly", "Paris-CDG", "Paris", "Dakar", "Ziguinchor", "Thiès", "Saint-Louis",
+  //  "Monrovia", "Buchanan", "Bissau", "Bafata", "Freetown", "Bo", "Cotonou", "Parakou",
+  //  "Lomé", "Niamtougou", "Accra", "Kumasi", "Lagos", "Abuja", "Abidjan", "Yamoussoukro",
+  //  "Ouagadougou", "Bobo-Dioulasso", "Banjul", "Farafenni", "Praia", "Mindelo",
+  //  "Niamey", "Agadez", "Nouakchott", "Nouadhibou"
+//];
 
 // On récupère toutes les valeurs envoyées par le formulaire vols.php grâce à $_POST, si la valeur n’est pas envoyée, mettre une chaîne vide pour éviter une erreur
 $ville_depart = $_POST['ville_depart'] ?? '';
