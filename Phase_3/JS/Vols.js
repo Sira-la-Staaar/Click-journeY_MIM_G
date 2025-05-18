@@ -3,7 +3,7 @@
     const dateAller = document.getElementById("date-aller"); // récupérer/cibler l’endroit où se trouve la date d’aller.
     const dateRetour = document.getElementById("date-retour"); // récupérer/cibler l’endroit où se trouve la date d’aller et retour.
 
-    function toggleDates() { //gérer quand afficher ou cacher les dates
+    function toggleDates() { //gérer quand afficher ou cacher les dates 
       if (typeVoyage.value === "aller simple") { // vérifier si l’utilisateur a choisi aller simple.
         dateAller.style.display = "block"; //si l'utilisateur choisit un aller simple, donc la date aller sera visible (block)
         dateRetour.style.display = "none"; //et donc on cache la date de retour
