@@ -35,6 +35,7 @@ $selection = $_SESSION['selection'];
         <p><strong>Ville de départ :</strong> <?= isset($selection['ville_depart']) ? $selection['ville_depart'] : 'Non spécifiée'; ?></p>
         <p><strong>Ville d'arrivée :</strong> <?= isset($selection['ville_arrivee']) ? $selection['ville_arrivee'] : 'Non spécifiée'; ?></p>
         <p><strong>Nombre de voyageurs :</strong> <?= isset($selection['voyageurs']) ? $selection['voyageurs'] : 'Non spécifié'; ?></p>
+        <p><strong>Prix final estimé :</strong> <?= $selection['prix']; ?> €</p>
     </div>
 
     <?php foreach ($selection as $index => $data): ?>
