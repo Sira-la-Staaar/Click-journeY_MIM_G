@@ -5,10 +5,11 @@
 <head>
   <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css" id="theme">
   <link rel="shortcut icon" type="image/png" href="Images/minilogo.png"/>
-  <script src="Validation.js" defer></script>
+
   <title>S'inscrire</title>
 </head>
 <script src="JS/theme.js" defer></script>
+<script src="Validation.js" defer></script>
 <body class="Inscription">
     <form action="Accueil.php" method="POST">
         <img src="Images/logo4.png" alt="logo de The West Agency" class="logo">
@@ -76,8 +77,7 @@
   
   <div class="input box">
     <h2 class="aida2">Mot de passe</h2>
-    <input type="password" class="input-box" placeholder="Mot de passe"required minlength="8" id="motdepasse">
-    <span id="togglePassword" style="cursor:pointer">👁️</span>
+    <input type="password" class="input-box" placeholder="Mot de passe"required minlength="8">
   </div>
 
 <?php
@@ -97,12 +97,16 @@
   }  
 ?>
 
-  <div class="input box">
+  <div class="input box" style="margin-top: 20px;">
   <button type="submit" class="btn-details">
    S'inscrire
-   </div>
+    </div>
 </button>
+   <h5 class="aida2">Déjà un compte? Dirigez-vous directement sur la page de connexion!</h6>
+    <div class="btn-details">
+      <a href="seConnecter.php">Se connecter</a>
   </div>
+</div>
      <?php include 'footer.php'; ?>
 </body>
 </html>
