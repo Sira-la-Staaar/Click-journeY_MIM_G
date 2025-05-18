@@ -189,7 +189,7 @@
 		
     
     <p>Choisissez la date et l'heure de votre   vol:</p> 
- Le mois: <input type="month" name="month" value="2025-03" min="2025-03" max="2025-12"><br> 
+ la date: <input type="date" name="time2" value="2025-03-01" min="2025-03-01" max="2025-12-31"> 
       
 		
 <?php include 'footer.php'; ?>
