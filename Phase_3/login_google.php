@@ -1,4 +1,4 @@
-<?php
+//<?php
 session_start();
 
 require_once 'vendor/autoload.php'; // Charger la bibliothèque Google API Client
