@@ -54,15 +54,16 @@ if ($type_voyage == "aller-retour") {
 $prix *= $nb_personnes;
 
     // stocker tout dans la session pour l’utiliser dans recapitulatif.php
-$_SESSION['selection'] = [
-    "ville_depart" => $ville_depart,
-    "ville_arrivee" => $ville_arrivee,
-    "formule" => $formule,
-    "type_voyage" => $type_voyage,
-    "date_heure" => $date_heure,
-    "prix" => $prix,
-    "nb_personnes" => $nb_personnes
-];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['vol_selectionne'] = [
+        'ville_depart' => $_POST['ville_depart'],
+        'ville_arrivee' => $_POST['ville_arrivee'],
+        'formule' => $_POST['formule'],
+        'type_voyage' => $_POST['type-voyage'],
+        'date_aller' => $_POST['date_aller'],
+        'date_retour' => $_POST['date_retour'] ?? '',
+        'voyageurs' => $_POST['voyageurs']
+    ];
 ?>
 
 <!DOCTYPE html>
