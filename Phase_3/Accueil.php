@@ -46,6 +46,7 @@ if ($voyages === null) {
     </div>
 
     <div class="Accueil3">
+      <div class="grid-pinterest">
       <?php
         shuffle($voyages);
         $voyages_limited = array_slice($voyages, 0, 6);
@@ -61,6 +62,7 @@ if ($voyages === null) {
           </div>
         </div>
       <?php }?>
+      </div>
     </div>
     <?php include 'footer.php'; ?>
  </body>
