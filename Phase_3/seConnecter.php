@@ -72,10 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //Vérifie si le formulaire a été 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Se Connecter</title>
-    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png" id="theme"/>
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+    	<meta charset="UTF-8">
+    	<title>Se Connecter</title>
+    	<link rel="shortcut icon" type="image/png" href="Images/minilogo.png" id="theme"/>
+    	<link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
+	<script src="Validation.js" defer></script>
 </head>
 <script src="JS/theme.js" defer></script>
 <body class="seConnecter">
