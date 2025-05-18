@@ -31,8 +31,8 @@ foreach ($voyages as $voyage) {
 <html>
   <head lang="fr">
     <title>Accueil | The West Agency</title>
-    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css">
-    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png" id="theme"/>
+    <link type="text/css" rel="stylesheet" href="CSS/theme-clair.css"id="theme"/>
+    <link rel="shortcut icon" type="image/png" href="Images/minilogo.png" />
     <meta charset="UTF-8" name="author" content="Sira DIAKITE" />
     <meta name=”description” content="page d'accueil" />
   </head>
@@ -47,7 +47,7 @@ foreach ($voyages as $voyage) {
 
       <a href="<?php 
         if (isset($_SESSION['utilisateur'])) {
-          echo '#';  // 
+          echo 'Vols.php';  // 
         } else {
           echo 'inscription.php';
         }
